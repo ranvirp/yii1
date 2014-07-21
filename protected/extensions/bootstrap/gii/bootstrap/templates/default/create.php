@@ -15,15 +15,27 @@ $label = $this->pluralize($this->class2name($this->modelClass));
 echo "\$this->breadcrumbs=array(
 	'$label'=>array('index'),
 	'Create',
-);\n";
+);?>\n";
+
+ echo "  <?php \$box = \$this->beginWidget('yiiwheels.widgets.box.WhBox', array(
+'title' => '$label Form',
+'headerIcon' => 'icon-th-list',
+// when displaying a table, if we include bootstra-widget-table class
+// the table will be 0-padding to the box
+'htmlOptions' => array('class'=>'bootstrap-widget-table')
+));?>";
+
 ?>
 
-$this->menu=array(
-	array('label'=>'List <?php echo $this->modelClass; ?>', 'url'=>array('index')),
-	array('label'=>'Manage <?php echo $this->modelClass; ?>', 'url'=>array('admin')),
-);
-?>
 
-<h1>Create <?php echo $this->modelClass; ?></h1>
 
 <?php echo "<?php \$this->renderPartial('_form', array('model'=>\$model)); ?>"; ?>
+ <?php echo "<?php \$this->endWidget();?>" ;
+echo "<?php
+\$this->menu=array(
+	array('label'=>'List  $this->modelClass', 'url'=>array('index')),
+	array('label'=>'Manage  $this->modelClass', 'url'=>array('admin')),
+);
+?>";
+ ?>
+   

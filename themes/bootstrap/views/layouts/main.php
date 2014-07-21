@@ -12,6 +12,7 @@
 
         <?php Yii::app()->bootstrap->register(); ?>
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet" />
+        <?php Yii::app()->language='hi';?>
 
     </head>
 
@@ -58,6 +59,7 @@
                                 '---',
                                 array('label' => 'Logout', 'url' => Yii::app()->getModule('user')->logoutUrl, 'icon' => 'off'),
                             )),
+							array('label'=>'Language '.Yii::app()->language),
                     ),
                 ),
                 /* '<form class="navbar-search form-search pull-right" action="">

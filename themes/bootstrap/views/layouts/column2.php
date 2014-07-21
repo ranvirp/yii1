@@ -2,7 +2,10 @@
 <?php $this->beginContent('//layouts/main'); ?>
 <!--<div class="container-fluid fill">-->
     <div class="row-fluid">
-        <div class="fixed-sidebar">
+         <div class="span8">
+                <?php echo $content; ?>
+            </div><!-- content -->
+        <div class="span4">
            
             <?php
             $this->beginWidget('yiiwheels.widgets.box.WhBox', array(
@@ -16,11 +19,9 @@
             $this->endWidget();
             ?>
         </div><!-- sidebar -->
-        <div class="content-column">
-            <div id="content">
-                <?php echo $content; ?>
-            </div><!-- content -->
-        </div>
+        
+           
+        
     </div>
 <!--</div>-->
 <?php $this->endContent(); ?>

@@ -8,7 +8,7 @@
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
-
+'language'=>'hi',
 	// preloading 'log' component
 	'theme'=>'bootstrap',
 	'preload'=>array('log'),
@@ -29,6 +29,8 @@ return array(
 	    'bootstrap.helpers.*',
 		'bootstrap.widgets.*',
 		'bootstrap.behaviors.*',
+		'ext.giix-components.*', // giix components
+            'ext.AweCrud.components.*', 
 	),
 
 	'modules'=>array(
@@ -88,18 +90,27 @@ return array(
                'debug'=>false, 
         ),
 		// uncomment the following to enable the Gii tool
-		/*
+		
 		'gii'=>array(
-			'class'=>'system.gii.GiiModule',
-			'password'=>'Enter Your Password Here',
+			'class'=>'ext.giiNew.GiiModule',
+			'password'=>'gii',
 			// If removed, Gii defaults to localhost only. Edit carefully to taste.
 			'ipFilters'=>array('127.0.0.1','::1'),
+			'generatorPaths'=>array(
+			
+			 'ext.bootstrap.gii'
+			),
 		),
-		*/
+		
 	),
 
 	// application components
 	'components'=>array(
+            	'messages' => array (
+		'extensionPaths' => array(
+			'AweCrud' => 'ext.AweCrud.messages', // AweCrud messages directory.
+		),
+	),
 		'user'=>array(
 			// enable cookie-based authentication
 			'allowAutoLogin'=>true,
@@ -137,7 +148,7 @@ return array(
 		// uncomment the following to use a MySQL database
 		
 		'db'=>array(
-			'connectionString' => 'mysql:host=localhost;dbname=yii1',
+			'connectionString' => 'mysql:host=localhost;dbname=mydb',
 			'emulatePrepare' => true,
 			'username' => 'root',
 			'password' => '',

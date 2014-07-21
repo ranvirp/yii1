@@ -259,3 +259,742 @@ Stack trace:
 #17 {main}
 REQUEST_URI=/yii1/index.php/site/test1
 ---
+2014/07/18 17:20:28 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'mydb.users' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `users`.
+in E:\xampp\htdocs\yii1\protected\modules\user\components\UserIdentity.php (27)
+in E:\xampp\htdocs\yii1\protected\modules\user\components\UserIdentity.php (27)
+in E:\xampp\htdocs\yii1\protected\modules\user\models\UserLogin.php (52)
+2014/07/18 17:20:28 [error] [exception.CDbException] exception 'CDbException' with message 'The table "users" for active record class "User" cannot be found in the database.' in E:\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php:2362
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(411): CActiveRecordMetaData->__construct(Object(User))
+#1 E:\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(212): CActiveRecord->getMetaData()
+#2 E:\xampp\htdocs\yii1\protected\modules\user\components\UserIdentity.php(27): CActiveRecord->__call('notsafe', Array)
+#3 E:\xampp\htdocs\yii1\protected\modules\user\components\UserIdentity.php(27): User->notsafe()
+#4 E:\xampp\htdocs\yii1\protected\modules\user\models\UserLogin.php(52): UserIdentity->authenticate()
+#5 E:\yii-1.1.15.022a51\framework\validators\CInlineValidator.php(42): UserLogin->authenticate('password', Array)
+#6 E:\yii-1.1.15.022a51\framework\validators\CValidator.php(213): CInlineValidator->validateAttribute(Object(UserLogin), 'password')
+#7 E:\yii-1.1.15.022a51\framework\base\CModel.php(159): CValidator->validate(Object(UserLogin), NULL)
+#8 E:\xampp\htdocs\yii1\protected\modules\user\controllers\LoginController.php(19): CModel->validate()
+#9 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): LoginController->actionLogin()
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#14 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('user/login')
+#15 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii1/index.php/user/login
+HTTP_REFERER=http://localhost/yii1/index.php/user/login
+---
+2014/07/18 17:35:43 [error] [exception.CException] exception 'CException' with message 'District and its behaviors do not have a method or closure named "label".' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(227): CComponent->__call('label', Array)
+#1 E:\xampp\htdocs\yii1\protected\views\district\create.php(4): CActiveRecord->__call('label', Array)
+#2 E:\xampp\htdocs\yii1\protected\views\district\create.php(4): District->label(2)
+#3 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#4 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#7 E:\xampp\htdocs\yii1\protected\controllers\DistrictController.php(52): CController->render('create', Array)
+#8 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DistrictController->actionCreate()
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#11 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#12 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#13 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#14 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#15 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#16 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('create')
+#18 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('district/create')
+#19 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii1/index.php/district/create
+---
+2014/07/18 17:38:42 [error] [exception.CException] exception 'CException' with message 'Block and its behaviors do not have a method or closure named "label".' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(227): CComponent->__call('label', Array)
+#1 E:\xampp\htdocs\yii1\protected\extensions\giix-components\GxActiveRecord.php(152): CActiveRecord->__call('label', Array)
+#2 E:\xampp\htdocs\yii1\protected\extensions\giix-components\GxActiveRecord.php(152): Block->label(2)
+#3 E:\xampp\htdocs\yii1\protected\views\district\_form.php(37): GxActiveRecord->getRelationLabel('blocks')
+#4 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#5 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#7 E:\xampp\htdocs\yii1\protected\views\district\create.php(19): CController->renderPartial('_form', Array)
+#8 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#9 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#11 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 E:\xampp\htdocs\yii1\protected\controllers\DistrictController.php(27): CController->render('create', Array)
+#13 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DistrictController->actionCreate()
+#14 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('create')
+#18 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('district/create')
+#19 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii1/index.php/district/create
+---
+2014/07/18 17:38:45 [error] [exception.CException] exception 'CException' with message 'Block and its behaviors do not have a method or closure named "label".' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(227): CComponent->__call('label', Array)
+#1 E:\xampp\htdocs\yii1\protected\extensions\giix-components\GxActiveRecord.php(152): CActiveRecord->__call('label', Array)
+#2 E:\xampp\htdocs\yii1\protected\extensions\giix-components\GxActiveRecord.php(152): Block->label(2)
+#3 E:\xampp\htdocs\yii1\protected\views\district\_form.php(37): GxActiveRecord->getRelationLabel('blocks')
+#4 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#5 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#7 E:\xampp\htdocs\yii1\protected\views\district\create.php(19): CController->renderPartial('_form', Array)
+#8 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#9 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#11 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 E:\xampp\htdocs\yii1\protected\controllers\DistrictController.php(27): CController->render('create', Array)
+#13 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DistrictController->actionCreate()
+#14 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('create')
+#18 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('district/create')
+#19 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii1/index.php/district/create
+---
+2014/07/18 17:39:40 [error] [exception.CException] exception 'CException' with message 'Block and its behaviors do not have a method or closure named "label".' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(227): CComponent->__call('label', Array)
+#1 E:\xampp\htdocs\yii1\protected\extensions\giix-components\GxActiveRecord.php(152): CActiveRecord->__call('label', Array)
+#2 E:\xampp\htdocs\yii1\protected\extensions\giix-components\GxActiveRecord.php(152): Block->label(2)
+#3 E:\xampp\htdocs\yii1\protected\views\district\_form.php(37): GxActiveRecord->getRelationLabel('blocks')
+#4 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#5 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#7 E:\xampp\htdocs\yii1\protected\views\district\create.php(19): CController->renderPartial('_form', Array)
+#8 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#9 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#11 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#12 E:\xampp\htdocs\yii1\protected\controllers\DistrictController.php(27): CController->render('create', Array)
+#13 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DistrictController->actionCreate()
+#14 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#15 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#16 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#17 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('create')
+#18 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('district/create')
+#19 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#20 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#21 {main}
+REQUEST_URI=/yii1/index.php/district/create
+HTTP_REFERER=http://localhost/yii1/index.php/district/admin
+---
+2014/07/19 07:57:26 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "create.php".' in E:\yii-1.1.15.022a51\framework\web\CController.php:483
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CController.php(270): CController->missingAction('create.php')
+#1 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('create.php')
+#2 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('district/create...')
+#3 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/district/create.php
+---
+2014/07/19 07:58:28 [error] [exception.CException] exception 'CException' with message 'Alias "bootstrap.widgets.TbBox" is invalid. Make sure it points to an existing PHP file and the file is readable.' in E:\yii-1.1.15.022a51\framework\YiiBase.php:322
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CWidgetFactory.php(146): YiiBase::import('bootstrap.widge...', true)
+#1 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(DistrictController), 'bootstrap.widge...', Array)
+#2 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(189): CBaseController->createWidget('bootstrap.widge...', Array)
+#3 E:\xampp\htdocs\yii1\protected\views\district\create.php(29): CBaseController->beginWidget('bootstrap.widge...', Array)
+#4 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#5 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#8 E:\xampp\htdocs\yii1\protected\controllers\DistrictController.php(79): CController->render('create', Array)
+#9 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DistrictController->actionCreate()
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#17 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('create')
+#19 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('district/create')
+#20 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii1/index.php/district/create
+HTTP_REFERER=http://localhost/yii1/index.php/user/login
+---
+2014/07/19 08:00:13 [error] [exception.CException] exception 'CException' with message 'Alias "yiiwheels.widgets.TbBox" is invalid. Make sure it points to an existing PHP file and the file is readable.' in E:\yii-1.1.15.022a51\framework\YiiBase.php:322
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CWidgetFactory.php(146): YiiBase::import('yiiwheels.widge...', true)
+#1 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(DistrictController), 'yiiwheels.widge...', Array)
+#2 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(189): CBaseController->createWidget('yiiwheels.widge...', Array)
+#3 E:\xampp\htdocs\yii1\protected\views\district\create.php(29): CBaseController->beginWidget('yiiwheels.widge...', Array)
+#4 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#5 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#8 E:\xampp\htdocs\yii1\protected\controllers\DistrictController.php(79): CController->render('create', Array)
+#9 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DistrictController->actionCreate()
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#17 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('create')
+#19 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('district/create')
+#20 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii1/index.php/district/create
+---
+2014/07/19 08:01:36 [error] [exception.CException] exception 'CException' with message 'Alias "yiiwheels.widgets.box.TbBox" is invalid. Make sure it points to an existing PHP file and the file is readable.' in E:\yii-1.1.15.022a51\framework\YiiBase.php:322
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CWidgetFactory.php(146): YiiBase::import('yiiwheels.widge...', true)
+#1 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(146): CWidgetFactory->createWidget(Object(DistrictController), 'yiiwheels.widge...', Array)
+#2 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(189): CBaseController->createWidget('yiiwheels.widge...', Array)
+#3 E:\xampp\htdocs\yii1\protected\views\district\create.php(29): CBaseController->beginWidget('yiiwheels.widge...', Array)
+#4 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#5 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#8 E:\xampp\htdocs\yii1\protected\controllers\DistrictController.php(79): CController->render('create', Array)
+#9 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DistrictController->actionCreate()
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#17 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('create')
+#19 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('district/create')
+#20 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii1/index.php/district/create
+---
+2014/07/19 09:43:01 [error] [php] Invalid argument supplied for foreach() (E:\yii-1.1.15.022a51\framework\web\helpers\CHtml.php:2325)
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\helpers\TbHtml.php(2163): activeDropDownList()
+#1 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\helpers\TbHtml.php(2097): createActiveInput()
+#2 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\widgets\TbActiveForm.php(704): activeControlGroup()
+#3 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\widgets\TbActiveForm.php(577): TbActiveForm->createControlGroup()
+#4 E:\xampp\htdocs\yii1\protected\views\district\_form.php(22): TbActiveForm->dropDownListControlGroup()
+#5 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#6 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): DistrictController->renderInternal()
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(869): DistrictController->renderFile()
+#8 E:\xampp\htdocs\yii1\protected\views\district\create.php(23): DistrictController->renderPartial()
+#9 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#10 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): DistrictController->renderInternal()
+#11 E:\yii-1.1.15.022a51\framework\web\CController.php(869): DistrictController->renderFile()
+#12 E:\yii-1.1.15.022a51\framework\web\CController.php(782): DistrictController->renderPartial()
+#13 E:\xampp\htdocs\yii1\protected\controllers\DistrictController.php(79): DistrictController->render()
+#14 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DistrictController->actionCreate()
+#15 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#16 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): DistrictController->runAction()
+#17 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#18 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#19 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): DistrictController->filterAccessControl()
+#20 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#21 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#22 E:\yii-1.1.15.022a51\framework\web\CController.php(265): DistrictController->runActionWithFilters()
+#23 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): DistrictController->run()
+#24 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#25 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#26 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/district/create
+in E:\xampp\htdocs\yii1\protected\extensions\bootstrap\helpers\TbHtml.php (1677)
+in E:\xampp\htdocs\yii1\protected\extensions\bootstrap\helpers\TbHtml.php (2163)
+in E:\xampp\htdocs\yii1\protected\extensions\bootstrap\helpers\TbHtml.php (2097)
+2014/07/19 12:06:57 [error] [exception.CException] exception 'CException' with message 'BootstrapCode and its behaviors do not have a method or closure named "getRelations".' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php(37): CComponent->__call('getRelations', Array)
+#1 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php(37): BootstrapCode->getRelations('District')
+#2 E:\yii-1.1.15.022a51\framework\gii\CCodeModel.php(321): require('E:\xampp\htdocs...')
+#3 E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php(97): CCodeModel->render('E:\xampp\htdocs...')
+#4 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): CrudCode->prepare()
+#5 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#11 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/bootstrap/i...')
+#12 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+HTTP_REFERER=http://localhost/yii1/index.php/gii/bootstrap/index
+---
+2014/07/19 12:10:29 [error] [exception.CException] exception 'CException' with message 'Property "BootstrapCode.relations" is not defined.' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php(36): CComponent->__get('relations')
+#1 E:\yii-1.1.15.022a51\framework\gii\CCodeModel.php(321): require('E:\xampp\htdocs...')
+#2 E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php(97): CCodeModel->render('E:\xampp\htdocs...')
+#3 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): CrudCode->prepare()
+#4 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#5 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#10 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/bootstrap/i...')
+#11 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+HTTP_REFERER=http://localhost/yii1/index.php/gii/bootstrap/index
+---
+2014/07/19 12:27:07 [warning] [application] Failed to set unsafe attribute "layout" of "AweCrudCode".
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/19 12:27:10 [warning] [application] Failed to set unsafe attribute "layout" of "AweCrudCode".
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/19 12:31:13 [warning] [application] Failed to set unsafe attribute "layout" of "AweCrudCode".
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/19 12:31:16 [warning] [application] Failed to set unsafe attribute "layout" of "AweCrudCode".
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/19 12:40:47 [error] [exception.CException] exception 'CException' with message 'BootstrapCode and its behaviors do not have a method or closure named "relations".' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php(37): CComponent->__call('relations', Array)
+#1 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php(37): BootstrapCode->relations('District')
+#2 E:\yii-1.1.15.022a51\framework\gii\CCodeModel.php(321): require('E:\xampp\htdocs...')
+#3 E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php(104): CCodeModel->render('E:\xampp\htdocs...')
+#4 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): CrudCode->prepare()
+#5 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#11 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/bootstrap/i...')
+#12 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+HTTP_REFERER=http://localhost/yii1/index.php/gii/bootstrap/index
+---
+2014/07/19 12:42:27 [error] [exception.CException] exception 'CException' with message 'BootstrapCode and its behaviors do not have a method or closure named "relations".' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php(37): CComponent->__call('relations', Array)
+#1 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php(37): BootstrapCode->relations('District')
+#2 E:\yii-1.1.15.022a51\framework\gii\CCodeModel.php(321): require('E:\xampp\htdocs...')
+#3 E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php(97): CCodeModel->render('E:\xampp\htdocs...')
+#4 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): CrudCode->prepare()
+#5 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#11 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/bootstrap/i...')
+#12 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+HTTP_REFERER=http://localhost/yii1/index.php/gii/bootstrap/index
+---
+2014/07/19 12:46:26 [error] [exception.CException] exception 'CException' with message 'Property "BootstrapCode.tableName" is not defined.' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\BootstrapCode.php(76): CComponent->__get('tableName')
+#1 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php(36): BootstrapCode->generateRelations()
+#2 E:\yii-1.1.15.022a51\framework\gii\CCodeModel.php(321): require('E:\xampp\htdocs...')
+#3 E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php(97): CCodeModel->render('E:\xampp\htdocs...')
+#4 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): CrudCode->prepare()
+#5 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#11 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/bootstrap/i...')
+#12 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+HTTP_REFERER=http://localhost/yii1/index.php/gii/bootstrap/index
+---
+2014/07/19 12:49:36 [error] [exception.CException] exception 'CException' with message 'Property "CWebApplication.tableName" is not defined.' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\base\CModule.php(105): CComponent->__get('tableName')
+#1 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\BootstrapCode.php(75): CModule->__get('tableName')
+#2 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php(36): BootstrapCode->generateRelations()
+#3 E:\yii-1.1.15.022a51\framework\gii\CCodeModel.php(321): require('E:\xampp\htdocs...')
+#4 E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php(97): CCodeModel->render('E:\xampp\htdocs...')
+#5 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): CrudCode->prepare()
+#6 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#7 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#12 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/bootstrap/i...')
+#13 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+HTTP_REFERER=http://localhost/yii1/index.php/gii/bootstrap/index
+---
+2014/07/19 12:51:42 [error] [php] strpos() expects parameter 1 to be string, object given (E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\BootstrapCode.php:77)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\gii\CCodeModel.php(321): require()
+#1 E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php(97): BootstrapCode->render()
+#2 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): BootstrapCode->prepare()
+#3 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): BootstrapGenerator->prepare()
+#4 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): BootstrapGenerator->actionIndex()
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(286): BootstrapGenerator->runAction()
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(265): BootstrapGenerator->runActionWithFilters()
+#8 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): BootstrapGenerator->run()
+#9 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#10 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+in E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\BootstrapCode.php (77)
+in E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php (36)
+in E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php (97)
+2014/07/19 12:53:15 [error] [exception.CException] exception 'CException' with message 'Property "BootstrapCode.connectionId" is not defined.' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\BootstrapCode.php(81): CComponent->__get('connectionId')
+#1 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php(36): BootstrapCode->generateRelations()
+#2 E:\yii-1.1.15.022a51\framework\gii\CCodeModel.php(321): require('E:\xampp\htdocs...')
+#3 E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php(97): CCodeModel->render('E:\xampp\htdocs...')
+#4 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): CrudCode->prepare()
+#5 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#11 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/bootstrap/i...')
+#12 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+HTTP_REFERER=http://localhost/yii1/index.php/gii/bootstrap/index
+---
+2014/07/19 12:55:55 [error] [exception.CException] exception 'CException' with message 'Property "BootstrapCode.tablePrefix" is not defined.' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\BootstrapCode.php(84): CComponent->__get('tablePrefix')
+#1 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php(36): BootstrapCode->generateRelations()
+#2 E:\yii-1.1.15.022a51\framework\gii\CCodeModel.php(321): require('E:\xampp\htdocs...')
+#3 E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php(97): CCodeModel->render('E:\xampp\htdocs...')
+#4 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): CrudCode->prepare()
+#5 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#6 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#10 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#11 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/bootstrap/i...')
+#12 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#14 {main}
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+HTTP_REFERER=http://localhost/yii1/index.php/gii/bootstrap/index
+---
+2014/07/19 12:57:38 [error] [exception.CException] exception 'CException' with message 'BootstrapCode and its behaviors do not have a method or closure named "removePrefix".' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\BootstrapCode.php(164): CComponent->__call('removePrefix', Array)
+#1 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\BootstrapCode.php(164): BootstrapCode->removePrefix('authassignment', false)
+#2 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\BootstrapCode.php(117): BootstrapCode->generateClassName('authassignment')
+#3 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php(36): BootstrapCode->generateRelations()
+#4 E:\yii-1.1.15.022a51\framework\gii\CCodeModel.php(321): require('E:\xampp\htdocs...')
+#5 E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php(97): CCodeModel->render('E:\xampp\htdocs...')
+#6 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): CrudCode->prepare()
+#7 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#8 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#13 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/bootstrap/i...')
+#14 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+HTTP_REFERER=http://localhost/yii1/index.php/gii/bootstrap/index
+---
+2014/07/19 12:59:02 [error] [php] Undefined offset: 1 (E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php:38)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): BootstrapCode->prepare()
+#1 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): BootstrapGenerator->prepare()
+#2 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): BootstrapGenerator->actionIndex()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(286): BootstrapGenerator->runAction()
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(265): BootstrapGenerator->runActionWithFilters()
+#6 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): BootstrapGenerator->run()
+#7 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+in E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php (38)
+in E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php (97)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/19 13:15:38 [error] [php] Undefined variable: table (E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php:37)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): BootstrapCode->prepare()
+#1 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): BootstrapGenerator->prepare()
+#2 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): BootstrapGenerator->actionIndex()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(286): BootstrapGenerator->runAction()
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(265): BootstrapGenerator->runActionWithFilters()
+#6 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): BootstrapGenerator->run()
+#7 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+in E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php (37)
+in E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php (97)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/19 13:54:47 [error] [php] Undefined variable: form (E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php:34)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): BootstrapCode->prepare()
+#1 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): BootstrapGenerator->prepare()
+#2 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): BootstrapGenerator->actionIndex()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(286): BootstrapGenerator->runAction()
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(265): BootstrapGenerator->runActionWithFilters()
+#6 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): BootstrapGenerator->run()
+#7 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+in E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php (34)
+in E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php (97)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/19 14:02:33 [error] [exception.CException] exception 'CException' with message 'Property "BootstrapCode.menu" is not defined.' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:173
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\create.php(35): CComponent->__set('menu', Array)
+#1 E:\yii-1.1.15.022a51\framework\gii\CCodeModel.php(321): require('E:\xampp\htdocs...')
+#2 E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php(97): CCodeModel->render('E:\xampp\htdocs...')
+#3 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): CrudCode->prepare()
+#4 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#5 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#10 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/bootstrap/i...')
+#11 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+HTTP_REFERER=http://localhost/yii1/index.php/gii/bootstrap/index
+---
+2014/07/19 14:15:15 [error] [php] Missing argument 2 for YiiBase::t(), called in E:\xampp\htdocs\yii1\protected\models\State.php on line 61 and defined (E:\yii-1.1.15.022a51\framework\YiiBase.php:577)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\helpers\CHtml.php(1390): State->getAttributeLabel()
+#1 E:\yii-1.1.15.022a51\framework\web\helpers\CHtml.php(1415): activeLabel()
+#2 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\helpers\TbHtml.php(2106): activeLabelEx()
+#3 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\widgets\TbActiveForm.php(704): activeControlGroup()
+#4 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\widgets\TbActiveForm.php(446): TbActiveForm->createControlGroup()
+#5 E:\xampp\htdocs\yii1\protected\views\state\_form.php(22): TbActiveForm->textFieldControlGroup()
+#6 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#7 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): StateController->renderInternal()
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(869): StateController->renderFile()
+#9 E:\xampp\htdocs\yii1\protected\views\state\create.php(20): StateController->renderPartial()
+#10 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#11 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): StateController->renderInternal()
+#12 E:\yii-1.1.15.022a51\framework\web\CController.php(869): StateController->renderFile()
+#13 E:\yii-1.1.15.022a51\framework\web\CController.php(782): StateController->renderPartial()
+#14 E:\xampp\htdocs\yii1\protected\controllers\StateController.php(79): StateController->render()
+#15 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): StateController->actionCreate()
+#16 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#17 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): StateController->runAction()
+#18 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#19 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#20 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): StateController->filterAccessControl()
+#21 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#22 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#23 E:\yii-1.1.15.022a51\framework\web\CController.php(265): StateController->runActionWithFilters()
+#24 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): StateController->run()
+#25 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#26 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#27 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/state/create
+in E:\xampp\htdocs\yii1\protected\models\State.php (61)
+in E:\xampp\htdocs\yii1\protected\extensions\bootstrap\helpers\TbHtml.php (2106)
+in E:\xampp\htdocs\yii1\protected\extensions\bootstrap\widgets\TbActiveForm.php (704)
+2014/07/19 14:22:59 [error] [exception.CException] exception 'CException' with message 'District and its behaviors do not have a method or closure named "listAll".' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(227): CComponent->__call('listAll', Array)
+#1 E:\xampp\htdocs\yii1\protected\views\block\_form.php(27): CActiveRecord->__call('listAll', Array)
+#2 E:\xampp\htdocs\yii1\protected\views\block\_form.php(27): District->listAll()
+#3 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#4 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#6 E:\xampp\htdocs\yii1\protected\views\block\create.php(20): CController->renderPartial('_form', Array)
+#7 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#8 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 E:\xampp\htdocs\yii1\protected\controllers\BlockController.php(79): CController->render('create', Array)
+#12 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): BlockController->actionCreate()
+#13 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#20 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('create')
+#22 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('block/create')
+#23 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/yii1/index.php/block/create
+---
+2014/07/20 04:28:48 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "states".' in E:\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('states')
+#1 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii1/index.php/states
+---
+2014/07/20 09:27:05 [error] [php] include(revenue_village.php): failed to open stream: No such file or directory (E:\yii-1.1.15.022a51\framework\YiiBase.php:427)
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\views\school\_form.php(32): spl_autoload_call()
+#1 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#2 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): SchoolController->renderInternal()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(869): SchoolController->renderFile()
+#4 E:\xampp\htdocs\yii1\protected\views\school\create.php(20): SchoolController->renderPartial()
+#5 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#6 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): SchoolController->renderInternal()
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(869): SchoolController->renderFile()
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(782): SchoolController->renderPartial()
+#9 E:\xampp\htdocs\yii1\protected\controllers\SchoolController.php(79): SchoolController->render()
+#10 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): SchoolController->actionCreate()
+#11 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): SchoolController->runAction()
+#13 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): SchoolController->filterAccessControl()
+#16 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#18 E:\yii-1.1.15.022a51\framework\web\CController.php(265): SchoolController->runActionWithFilters()
+#19 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): SchoolController->run()
+#20 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/school/create
+in E:\xampp\htdocs\yii1\protected\views\school\_form.php (32)
+in E:\xampp\htdocs\yii1\protected\views\school\create.php (20)
+in E:\xampp\htdocs\yii1\protected\controllers\SchoolController.php (79)
+2014/07/20 09:33:37 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The requested page does not exist.' in E:\xampp\htdocs\yii1\protected\controllers\BlockController.php:164
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\controllers\BlockController.php(55): BlockController->loadModel('220400')
+#1 [internal function]: BlockController->actionView('220400')
+#2 E:\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(BlockController), Array)
+#3 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(BlockController), Object(ReflectionMethod), Array)
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#5 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#6 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#8 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#9 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#11 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('view')
+#13 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('block/view')
+#14 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii1/index.php/block/220400
+---
+2014/07/20 10:39:05 [error] [php] include(skill_level_category.php): failed to open stream: No such file or directory (E:\yii-1.1.15.022a51\framework\YiiBase.php:427)
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\views\skillLevel\_form.php(26): spl_autoload_call()
+#1 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#2 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): SkillLevelController->renderInternal()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(869): SkillLevelController->renderFile()
+#4 E:\xampp\htdocs\yii1\protected\views\skillLevel\create.php(20): SkillLevelController->renderPartial()
+#5 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#6 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): SkillLevelController->renderInternal()
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(869): SkillLevelController->renderFile()
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(782): SkillLevelController->renderPartial()
+#9 E:\xampp\htdocs\yii1\protected\controllers\SkillLevelController.php(79): SkillLevelController->render()
+#10 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): SkillLevelController->actionCreate()
+#11 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): SkillLevelController->runAction()
+#13 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): SkillLevelController->filterAccessControl()
+#16 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#18 E:\yii-1.1.15.022a51\framework\web\CController.php(265): SkillLevelController->runActionWithFilters()
+#19 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): SkillLevelController->run()
+#20 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/skillLevel/create
+in E:\xampp\htdocs\yii1\protected\views\skillLevel\_form.php (26)
+in E:\xampp\htdocs\yii1\protected\views\skillLevel\create.php (20)
+in E:\xampp\htdocs\yii1\protected\controllers\SkillLevelController.php (79)
+2014/07/20 10:45:50 [error] [exception.CException] exception 'CException' with message 'Property "BootstrapCode.generateClassName" is not defined.' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\extensions\bootstrap\gii\bootstrap\templates\default\_form.php(35): CComponent->__get('generateClassNa...')
+#1 E:\yii-1.1.15.022a51\framework\gii\CCodeModel.php(321): require('E:\xampp\htdocs...')
+#2 E:\xampp\htdocs\yii1\protected\extensions\giiNew\generators\crud\CrudCode.php(97): CCodeModel->render('E:\xampp\htdocs...')
+#3 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(162): CrudCode->prepare()
+#4 E:\yii-1.1.15.022a51\framework\gii\CCodeGenerator.php(63): CCodeGenerator->prepare()
+#5 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): CCodeGenerator->actionIndex()
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#9 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('index')
+#10 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('gii/bootstrap/i...')
+#11 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#13 {main}
+REQUEST_URI=/yii1/index.php/gii/bootstrap/index
+HTTP_REFERER=http://localhost/yii1/index.php/gii/bootstrap/index
+---
+2014/07/20 10:49:34 [error] [php] include(Subject.php): failed to open stream: No such file or directory (E:\yii-1.1.15.022a51\framework\YiiBase.php:427)
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\views\skillLevel\_form.php(43): spl_autoload_call()
+#1 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#2 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): SkillLevelController->renderInternal()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(869): SkillLevelController->renderFile()
+#4 E:\xampp\htdocs\yii1\protected\views\skillLevel\create.php(20): SkillLevelController->renderPartial()
+#5 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require()
+#6 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): SkillLevelController->renderInternal()
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(869): SkillLevelController->renderFile()
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(782): SkillLevelController->renderPartial()
+#9 E:\xampp\htdocs\yii1\protected\controllers\SkillLevelController.php(79): SkillLevelController->render()
+#10 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): SkillLevelController->actionCreate()
+#11 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#12 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): SkillLevelController->runAction()
+#13 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#14 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#15 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): SkillLevelController->filterAccessControl()
+#16 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#17 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#18 E:\yii-1.1.15.022a51\framework\web\CController.php(265): SkillLevelController->runActionWithFilters()
+#19 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): SkillLevelController->run()
+#20 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#21 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#22 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/skillLevel/create
+in E:\xampp\htdocs\yii1\protected\views\skillLevel\_form.php (43)
+in E:\xampp\htdocs\yii1\protected\views\skillLevel\create.php (20)
+in E:\xampp\htdocs\yii1\protected\controllers\SkillLevelController.php (79)
+2014/07/20 10:50:23 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "subject/create".' in E:\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('subject/create')
+#1 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii1/index.php/subject/create
+---
