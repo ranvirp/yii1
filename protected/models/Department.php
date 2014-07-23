@@ -5,13 +5,13 @@
  *
  * The followings are the available columns in table 'department':
  * @property integer $id
- * @property string $name
+ * @property string $name_hi
  * @property string $code
- * @property string $statecode
- * @property integer $designation_type_id
+ * @property string $name_en
+ * @property string $state_code
  *
  * The followings are the available model relations:
- * @property DesignationType $designationType
+ * @property State $stateCode
  * @property DesignationType[] $designationTypes
  */
 class Department extends CActiveRecord
@@ -32,13 +32,12 @@ class Department extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('statecode, designation_type_id', 'required'),
-			array('designation_type_id', 'numerical', 'integerOnly'=>true),
-			array('name, code', 'length', 'max'=>45),
-			array('statecode', 'length', 'max'=>2),
+			array('state_code', 'required'),
+			array('name_hi, code, name_en', 'length', 'max'=>45),
+			array('state_code', 'length', 'max'=>2),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name, code, statecode, designation_type_id', 'safe', 'on'=>'search'),
+			array('id, name_hi, code, name_en, state_code', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -50,7 +49,7 @@ class Department extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
-			'designationType' => array(self::BELONGS_TO, 'DesignationType', 'designation_type_id'),
+			'stateCode' => array(self::BELONGS_TO, 'State', 'state_code'),
 			'designationTypes' => array(self::HAS_MANY, 'DesignationType', 'department_id'),
 		);
 	}
@@ -61,11 +60,11 @@ class Department extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'name' => 'Name',
-			'code' => 'Code',
-			'statecode' => 'Statecode',
-			'designation_type_id' => 'Designation Type',
+			'id' => Yii::t('app','ID'),
+			'name_hi' => Yii::t('app','Name Hi'),
+			'code' => Yii::t('app','Code'),
+			'name_en' => Yii::t('app','Name En'),
+			'state_code' => Yii::t('app','State Code'),
 		);
 	}
 
@@ -88,10 +87,10 @@ class Department extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
+		$criteria->compare('name_hi',$this->name_hi,true);
 		$criteria->compare('code',$this->code,true);
-		$criteria->compare('statecode',$this->statecode,true);
-		$criteria->compare('designation_type_id',$this->designation_type_id);
+		$criteria->compare('name_en',$this->name_en,true);
+		$criteria->compare('state_code',$this->state_code,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -107,5 +106,29 @@ class Department extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	/**
+	* Returns all models in List of primary key,name format
+	*/
+	public static function listAll($className=__CLASS__)
+	{
+	    $lang = Yii::app()->language;
+        $models = $className::model()->findAll();
+        $pk = $className::model()->tableSchema->primaryKey;
+        // format models resulting using listData     
+        $list = CHtml::listData($models, $pk, 'name_'.$lang);
+        return $list;
+	}
+        /**
+	* Returns all models in List of primary key,name format
+	*/
+	public static function listAllJson($className=__CLASS__)
+	{
+	    $lang = Yii::app()->language;
+        $models = $className::model()->findAll();
+        $pk = $className::model()->tableSchema->primaryKey;
+        // format models resulting using listData     
+        $list = CHtml::listData($models, $pk, 'name_'.$lang);
+        return json_encode($list);
 	}
 }

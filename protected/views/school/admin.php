@@ -50,7 +50,12 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 		'id',
 		'name_en',
 		'name_hi',
-		'revenue_viilage_code',
+		'rural_urban',
+		'location_type',
+		'location_code',
+		/*
+		'dise_code',
+		*/
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),

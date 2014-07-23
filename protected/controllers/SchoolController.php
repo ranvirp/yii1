@@ -177,4 +177,10 @@ class SchoolController extends Controller
 			Yii::app()->end();
 		}
 	}
+         protected function respond($httpCode, $status, $data = array()) {
+        $response['status'] = $status;
+        $response['data'] = $data;
+        echo CJSON::encode($response);
+        Yii::app()->end($httpCode, true);
+    }
 }

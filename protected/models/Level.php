@@ -5,7 +5,12 @@
  *
  * The followings are the available columns in table 'level':
  * @property integer $id
- * @property string $name
+ * @property string $name_hi
+ * @property string $name_en
+ * @property string $table_name
+ *
+ * The followings are the available model relations:
+ * @property DesignationType[] $designationTypes
  */
 class Level extends CActiveRecord
 {
@@ -25,10 +30,10 @@ class Level extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('name', 'length', 'max'=>45),
+			array('name_hi, name_en, table_name', 'length', 'max'=>45),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name', 'safe', 'on'=>'search'),
+			array('id, name_hi, name_en, table_name', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -40,6 +45,7 @@ class Level extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'designationTypes' => array(self::HAS_MANY, 'DesignationType', 'level_id'),
 		);
 	}
 
@@ -49,8 +55,10 @@ class Level extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'name' => 'Name',
+			'id' => Yii::t('app','ID'),
+			'name_hi' => Yii::t('app','Name Hi'),
+			'name_en' => Yii::t('app','Name En'),
+			'table_name' => Yii::t('app','Table Name'),
 		);
 	}
 
@@ -73,7 +81,9 @@ class Level extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('name',$this->name,true);
+		$criteria->compare('name_hi',$this->name_hi,true);
+		$criteria->compare('name_en',$this->name_en,true);
+		$criteria->compare('table_name',$this->table_name,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -89,5 +99,29 @@ class Level extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	/**
+	* Returns all models in List of primary key,name format
+	*/
+	public static function listAll($className=__CLASS__)
+	{
+	    $lang = Yii::app()->language;
+        $models = $className::model()->findAll();
+        $pk = $className::model()->tableSchema->primaryKey;
+        // format models resulting using listData     
+        $list = CHtml::listData($models, $pk, 'name_'.$lang);
+        return $list;
+	}
+        /**
+	* Returns all models in List of primary key,name format
+	*/
+	public static function listAllJson($className=__CLASS__)
+	{
+	    $lang = Yii::app()->language;
+        $models = $className::model()->findAll();
+        $pk = $className::model()->tableSchema->primaryKey;
+        // format models resulting using listData     
+        $list = CHtml::listData($models, $pk, 'name_'.$lang);
+        return json_encode($list);
 	}
 }

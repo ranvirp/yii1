@@ -12,6 +12,7 @@
  * @property string $unit_en
  * @property integer $level
  * @property string $subject_code
+ * @property string $required_value
  *
  * The followings are the available model relations:
  * @property SkillLevelCategory $category
@@ -36,7 +37,7 @@ class SkillLevel extends CActiveRecord
 		// will receive user inputs.
 		return array(
 			array('category_id, level', 'numerical', 'integerOnly'=>true),
-			array('name_hi, name_en, unit_hi, unit_en', 'length', 'max'=>45),
+			array('name_hi, name_en, unit_hi, unit_en,required_value', 'length', 'max'=>45),
 			array('subject_code', 'length', 'max'=>10),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
@@ -140,4 +141,20 @@ class SkillLevel extends CActiveRecord
         $list = CHtml::listData($models, $pk, 'name_'.$lang);
         return json_encode($list);
 	}
+        public static function listAllSkilLevel($className=__CLASS__)
+        {
+            $x=array();
+            $lang=Yii::app()->language;
+            $name ="name_".$lang;
+            $unit="unit_".$lang;
+            $sls = $className::model()->findAll(array('order'=>'subject_code ASC,level ASC'));
+            foreach ($sls as $skillLevel)
+            {
+               
+                $subject=$skillLevel->subjectCode;
+                $category=$skillLevel->category;
+                $x[$subject->$name][$skillLevel->level][]=array('id'=>$skillLevel->id,'category'=>$category->$name,'name'=>$skillLevel->$name,'unit'=>$skillLevel->unit_en,'unit_lang'=>$skillLevel->$unit);
+            }
+            return $x; 
+        }
 }

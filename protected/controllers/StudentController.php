@@ -1,7 +1,10 @@
 <?php
 
 class StudentController extends Controller
-{
+{const RESPONSE_OK = 'OK';
+    const RESPONSE_NO_DATA = 'No data';
+    const RESPONSE_NOT_FOUND = 'Not found';
+    const RESPONSE_VALIDATION_ERRORS = 'Validation errors';
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
@@ -32,7 +35,7 @@ class StudentController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','GetBySchoolJSON'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -177,4 +180,19 @@ class StudentController extends Controller
 			Yii::app()->end();
 		}
 	}
+        public function actionGetBySchoolJSON($id)
+        {
+            $models=Student::model()->findAllByAttributes(array('school_id'=>intval($id)));
+        $lang=Yii::app()->language;
+       
+        
+         $list = CHtml::listData($models, 'id', 'name_'.$lang);
+        $this->respond(200, self::RESPONSE_OK, $list);
+        }
+         protected function respond($httpCode, $status, $data = array()) {
+        $response['status'] = $status;
+        $response['data'] = $data;
+        echo CJSON::encode($response);
+        Yii::app()->end($httpCode, true);
+    }
 }

@@ -17,7 +17,13 @@
 
                     <?php echo $form->textFieldControlGroup($model,'name_hi',array('span'=>5,'maxlength'=>45)); ?>
 
-                    <?php echo $form->textFieldControlGroup($model,'revenue_viilage_code',array('span'=>5,'maxlength'=>10)); ?>
+                    <?php echo $form->textFieldControlGroup($model,'rural_urban',array('span'=>5,'maxlength'=>1)); ?>
+
+                    <?php echo $form->textFieldControlGroup($model,'location_type',array('span'=>5,'maxlength'=>15)); ?>
+
+                    <?php echo $form->textFieldControlGroup($model,'location_code',array('span'=>5,'maxlength'=>45)); ?>
+
+                    <?php echo $form->textFieldControlGroup($model,'dise_code',array('span'=>5,'maxlength'=>45)); ?>
 
         <div class="form-actions">
         <?php echo TbHtml::submitButton('Search',  array('color' => TbHtml::BUTTON_COLOR_PRIMARY,));?>

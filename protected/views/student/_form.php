@@ -34,7 +34,7 @@
     	 <?php echo $form->textFieldControlGroup($model,'name_en',array('span'=>5,'maxlength'=>45)); ?>
 
     
-    	 <?php echo $form->textFieldControlGroup($model,'date_of_birth',array('span'=>5,'maxlength'=>10)); ?>
+    	 <?php echo $form->dateFieldControlGroup($model,'date_of_birth'); ?>
 
     
     	 <?php echo $form->textFieldControlGroup($model,'age',array('span'=>5,'maxlength'=>4)); ?>

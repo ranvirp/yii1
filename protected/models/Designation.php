@@ -1,17 +1,16 @@
 <?php
 
 /**
- * This is the model class for table "designation".
+ * This is the model class for table "Designation".
  *
- * The followings are the available columns in table 'designation':
+ * The followings are the available columns in table 'Designation':
  * @property integer $id
- * @property string $level
- * @property string $level_id
- * @property string $userid
  * @property integer $designation_type_id
+ * @property integer $level_type_id
  *
  * The followings are the available model relations:
  * @property DesignationType $designationType
+ * @property DesignationUser[] $designationUsers
  */
 class Designation extends CActiveRecord
 {
@@ -20,7 +19,7 @@ class Designation extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return 'designation';
+		return 'Designation';
 	}
 
 	/**
@@ -31,12 +30,11 @@ class Designation extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id, designation_type_id', 'required'),
-			array('id, designation_type_id', 'numerical', 'integerOnly'=>true),
-			array('level, level_id, userid', 'length', 'max'=>45),
+			array('designation_type_id, level_type_id', 'required'),
+			array('designation_type_id, level_type_id', 'numerical', 'integerOnly'=>true),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, level, level_id, userid, designation_type_id', 'safe', 'on'=>'search'),
+			array('id, designation_type_id, level_type_id', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -49,6 +47,7 @@ class Designation extends CActiveRecord
 		// class name for the relations automatically generated below.
 		return array(
 			'designationType' => array(self::BELONGS_TO, 'DesignationType', 'designation_type_id'),
+			'designationUsers' => array(self::HAS_MANY, 'DesignationUser', 'designation_id'),
 		);
 	}
 
@@ -58,11 +57,9 @@ class Designation extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'level' => 'Level',
-			'level_id' => 'Level',
-			'userid' => 'Userid',
-			'designation_type_id' => 'Designation Type',
+			'id' => Yii::t('app','ID'),
+			'designation_type_id' => Yii::t('app','Designation Type'),
+			'level_type_id' => Yii::t('app','Level Type'),
 		);
 	}
 
@@ -85,10 +82,8 @@ class Designation extends CActiveRecord
 		$criteria=new CDbCriteria;
 
 		$criteria->compare('id',$this->id);
-		$criteria->compare('level',$this->level,true);
-		$criteria->compare('level_id',$this->level_id,true);
-		$criteria->compare('userid',$this->userid,true);
 		$criteria->compare('designation_type_id',$this->designation_type_id);
+		$criteria->compare('level_type_id',$this->level_type_id);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -105,4 +100,53 @@ class Designation extends CActiveRecord
 	{
 		return parent::model($className);
 	}
+	/**
+	* Returns all models in List of primary key,name format
+	*/
+	public static function listAll($className=__CLASS__)
+	{
+	    $lang = Yii::app()->language;
+        $models = $className::model()->findAll();
+        $pk = $className::model()->tableSchema->primaryKey;
+        // format models resulting using listData     
+        $list = CHtml::listData($models, $pk, 'name_'.$lang);
+        return $list;
+	}
+        /**
+	* Returns all models in List of primary key,name format
+	*/
+	public static function listAllJson($className=__CLASS__)
+	{
+	    $lang = Yii::app()->language;
+        $models = $className::model()->findAll();
+        $pk = $className::model()->tableSchema->primaryKey;
+        // format models resulting using listData     
+        $list = CHtml::listData($models, $pk, 'name_'.$lang);
+        return json_encode($list);
+	}
+         public static function assignUser($designation_id,$userid)
+        {
+            //check level can be s
+            $designation = Designation::model()->with('designation_type_id')->findByPk($designation_id);
+            $user = Yii::app()->user;
+            //check if the person who is assigning posts has right to assign post of the same district
+            //get district of the post
+            $level= $designation->designation_type_id->name_en;
+            if (($level!='govt') && ($level!='dept'))
+            {
+                $designation->foreignKeys[$column->name][0];
+            }
+                
+        }
+        public static function getByType($id)
+        {
+            $designations=Designation::model()->with('designationType')->findAllByAttributes(array('designation_type_id'=>$id));
+            $lang=Yii::app()->lang;
+            $x=array();
+            foreach($designations as $designation)
+            {
+                $levelmodel = Level::model()->findByPk($designation->designationType->level_id);
+               $x[$designation->id]=$designation->designationType->
+            }
+        }
 }

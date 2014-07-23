@@ -32,7 +32,7 @@ class SkillLevelCategoryController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','GetBySubjectJSON'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -177,4 +177,8 @@ class SkillLevelCategoryController extends Controller
 			Yii::app()->end();
 		}
 	}
+        public static function actionGetBySubjectJSON($id)
+        {
+            print SkillLevelCategory::model()->listAllJSON(array('subject_code'=>$id));
+        }
 }

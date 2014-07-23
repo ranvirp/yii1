@@ -6,6 +6,12 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
+    'controllerMap' => array(
+'api' => array(
+'class' => 'ext.json_api.JsonApiController',
+'modelName' => 'Post',
+),
+),
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
 'language'=>'hi',
@@ -22,6 +28,7 @@ return array(
 	'import'=>array(
 		'application.models.*',
 		'application.components.*',
+                'application.controllers.UtilityController',
 		'application.modules.user.models.*',
         'application.modules.user.components.*',
         'application.modules.rights.*',
@@ -67,8 +74,8 @@ return array(
  
                 # page after logout
                 'returnLogoutUrl' => array('/user/login'),
-        ),
- 
+      
+ ),
         //Modules Rights
    'rights'=>array(
  

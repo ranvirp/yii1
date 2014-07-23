@@ -17,8 +17,20 @@
 	<?php echo CHtml::encode($data->name_hi); ?>
 	<br />
 
-	<b><?php echo CHtml::encode($data->getAttributeLabel('revenue_viilage_code')); ?>:</b>
-	<?php echo CHtml::encode($data->revenue_viilage_code); ?>
+	<b><?php echo CHtml::encode($data->getAttributeLabel('rural_urban')); ?>:</b>
+	<?php echo CHtml::encode($data->rural_urban); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('location_type')); ?>:</b>
+	<?php echo CHtml::encode($data->location_type); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('location_code')); ?>:</b>
+	<?php echo CHtml::encode($data->location_code); ?>
+	<br />
+
+	<b><?php echo CHtml::encode($data->getAttributeLabel('dise_code')); ?>:</b>
+	<?php echo CHtml::encode($data->dise_code); ?>
 	<br />
 
 

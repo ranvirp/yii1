@@ -3,7 +3,29 @@
 /* @var $model SkillLevel */
 /* @var $form TbActiveForm */
 ?>
+<script>
+  function populateCategories(value)
+  {
+      $.get('<?php echo $this->createUrl('skillLevelCategory/GetBySubjectJSON/id');?>'+'/'+value,
+          function(data)
+          {
+              data = $.parseJSON(data)
+            
+               
+                var htmlToAppend='';
+              $.each(data,function(key,value)
+         {
+        htmlToAppend +="<option value='"+key+"'>" + value  + "</option>";
+         });
 
+                 
+                 $('#SkillLevel_category_id').html(htmlToAppend);    
+            
+          }
+              
+            )
+  }
+  </script>
 <div class="form">
 
     <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
@@ -22,7 +44,7 @@
    
     
     
-    
+     <?php   echo $form->dropDownListControlGroup($model,'subject_code',Subject::model()->listAll(),array('onChange'=>'js:populateCategories($(this).val())'));  ?>
     <?php   echo $form->dropDownListControlGroup($model,'category_id',SkillLevelCategory::model()->listAll());  ?>
     
     	 <?php echo $form->textFieldControlGroup($model,'name_hi',array('span'=>5,'maxlength'=>45)); ?>
@@ -40,7 +62,7 @@
     	 <?php echo $form->textFieldControlGroup($model,'level',array('span'=>5,'maxlength'=>4)); ?>
 
     
-    <?php   echo $form->dropDownListControlGroup($model,'subject_code',Subject::model()->listAll());  ?>
+   
     <div class="form-actions">
         <?php echo TbHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array(
 		    'color'=>TbHtml::BUTTON_COLOR_PRIMARY,

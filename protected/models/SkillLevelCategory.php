@@ -117,10 +117,10 @@ class SkillLevelCategory extends CActiveRecord
         /**
 	* Returns all models in List of primary key,name format
 	*/
-	public static function listAllJson($className=__CLASS__)
+	public static function listAllJson($attributes,$className=__CLASS__)
 	{
 	    $lang = Yii::app()->language;
-        $models = $className::model()->findAll();
+        $models = $className::model()->findAllByAttributes($attributes);
         $pk = $className::model()->tableSchema->primaryKey;
         // format models resulting using listData     
         $list = CHtml::listData($models, $pk, 'name_'.$lang);

@@ -29,6 +29,9 @@ $this->menu=array(
 		'id',
 		'name_en',
 		'name_hi',
-		'revenue_viilage_code',
+		'rural_urban',
+		'location_type',
+		'location_code',
+		'dise_code',
 	),
 )); ?>

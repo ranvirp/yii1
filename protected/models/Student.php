@@ -16,6 +16,7 @@
  * @property string $section
  *
  * The followings are the available model relations:
+ * @property LearningLevel[] $learningLevels
  * @property School $school
  */
 class Student extends CActiveRecord
@@ -54,6 +55,7 @@ class Student extends CActiveRecord
 		// NOTE: you may need to adjust the relation name and the related
 		// class name for the relations automatically generated below.
 		return array(
+			'learningLevels' => array(self::HAS_MANY, 'LearningLevel', 'student_id'),
 			'school' => array(self::BELONGS_TO, 'School', 'school_id'),
 		);
 	}

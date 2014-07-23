@@ -29,7 +29,16 @@
     	 <?php echo $form->textFieldControlGroup($model,'name_hi',array('span'=>5,'maxlength'=>45)); ?>
 
     
-    <?php   echo $form->dropDownListControlGroup($model,'revenue_viilage_code',RevenueVillage::model()->listAll());  ?>
+    <?php   echo $form->dropDownListControlGroup($model,'rural_urban',RevenueVillage::model()->listAll());  ?>
+    
+    	 <?php echo $form->textFieldControlGroup($model,'location_type',array('span'=>5,'maxlength'=>15)); ?>
+
+    
+    	 <?php echo $form->textFieldControlGroup($model,'location_code',array('span'=>5,'maxlength'=>45)); ?>
+
+    
+    	 <?php echo $form->textFieldControlGroup($model,'dise_code',array('span'=>5,'maxlength'=>45)); ?>
+
     <div class="form-actions">
         <?php echo TbHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array(
 		    'color'=>TbHtml::BUTTON_COLOR_PRIMARY,

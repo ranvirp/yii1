@@ -11,7 +11,10 @@
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/css/custom.css" />
 
         <?php Yii::app()->bootstrap->register(); ?>
+     <!--   <script type="text/javascript" src="https://www.google.com/jsapi" ></script>
+        <script src='<?php echo Yii::app()->baseUrl.'/js/googleTransliteration.js'; ?>' type='text/javascript' ></script>
         <link href="//netdna.bootstrapcdn.com/font-awesome/4.0.1/css/font-awesome.css" rel="stylesheet" />
+     -->
         <?php Yii::app()->language='hi';?>
 
     </head>
