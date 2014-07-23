@@ -32,7 +32,7 @@ class DesignationController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update'),
+				'actions'=>array('create','update','getByTypeJSON','getLevelsByTypeJSON','userAssign'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -66,8 +66,7 @@ class DesignationController extends Controller
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-
-		if (isset($_POST['Designation'])) {
+        if (isset($_POST['Designation'])) {
 			$model->attributes=$_POST['Designation'];
 			if ($model->save()) {
 				$this->redirect(array('view','id'=>$model->id));
@@ -176,5 +175,32 @@ class DesignationController extends Controller
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}
+	}
+	public function actionGetByTypeJSON($id)
+	{
+		print json_encode(Designation::model()->getByType($id));
+	}
+	public function actionGetLevelsByTypeJSON($id)
+	{
+		print json_encode(Designation::model()->getLevelsByType($id));
+	}
+	public function actionUserAssign()
+	{
+		$model=new DesignationUser;
+
+		// Uncomment the following line if AJAX validation is needed
+		// $this->performAjaxValidation($model);
+        if (isset($_POST['DesignationAssign'])) {
+			$model->attributes=$_POST['DesignationAssign'];
+			$model->create_time=time();
+			$model->create_user=Yii::app()->user->id;
+			if ($model->save()) {
+				$this->redirect(array('view','id'=>$model->id));
+			}
+		}
+
+		$this->render('_formAssign',array(
+			'model'=>$model,
+		));
 	}
 }

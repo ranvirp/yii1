@@ -141,12 +141,29 @@ class Designation extends CActiveRecord
         public static function getByType($id)
         {
             $designations=Designation::model()->with('designationType')->findAllByAttributes(array('designation_type_id'=>$id));
-            $lang=Yii::app()->lang;
+            $lang=Yii::app()->language;
+			$name ="name_".$lang;
             $x=array();
             foreach($designations as $designation)
             {
                 $levelmodel = Level::model()->findByPk($designation->designationType->level_id);
-               $x[$designation->id]=$designation->designationType->
-            }
+				$table=$levelmodel->table_name;
+				
+               $x[$designation->id]=$table::model()->findByPk($designation->level_type_id)->$name;
+			         }
+			return $x;
         }
+		public static function getLevelsByType($id)
+        {
+                $levelmodel = DesignationType::model()->findBYPk($id)->level->table_name;
+                return $levelmodel::model()->listAll();
+        }
+		public static function getDesignationByUser($userid)
+		{
+			$deisgnation=  DesignationUser::model()->findByAttributes(array('user_id'=>$userid), array('order'=>'create_time DESC'));
+		}
+		public static function getUserByDesignation($designation_id)
+		{
+			$deisgnation=  DesignationUser::model()->findByAttributes(array('designation_id'=>$designation_id), array('order'=>'create_time DESC'));
+		}
 }
