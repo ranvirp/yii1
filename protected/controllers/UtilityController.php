@@ -8,6 +8,10 @@
 class UtilityController extends Controller
 
 {
+    public function actionTest()
+    {
+        $this->render('test');
+    }
    public static function monthDropdown($name="month", $selected=null)
 {
         $dd = '<select name="'.$name.'" id="'.$name.'">';

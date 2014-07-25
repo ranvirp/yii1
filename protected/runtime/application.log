@@ -2152,3 +2152,511 @@ Stack trace:
 REQUEST_URI=/yii1/index.php/designation/create
 HTTP_REFERER=http://localhost/yii1/index.php/designation
 ---
+2014/07/24 07:13:06 [error] [php] Trying to get property of non-object (E:\xampp\htdocs\yii1\protected\models\Designation.php:152)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#4 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#7 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#10 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): DesignationController->run()
+#11 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/designation/GetByTypeJSON/id/1
+in E:\xampp\htdocs\yii1\protected\models\Designation.php (152)
+in E:\xampp\htdocs\yii1\protected\controllers\DesignationController.php (181)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/24 07:14:17 [error] [php] Trying to get property of non-object (E:\xampp\htdocs\yii1\protected\models\Designation.php:152)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#4 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#7 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#10 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): DesignationController->run()
+#11 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/designation/GetByTypeJSON/id/1
+in E:\xampp\htdocs\yii1\protected\models\Designation.php (152)
+in E:\xampp\htdocs\yii1\protected\controllers\DesignationController.php (181)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/24 07:15:15 [error] [php] Trying to get property of non-object (E:\xampp\htdocs\yii1\protected\models\Designation.php:152)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#4 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#7 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#10 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): DesignationController->run()
+#11 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/designation/GetByTypeJSON/id/1
+in E:\xampp\htdocs\yii1\protected\models\Designation.php (152)
+in E:\xampp\htdocs\yii1\protected\controllers\DesignationController.php (181)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/24 08:30:38 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "importModels/default".' in E:\yii-1.1.15.022a51\framework\web\CWebApplication.php:286
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('importModels/de...')
+#1 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii1/index.php/importModels/default
+---
+2014/07/24 08:38:44 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "templates/_Importform".' in E:\yii-1.1.15.022a51\framework\web\CController.php:878
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('templates/_Impo...', Array, true)
+#1 E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php(8): CController->render('templates/_Impo...', Array)
+#2 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#7 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('importModels/de...')
+#8 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii1/index.php/importModels/default
+---
+2014/07/24 08:39:17 [error] [exception.CException] exception 'CException' with message 'DefaultController cannot find the requested view "templates/_Importform".' in E:\yii-1.1.15.022a51\framework\web\CController.php:878
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('templates/_Impo...', Array, true)
+#1 E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php(8): CController->render('templates/_Impo...', Array)
+#2 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#7 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('importModels/de...')
+#8 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#10 {main}
+REQUEST_URI=/yii1/index.php/importModels/default
+---
+2014/07/24 08:46:01 [error] [exception.CException] exception 'CException' with message 'DefaultController and its behaviors do not have a method or closure named "getControllerClass".' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\modules\importModels\views\default\templates\_Importform.php(8): CComponent->__call('getControllerCl...', Array)
+#1 E:\xampp\htdocs\yii1\protected\modules\importModels\views\default\templates\_Importform.php(8): DefaultController->getControllerClass()
+#2 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#3 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('templates/_Impo...', Array, true)
+#6 E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php(8): CController->render('templates/_Impo...', Array)
+#7 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#12 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('importModels/de...')
+#13 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii1/index.php/importModels/default
+---
+2014/07/24 08:48:08 [error] [exception.CException] exception 'CException' with message 'School and its behaviors do not have a method or closure named "getClassName".' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getClassName', Array)
+#1 E:\xampp\htdocs\yii1\protected\modules\importModels\views\default\templates\_Importform.php(9): CActiveRecord->__call('getClassName', Array)
+#2 E:\xampp\htdocs\yii1\protected\modules\importModels\views\default\templates\_Importform.php(9): School->getClassName()
+#3 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#4 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('templates/_Impo...', Array, true)
+#7 E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php(8): CController->render('templates/_Impo...', Array)
+#8 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#13 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('importModels/de...')
+#14 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii1/index.php/importModels/default
+---
+2014/07/24 08:58:18 [error] [exception.CException] exception 'CException' with message 'School and its behaviors do not have a method or closure named "getClassName".' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(227): CComponent->__call('getClassName', Array)
+#1 E:\xampp\htdocs\yii1\protected\modules\importModels\views\default\templates\_Importform.php(9): CActiveRecord->__call('getClassName', Array)
+#2 E:\xampp\htdocs\yii1\protected\modules\importModels\views\default\templates\_Importform.php(9): School->getClassName()
+#3 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#4 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('templates/_Impo...', Array, true)
+#7 E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php(10): CController->render('templates/_Impo...', Array)
+#8 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#11 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#12 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('')
+#13 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('importModels/de...')
+#14 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#15 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#16 {main}
+REQUEST_URI=/yii1/index.php/importModels/default
+---
+2014/07/24 09:11:23 [error] [php] Trying to get property of non-object (E:\xampp\htdocs\yii1\protected\modules\importModels\views\common\code.php:2)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CController.php(869): DefaultController->renderFile()
+#1 E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php(11): DefaultController->renderPartial()
+#2 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DefaultController->actionIndex()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(286): DefaultController->runAction()
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#6 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): DefaultController->run()
+#7 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/importModels/default
+in E:\xampp\htdocs\yii1\protected\modules\importModels\views\common\code.php (2)
+in E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php (11)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/24 09:30:48 [error] [php] Undefined variable: model (E:\xampp\htdocs\yii1\protected\modules\importModels\views\default\_importform.php:9)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CController.php(869): DefaultController->renderFile()
+#1 E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php(17): DefaultController->renderPartial()
+#2 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DefaultController->actionGetForm()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(286): DefaultController->runAction()
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#6 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): DefaultController->run()
+#7 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#8 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#9 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/importModels/default/getform
+in E:\xampp\htdocs\yii1\protected\modules\importModels\views\default\_importform.php (9)
+in E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php (17)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/24 09:41:27 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\yii-1.1.15.022a51\framework\web\CController.php:336
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('getformbymodel')
+#4 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('importModels/de...')
+#5 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/yii1/index.php/importModels/default/getformbymodel/school
+---
+2014/07/24 09:44:11 [error] [php] Undefined variable: model (E:\xampp\htdocs\yii1\protected\modules\importModels\views\default\school\_import.php:20)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CController.php(869): DefaultController->renderFile()
+#1 E:\yii-1.1.15.022a51\framework\web\CController.php(782): DefaultController->renderPartial()
+#2 E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php(22): DefaultController->render()
+#3 unknown(0): DefaultController->actionGetFormByModel()
+#4 E:\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 E:\yii-1.1.15.022a51\framework\web\CController.php(286): DefaultController->runAction()
+#8 E:\yii-1.1.15.022a51\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#9 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): DefaultController->run()
+#10 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/importModels/default/getformbymodel/model/school
+in E:\xampp\htdocs\yii1\protected\modules\importModels\views\default\school\_import.php (20)
+in E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php (22)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/24 10:13:08 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in E:\yii-1.1.15.022a51\framework\web\CController.php:336
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#2 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#3 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('getformbymodel')
+#4 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('importModels/de...')
+#5 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/yii1/index.php/importModels/default/getformbymodel/
+---
+2014/07/24 10:14:03 [error] [exception.CException] exception 'CException' with message 'Property "DefaultController.renderPartial" is not defined.' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php(18): CComponent->__get('renderPartial')
+#1 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(49): DefaultController->actionGetForm()
+#2 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#5 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('getform')
+#6 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('importModels/de...')
+#7 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii1/index.php/importModels/default/getform
+---
+2014/07/24 10:14:42 [error] [php] include( &lt;?php
+
+/* @var $model School */
+/* @var $form TbActiveForm */
+?&gt;
+
+&lt;div class=&quot;form&quot;&gt;
+
+    &lt;?php $form=$this-&gt;beginWidget('bootstrap.widgets.TbActiveForm', array(
+    'id'=&gt;'School-Import form',
+    // Please note: When you enable ajax validation, make sure the corresponding
+    // controller action is handling ajax validation correctly.
+    // There is a call to performAjaxValidation() commented in generated controller code.
+    // See class documentation of CActiveForm for details on this.
+    'enableAjaxValidation'=&gt;false,
+        'layout'=&gt;  TbHtml::FORM_LAYOUT_HORIZONTAL,
+)); ?&gt;
+    &lt;p class=&quot;help-block&quot;&gt;Fields with &lt;span class=&quot;required&quot;&gt;*&lt;/span&gt; are required.&lt;/p&gt;
+
+    &lt;?php echo $form-&gt;errorSummary($model); ?&gt;
+   
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    &lt;table class='table'&gt;&lt;tr&gt;&lt;th&gt;Column of Model&lt;/th&gt;&lt;th&gt;Type&lt;/th&gt;&lt;th&gt;Col. No. in XLSX&lt;/th&gt;&lt;/tr&gt;     &lt;?php echo '&lt;tr&gt;&lt;td&gt;name_en&lt;/td&gt;&lt;td&gt;string&lt;td&gt;'.TbHtml::dropDownList('name_en'.'_xlsx',1,range(1,30)); ?&gt;
+
+     &lt;?php echo '&lt;tr&gt;&lt;td&gt;name_hi&lt;/td&gt;&lt;td&gt;string&lt;td&gt;'.TbHtml::dropDownList('name_hi'.'_xlsx',2,range(1,30)); ?&gt;
+
+     &lt;?php echo '&lt;tr&gt;&lt;td&gt;rural_urban&lt;/td&gt;&lt;td&gt;string&lt;td&gt;'.TbHtml::dropDownList('rural_urban'.'_xlsx',3,range(1,30)); ?&gt;
+
+     &lt;?php echo '&lt;tr&gt;&lt;td&gt;location_type&lt;/td&gt;&lt;td&gt;string&lt;td&gt;'.TbHtml::dropDownList('location_type'.'_xlsx',4,range(1,30)); ?&gt;
+
+     &lt;?php echo '&lt;tr&gt;&lt;td&gt;location_code&lt;/td&gt;&lt;td&gt;string&lt;td&gt;'.TbHtml::dropDownList('location_code'.'_xlsx',5,range(1,30)); ?&gt;
+
+     &lt;?php echo '&lt;tr&gt;&lt;td&gt;dise_code&lt;/td&gt;&lt;td&gt;string&lt;td&gt;'.TbHtml::dropDownList('dise_code'.'_xlsx',6,range(1,30)); ?&gt;
+
+    &lt;label for=&quot;row_initial&quot;&gt;Initial Row No:&lt;/label&gt;&lt;input type=&quot;text&quot; value=&quot;&quot; name=&quot;row_initial&quot; id=&quot;row_initial&quot; /&gt;    &lt;label for=&quot;row_final&quot;&gt;  Final Row No:&lt;/label&gt;&lt;input type=&quot;text&quot; value=&quot;&quot; name=&quot;row_final&quot; id=&quot;row_final&quot; /&gt;    &lt;label for=&quot;new_file&quot;&gt; New file:&lt;/label&gt;     &lt;label for=&quot;existing_file&quot;&gt;Existing file:&lt;/label&gt;&lt;select name=&quot;existing_file&quot; id=&quot;existing_file&quot;&gt;
+&lt;/select&gt;    &lt;div class=&quot;form-actions&quot;&gt;
+        &lt;?php echo TbHtml::submitButton($model-&gt;isNewRecord ? 'Create' : 'Save',array(
+            'color'=&gt;TbHtml::BUTTON_COLOR_PRIMARY,
+            'size'=&gt;TbHtml::BUTTON_SIZE_LARGE,
+        )); ?&gt;
+    &lt;/div&gt;
+
+    &lt;?php $this-&gt;endWidget(); ?&gt;
+
+&lt;/div&gt;&lt;!-- form --&gt; ): failed to open stream: Invalid argument (E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php:18)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#1 E:\yii-1.1.15.022a51\framework\web\CController.php(286): DefaultController->runAction()
+#2 E:\yii-1.1.15.022a51\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#3 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): DefaultController->run()
+#4 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#5 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/importModels/default/getform
+in E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php (18)
+in E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php (18)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/24 10:21:46 [error] [php] Use of undefined constant _FILE - assumed '_FILE' (E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php:17)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 E:\yii-1.1.15.022a51\framework\web\CController.php(286): DefaultController->runAction()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#4 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): DefaultController->run()
+#5 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/importModels/default/getform/m/school
+in E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php (17)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/24 10:22:12 [error] [php] Use of undefined constant _FILE_ - assumed '_FILE_' (E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php:17)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 E:\yii-1.1.15.022a51\framework\web\CController.php(286): DefaultController->runAction()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#4 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): DefaultController->run()
+#5 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#6 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#7 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/importModels/default/getform/m/school
+in E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php (17)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/24 10:23:05 [error] [php] dir(E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php,E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php): The directory name is invalid. (code: 267) (E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php:17)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(286): DefaultController->runAction()
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#5 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): DefaultController->run()
+#6 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/importModels/default/getform/m/school
+in E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php (17)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/24 10:23:41 [error] [php] mkdir(): No such file or directory (E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php:18)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(286): DefaultController->runAction()
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#5 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): DefaultController->run()
+#6 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/importModels/default/getform/m/school
+in E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php (18)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/24 10:25:17 [error] [php] mkdir(): File exists (E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php:20)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 E:\yii-1.1.15.022a51\framework\web\CController.php(286): DefaultController->runAction()
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(265): DefaultController->runActionWithFilters()
+#5 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): DefaultController->run()
+#6 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#7 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/importModels/default/getform/m/school
+in E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php (20)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/24 10:28:08 [error] [exception.CException] exception 'CException' with message 'Student and its behaviors do not have a method or closure named "generateClassName".' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:266
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(227): CComponent->__call('generateClassNa...', Array)
+#1 E:\xampp\htdocs\yii1\protected\modules\importModels\views\default\_importform.php(34): CActiveRecord->__call('generateClassNa...', Array)
+#2 E:\xampp\htdocs\yii1\protected\modules\importModels\views\default\_importform.php(34): Student->generateClassName('school')
+#3 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#4 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#6 E:\xampp\htdocs\yii1\protected\modules\importModels\controllers\DefaultController.php(22): CController->renderPartial('_importform', Array, true)
+#7 [internal function]: DefaultController->actionGetForm('student')
+#8 E:\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DefaultController), Array)
+#9 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DefaultController), Object(ReflectionMethod), Array)
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 E:\yii-1.1.15.022a51\framework\web\CController.php(286): CController->runAction(Object(CInlineAction))
+#12 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('getform')
+#14 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('importModels/de...')
+#15 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii1/index.php/importModels/default/getform/m/student
+---
+2014/07/25 11:07:22 [error] [php] Undefined variable: student (E:\xampp\htdocs\yii1\protected\views\learningLevel\StudentProfile.php:39)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CController.php(869): LearningLevelController->renderFile()
+#1 E:\yii-1.1.15.022a51\framework\web\CController.php(782): LearningLevelController->renderPartial()
+#2 E:\xampp\htdocs\yii1\protected\controllers\LearningLevelController.php(215): LearningLevelController->render()
+#3 unknown(0): LearningLevelController->actionGetStudentProfile()
+#4 E:\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): LearningLevelController->runAction()
+#8 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): LearningLevelController->filterAccessControl()
+#11 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\yii-1.1.15.022a51\framework\web\CController.php(265): LearningLevelController->runActionWithFilters()
+#14 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): LearningLevelController->run()
+#15 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/learningLevel/getstudentprofile/s/1/m/7/y/2014
+in E:\xampp\htdocs\yii1\protected\views\learningLevel\StudentProfile.php (39)
+in E:\xampp\htdocs\yii1\protected\controllers\LearningLevelController.php (215)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/25 11:09:31 [error] [exception.CException] exception 'CException' with message 'Property "Student.fathersname_" is not defined.' in E:\yii-1.1.15.022a51\framework\base\CComponent.php:130
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\db\ar\CActiveRecord.php(145): CComponent->__get('fathersname_')
+#1 E:\xampp\htdocs\yii1\protected\views\learningLevel\StudentProfile.php(39): CActiveRecord->__get('fathersname_')
+#2 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(126): require('E:\xampp\htdocs...')
+#3 E:\yii-1.1.15.022a51\framework\web\CBaseController.php(95): CBaseController->renderInternal('E:\xampp\htdocs...', Array, true)
+#4 E:\yii-1.1.15.022a51\framework\web\CController.php(869): CBaseController->renderFile('E:\xampp\htdocs...', Array, true)
+#5 E:\yii-1.1.15.022a51\framework\web\CController.php(782): CController->renderPartial('StudentProfile', Array, true)
+#6 E:\xampp\htdocs\yii1\protected\controllers\LearningLevelController.php(215): CController->render('StudentProfile', Array)
+#7 [internal function]: LearningLevelController->actionGetStudentProfile('1', '7', '2014')
+#8 E:\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(LearningLevelController), Array)
+#9 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(LearningLevelController), Object(ReflectionMethod), Array)
+#10 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#11 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#12 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#14 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#15 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#16 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#17 E:\yii-1.1.15.022a51\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#18 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): CController->run('getstudentprofi...')
+#19 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController('learningLevel/g...')
+#20 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 E:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#22 {main}
+REQUEST_URI=/yii1/index.php/learningLevel/getstudentprofile/s/1/m/7/y/2014
+---
+2014/07/25 11:14:27 [error] [php] Undefined variable: prevcategory (E:\xampp\htdocs\yii1\protected\views\learningLevel\StudentProfile.php:107)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CController.php(869): LearningLevelController->renderFile()
+#1 E:\yii-1.1.15.022a51\framework\web\CController.php(782): LearningLevelController->renderPartial()
+#2 E:\xampp\htdocs\yii1\protected\controllers\LearningLevelController.php(215): LearningLevelController->render()
+#3 unknown(0): LearningLevelController->actionGetStudentProfile()
+#4 E:\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): LearningLevelController->runAction()
+#8 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): LearningLevelController->filterAccessControl()
+#11 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\yii-1.1.15.022a51\framework\web\CController.php(265): LearningLevelController->runActionWithFilters()
+#14 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): LearningLevelController->run()
+#15 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/learningLevel/getstudentprofile/s/1/m/7/y/2014
+in E:\xampp\htdocs\yii1\protected\views\learningLevel\StudentProfile.php (107)
+in E:\xampp\htdocs\yii1\protected\controllers\LearningLevelController.php (215)
+in E:\xampp\htdocs\yii1\index.php (13)
+2014/07/25 11:15:06 [error] [php] Undefined variable: width (E:\xampp\htdocs\yii1\protected\views\learningLevel\StudentProfile.php:133)
+Stack trace:
+#0 E:\yii-1.1.15.022a51\framework\web\CController.php(869): LearningLevelController->renderFile()
+#1 E:\yii-1.1.15.022a51\framework\web\CController.php(782): LearningLevelController->renderPartial()
+#2 E:\xampp\htdocs\yii1\protected\controllers\LearningLevelController.php(215): LearningLevelController->render()
+#3 unknown(0): LearningLevelController->actionGetStudentProfile()
+#4 E:\yii-1.1.15.022a51\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 E:\yii-1.1.15.022a51\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 E:\yii-1.1.15.022a51\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(133): LearningLevelController->runAction()
+#8 E:\yii-1.1.15.022a51\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 E:\yii-1.1.15.022a51\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 E:\yii-1.1.15.022a51\framework\web\filters\CInlineFilter.php(58): LearningLevelController->filterAccessControl()
+#11 E:\yii-1.1.15.022a51\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 E:\yii-1.1.15.022a51\framework\web\CController.php(291): CFilterChain->run()
+#13 E:\yii-1.1.15.022a51\framework\web\CController.php(265): LearningLevelController->runActionWithFilters()
+#14 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(282): LearningLevelController->run()
+#15 E:\yii-1.1.15.022a51\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 E:\yii-1.1.15.022a51\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 E:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/learningLevel/getstudentprofile/s/1/m/7/y/2014
+in E:\xampp\htdocs\yii1\protected\views\learningLevel\StudentProfile.php (133)
+in E:\xampp\htdocs\yii1\protected\controllers\LearningLevelController.php (215)
+in E:\xampp\htdocs\yii1\index.php (13)

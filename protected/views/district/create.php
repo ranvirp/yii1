@@ -2,7 +2,12 @@
 /* @var $this DistrictController */
 /* @var $model District */
 ?>
-
+<style>
+    .bootstrap-widget-header h3
+{
+    color: white;
+}
+</style>
 <?php
 $this->breadcrumbs=array(
 	'Districts'=>array('index'),
@@ -13,7 +18,8 @@ $this->breadcrumbs=array(
 'headerIcon' => 'icon-th-list',
 // when displaying a table, if we include bootstra-widget-table class
 // the table will be 0-padding to the box
-'htmlOptions' => array('class'=>'bootstrap-widget-table')
+'htmlOptions' => array('class'=>'bootstrap-widget-table'),
+ 'htmlHeaderOptions'=>array('class'=>'btn-danger'),
 ));?>
 
 

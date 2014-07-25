@@ -32,7 +32,7 @@ class LearningLevelController extends Controller
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
-				'actions'=>array('create','update','getForm'),
+				'actions'=>array('create','update','getForm','getStudentProfile'),
 				'users'=>array('@'),
 			),
 			array('allow', // allow admin user to perform 'admin' and 'delete' actions
@@ -209,4 +209,14 @@ $model=new LearningLevel;
             $lls=LearningLevel::model()->getLearningLevelByMonth($s,$m,$y);
             print $this->renderPartial('gridViewLearningLevelForm',array('arrayOfLL'=>$lls));
         }
+        public function actionGetStudentProfile($s,$m,$y)
+        {
+            $arrayOfLL=LearningLevel::getLearningLevelByMonth($s,$m,$y);
+            $this->render('StudentProfile',array('arrayOfLL'=>$arrayOfLL,'student'=>Student::model()->findByPk($s),'lang'=>Yii::app()->language));
+        }
+        public function actionGetSummaryProfile($levelid,$level='school')
+        {
+            
+        }
+        
 }

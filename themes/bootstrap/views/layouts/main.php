@@ -9,7 +9,7 @@
 
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->theme->baseUrl; ?>/css/styles.css" />
         <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/css/custom.css" />
-
+ <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->baseUrl; ?>/css/font-awesome.css" />
         <?php Yii::app()->bootstrap->register(); ?>
      <!--   <script type="text/javascript" src="https://www.google.com/jsapi" ></script>
         <script src='<?php echo Yii::app()->baseUrl.'/js/googleTransliteration.js'; ?>' type='text/javascript' ></script>

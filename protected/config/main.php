@@ -33,6 +33,7 @@ return array(
         'application.modules.user.components.*',
         'application.modules.rights.*',
         'application.modules.rights.components.*',
+           
 	    'bootstrap.helpers.*',
 		'bootstrap.widgets.*',
 		'bootstrap.behaviors.*',
@@ -41,6 +42,7 @@ return array(
 	),
 
 	'modules'=>array(
+            'importModels',
 	    'user'=>array(
                 'tableUsers' => 'users',
                 'tableProfiles' => 'profiles',

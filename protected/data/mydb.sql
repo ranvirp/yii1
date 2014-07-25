@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 23, 2014 at 06:12 PM
+-- Generation Time: Jul 25, 2014 at 07:48 PM
 -- Server version: 5.6.16
 -- PHP Version: 5.5.9
 
@@ -27,12 +27,12 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `authassignment` (
-  `itemname` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
-  `userid` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
-  `bizrule` text COLLATE utf8_unicode_ci,
-  `data` text COLLATE utf8_unicode_ci,
+  `itemname` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `userid` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `bizrule` text COLLATE utf8mb4_unicode_ci,
+  `data` text COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`itemname`,`userid`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `authassignment`
@@ -48,13 +48,13 @@ INSERT INTO `authassignment` (`itemname`, `userid`, `bizrule`, `data`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `authitem` (
-  `name` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `name` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` int(11) NOT NULL,
-  `description` text COLLATE utf8_unicode_ci,
-  `bizrule` text COLLATE utf8_unicode_ci,
-  `data` text COLLATE utf8_unicode_ci,
+  `description` text COLLATE utf8mb4_unicode_ci,
+  `bizrule` text COLLATE utf8mb4_unicode_ci,
+  `data` text COLLATE utf8mb4_unicode_ci,
   PRIMARY KEY (`name`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `authitem`
@@ -73,11 +73,11 @@ INSERT INTO `authitem` (`name`, `type`, `description`, `bizrule`, `data`) VALUES
 --
 
 CREATE TABLE IF NOT EXISTS `authitemchild` (
-  `parent` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
-  `child` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `parent` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `child` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`parent`,`child`),
   KEY `child` (`child`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -92,14 +92,14 @@ CREATE TABLE IF NOT EXISTS `block` (
   `name_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`code`),
   KEY `code_idx` (`district_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `block`
 --
 
 INSERT INTO `block` (`code`, `district_code`, `name_en`, `name_hi`) VALUES
-('3122014', '0970', 'Jaithara', 'जैथरा');
+('3122014', '970', 'Jaithara', 'जैथरा');
 
 -- --------------------------------------------------------
 
@@ -118,7 +118,7 @@ CREATE TABLE IF NOT EXISTS `citizen_rural` (
   `revenue_village_code` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `code_idx` (`revenue_village_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -130,11 +130,11 @@ CREATE TABLE IF NOT EXISTS `department` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `code` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
-  `name_en` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name_en` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `state_code` varchar(2) CHARACTER SET utf8 NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_department_state1_idx` (`state_code`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `department`
@@ -152,10 +152,19 @@ INSERT INTO `department` (`id`, `name_hi`, `code`, `name_en`, `state_code`) VALU
 CREATE TABLE IF NOT EXISTS `designation` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `designation_type_id` int(11) NOT NULL,
-  `level_type_id` int(11) NOT NULL,
+  `level_type_id` varchar(45) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `remarks` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
+  UNIQUE KEY `unique_index` (`designation_type_id`,`level_type_id`),
   KEY `fk_designation_designation_type1_idx` (`designation_type_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `designation`
+--
+
+INSERT INTO `designation` (`id`, `designation_type_id`, `level_type_id`, `remarks`) VALUES
+(1, 1, '970', NULL);
 
 -- --------------------------------------------------------
 
@@ -168,12 +177,12 @@ CREATE TABLE IF NOT EXISTS `designation_type` (
   `name_hi` varchar(45) CHARACTER SET utf8 NOT NULL,
   `code` varchar(30) CHARACTER SET utf8 NOT NULL,
   `department_id` int(11) NOT NULL,
-  `name_en` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name_en` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `level_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_designation_department_idx` (`department_id`),
   KEY `fk_designation_type_level1_idx` (`level_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='<double-click to overwrite multiple objects>' AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci COMMENT='<double-click to overwrite multiple objects>' AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `designation_type`
@@ -199,7 +208,14 @@ CREATE TABLE IF NOT EXISTS `designation_user` (
   PRIMARY KEY (`id`),
   KEY `fk_designation_user_designation1_idx` (`designation_id`),
   KEY `fk_designation_user_users_idx` (`user_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `designation_user`
+--
+
+INSERT INTO `designation_user` (`id`, `designation_id`, `user_id`, `create_time`, `update_time`, `create_user`) VALUES
+(1, 1, 3, '1406179103', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -214,14 +230,29 @@ CREATE TABLE IF NOT EXISTS `district` (
   `name_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`code`),
   KEY `code_idx` (`state_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `district`
 --
 
 INSERT INTO `district` (`state_code`, `code`, `name_en`, `name_hi`) VALUES
-('09', '0970', 'ETAH', 'एटा');
+('09', '970', 'ETAH', 'एटा');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `importinfo`
+--
+
+CREATE TABLE IF NOT EXISTS `importinfo` (
+  `id` int(11) NOT NULL,
+  `filename` text,
+  `filesize` int(11) DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `filedump` text,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -233,11 +264,14 @@ CREATE TABLE IF NOT EXISTS `imports` (
   `id` int(11) NOT NULL,
   `import_code` varchar(45) DEFAULT NULL,
   `model_name` varchar(45) DEFAULT NULL,
-  `model_data` varchar(45) DEFAULT NULL,
+  `model_data` text,
   `validated` varchar(45) DEFAULT NULL,
   `imported` varchar(45) DEFAULT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `fkdata` text,
+  `importInfo_id` int(11) NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `fk_Imports_importInfo1_idx` (`importInfo_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -257,7 +291,7 @@ CREATE TABLE IF NOT EXISTS `learning_level` (
   PRIMARY KEY (`id`),
   KEY `fk_Learning_Level_student1_idx` (`student_id`),
   KEY `fk_Learning_Level_skill_level1_idx` (`skill_level_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=13 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 AUTO_INCREMENT=13 ;
 
 --
 -- Dumping data for table `learning_level`
@@ -284,10 +318,10 @@ INSERT INTO `learning_level` (`id`, `value`, `student_id`, `skill_level_id`, `mo
 CREATE TABLE IF NOT EXISTS `level` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
-  `name_en` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `table_name` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name_en` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `table_name` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `level`
@@ -311,7 +345,7 @@ CREATE TABLE IF NOT EXISTS `panchayat` (
   `name_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`code`),
   KEY `code_idx` (`block_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `panchayat`
@@ -392,11 +426,11 @@ CREATE TABLE IF NOT EXISTS `revenue_village` (
   `name_en` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `name_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `panchayat_code` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
-  `census_code` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `census_code` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`code`),
   KEY `code_idx` (`tehsil_code`),
   KEY `code_idx1` (`panchayat_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `revenue_village`
@@ -412,11 +446,11 @@ INSERT INTO `revenue_village` (`code`, `tehsil_code`, `name_en`, `name_hi`, `pan
 --
 
 CREATE TABLE IF NOT EXISTS `rights` (
-  `itemname` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
+  `itemname` varchar(64) COLLATE utf8mb4_unicode_ci NOT NULL,
   `type` int(11) NOT NULL,
   `weight` int(11) NOT NULL,
   PRIMARY KEY (`itemname`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -429,11 +463,11 @@ CREATE TABLE IF NOT EXISTS `school` (
   `name_en` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `name_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `rural_urban` varchar(1) CHARACTER SET utf8 DEFAULT 'r',
-  `location_type` varchar(15) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `location_code` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
-  `dise_code` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `location_type` varchar(15) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `location_code` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `dise_code` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=2 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=2 ;
 
 --
 -- Dumping data for table `school`
@@ -457,11 +491,11 @@ CREATE TABLE IF NOT EXISTS `skill_level` (
   `unit_en` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `level` tinyint(4) DEFAULT NULL,
   `subject_code` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
-  `required_value` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `required_value` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_category_id_idx` (`category_id`),
   KEY `fk_subject_code_skill_level_idx` (`subject_code`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `skill_level`
@@ -485,7 +519,7 @@ CREATE TABLE IF NOT EXISTS `skill_level_category` (
   `subject_code` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_subject_code_idx` (`subject_code`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=4 ;
 
 --
 -- Dumping data for table `skill_level_category`
@@ -507,7 +541,7 @@ CREATE TABLE IF NOT EXISTS `state` (
   `name_en` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `name_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `state`
@@ -532,18 +566,22 @@ CREATE TABLE IF NOT EXISTS `student` (
   `age` tinyint(4) DEFAULT NULL,
   `photo` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `rollno` int(11) DEFAULT NULL,
-  `section` varchar(1) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `section` varchar(1) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `fathersname_hi` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `fathersname_en` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mothersname_hi` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
+  `mothersname_en` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_school_student_idx` (`school_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=3 ;
 
 --
 -- Dumping data for table `student`
 --
 
-INSERT INTO `student` (`id`, `school_id`, `class`, `name_hi`, `name_en`, `date_of_birth`, `age`, `photo`, `rollno`, `section`) VALUES
-(1, 1, 1, 'रणवीर प्रसाद', 'Ranvir Prasad', '2009-08-15', 5, '', 1, 'A'),
-(2, 1, 1, 'राजेश कुमार', 'Rajesh Kumar', '2008-05-01', 6, '', NULL, 'A');
+INSERT INTO `student` (`id`, `school_id`, `class`, `name_hi`, `name_en`, `date_of_birth`, `age`, `photo`, `rollno`, `section`, `fathersname_hi`, `fathersname_en`, `mothersname_hi`, `mothersname_en`) VALUES
+(1, 1, 1, 'रणवीर प्रसाद', 'Ranvir Prasad', '2009-08-15', 5, '', 1, 'A', NULL, NULL, NULL, NULL),
+(2, 1, 1, 'राजेश कुमार', 'Rajesh Kumar', '2008-05-01', 6, '', NULL, 'A', NULL, NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -556,7 +594,7 @@ CREATE TABLE IF NOT EXISTS `subject` (
   `name_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `name_en` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `subject`
@@ -578,7 +616,7 @@ CREATE TABLE IF NOT EXISTS `tagmap` (
   `object_id` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `tag_id` int(11) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -593,7 +631,7 @@ CREATE TABLE IF NOT EXISTS `tags` (
   `tag_category_id` int(11) NOT NULL,
   PRIMARY KEY (`id`),
   KEY `fk_tags_tag_category1_idx` (`tag_category_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -606,7 +644,7 @@ CREATE TABLE IF NOT EXISTS `tag_category` (
   `category_en` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `category_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci AUTO_INCREMENT=1 ;
 
 -- --------------------------------------------------------
 
@@ -619,18 +657,18 @@ CREATE TABLE IF NOT EXISTS `tehsil` (
   `district_code` varchar(5) CHARACTER SET utf8 DEFAULT NULL,
   `name_en` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `name_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
-  `up_code` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `up_code` varchar(45) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`code`),
   KEY `code_idx` (`district_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Dumping data for table `tehsil`
 --
 
 INSERT INTO `tehsil` (`code`, `district_code`, `name_en`, `name_hi`, `up_code`) VALUES
-('220400', '0970', 'Etah', 'एटा', NULL),
-('220500', '0970', 'Aliganj', 'अलीगंज', NULL);
+('220400', '970', 'Etah', 'एटा', NULL),
+('220500', '970', 'Aliganj', 'अलीगंज', NULL);
 
 -- --------------------------------------------------------
 
@@ -646,7 +684,7 @@ CREATE TABLE IF NOT EXISTS `town` (
   `name_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`code`),
   KEY `districtcodetown_idx` (`district_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 -- --------------------------------------------------------
 
@@ -666,7 +704,7 @@ CREATE TABLE IF NOT EXISTS `uploads` (
   `mime_type` varchar(45) DEFAULT NULL,
   `size` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
 
@@ -696,7 +734,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `activkey`, `create_at`, `lastvisit_at`, `superuser`, `status`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'webmaster@example.com', '9a24eff8c15a6a141ece27eb6947da0f', '2014-07-13 10:33:20', '2014-07-23 07:23:35', 1, 1),
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'webmaster@example.com', '9a24eff8c15a6a141ece27eb6947da0f', '2014-07-13 10:33:20', '2014-07-25 05:35:58', 1, 1),
 (2, 'demo', 'fe01ce2a7fbac8fafaed7c982a04e229', 'demo@example.com', '099f825543f7850cc038b90aaff39fac', '2014-07-13 10:33:20', '0000-00-00 00:00:00', 0, 1),
 (3, 'rkumar', '1d36782b8c8cdf0b8bc8ba875642f4d8', 'r@r.com', '9a7819bd20973f016d2d5b1fc5d3bd56', '2014-07-23 03:13:23', '2014-07-23 04:05:56', 0, 1);
 
@@ -713,7 +751,7 @@ CREATE TABLE IF NOT EXISTS `ward` (
   `name_en` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   PRIMARY KEY (`code`),
   KEY `wardtowncode_idx` (`town_code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 --
 -- Constraints for dumped tables
@@ -775,6 +813,12 @@ ALTER TABLE `designation_user`
 --
 ALTER TABLE `district`
   ADD CONSTRAINT `statecode` FOREIGN KEY (`state_code`) REFERENCES `state` (`code`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Constraints for table `imports`
+--
+ALTER TABLE `imports`
+  ADD CONSTRAINT `fk_Imports_importInfo1` FOREIGN KEY (`importInfo_id`) REFERENCES `importinfo` (`id`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 --
 -- Constraints for table `learning_level`

@@ -52,6 +52,8 @@ class TbApi extends CApplicationComponent
             $url = $this->getAssetsUrl() . '/css/' . $fileName;
         }
         Yii::app()->clientScript->registerCssFile($url, $media);
+       
+        
     }
 
     /**

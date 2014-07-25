@@ -11,6 +11,7 @@ class ImportModelsModule extends CWebModule
 		$this->setImport(array(
 			'importModels.models.*',
 			'importModels.components.*',
+                    'importModels.controllers.*',
 		));
 	}
 
