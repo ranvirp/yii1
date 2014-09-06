@@ -1,0 +1,170 @@
+  UID   PID  PPID        F CPU PRI NI       SZ    RSS WCHAN     S             ADDR TTY           TIME CMD
+    0     1     0 80004004   0  31  0  2473128   3660 -      Ss                  0 ??         0:52.96 /sbin/launchd
+    0    16     1     4004   0  63  0  2495580   5184 -      Ss                  0 ??         0:03.88 /usr/libexec/UserEventAgent (System)
+    0    17     1     4004   0  33  0  2497728   3912 -      Ss                  0 ??         0:07.42 /usr/libexec/kextd
+    0    18     1     4004   0  33  0  2492884   2248 -      Ss                  0 ??         0:02.51 /usr/libexec/taskgated -s
+    0    20     1     4004   0   4  0  2469228      4 -      Ss                  0 ??         0:00.05 /usr/libexec/wdhelper
+    0    21     1     4004   0  23 10  2471116   1572 -      SNs                 0 ??         0:00.66 /usr/libexec/warmd
+  213    22     1     4004   0  33  0  2480508    668 -      Ss                  0 ??         0:00.16 /System/Library/PrivateFrameworks/MobileDevice.framework/Versions/A/Resources/usbmuxd -launchd
+    0    24     1     4004   0  33  0  2480636   1928 -      Ss                  0 ??         0:07.32 /usr/sbin/syslogd
+    0    26     1 40004004   0  33  0  2469256    584 -      Ss                  0 ??         0:00.11 /usr/libexec/stackshot -t
+    0    29     1     4004   0   4  0  2468732      4 -      Ss                  0 ??         0:00.01 /System/Library/CoreServices/SleepServicesD
+    0    30     1     4004   0  33  0  2493808   2456 -      Ss                  0 ??         0:01.81 /usr/sbin/securityd -i
+    0    32     1   104004   0  47  0  2470928   1104 -      Ss                  0 ??         0:00.22 /System/Library/PrivateFrameworks/GenerationalStorage.framework/Versions/A/Support/revisiond
+    0    33     1     4004   0  33  0  2491864   1364 -      Ss                  0 ??         0:10.22 /System/Library/CoreServices/powerd.bundle/powerd
+    0    36     1     4004   0  33  0  2508648   5096 -      Us                  0 ??         0:16.83 /usr/libexec/opendirectoryd
+    0    39     1  1004004   0  50  0  2649548  62996 -      Ss                  0 ??         9:53.88 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Support/mds
+   65    40     1     4004   0  63  0  2494412   3192 -      Ss                  0 ??         0:09.15 /usr/sbin/mDNSResponder
+  501    43     1 81004104   0  50  0  2568040  28128 -      Ss                  0 ??         0:09.83 /System/Library/CoreServices/loginwindow.app/Contents/MacOS/loginwindow console
+    0    44     1     4004   0  33  0  2468732    620 -      Ss                  0 ??         0:00.06 /System/Library/CoreServices/logind
+  205    45     1     4004   0   4  0  2498844   3092 -      Ss                  0 ??         0:05.70 /usr/libexec/locationd
+    0    46     1     4004   0  33  0  2460612    216 -      Ss                  0 ??         0:00.01 /usr/sbin/KernelEventAgent
+    0    49     1     4004   0  63  0  2470296   2380 -      Ss                  0 ??         3:36.13 /usr/libexec/hidd
+    0    50     1  1004004   0  50  0  2494856   5364 -      Ss                  0 ??         0:20.20 /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/Support/fseventsd
+    0    52     1     4004   0  63  0  2432796     20 -      Ss                  0 ??         0:00.20 /sbin/dynamic_pager -F /private/var/vm/swapfile
+    0    56     1     4004   0  33  0  2468816   1256 -      Ss                  0 ??         0:01.55 /usr/libexec/diskarbitrationd
+    0    57     1     4004   0   4  0  2503732   3476 -      Ss                  0 ??         0:06.14 /System/Library/CoreServices/launchservicesd
+   55    58     1     4004   0   4  0  2492284   1020 -      Ss                  0 ??         0:00.30 /System/Library/CoreServices/appleeventsd --server
+    0    60     1     400c   0  33  0  2471532   3524 -      Ss                  0 ??         0:23.80 /usr/libexec/configd
+    0    64     1     4004   0  33  0  2469340    476 -      Ss                  0 ??         0:00.12 autofsd
+    0    65     1     4004   0  63  0  2494348   4096 -      Ss                  0 ??         0:01.68 /System/Library/PrivateFrameworks/ApplePushService.framework/apsd
+    0    66     1     4004   0   4  0  2495504   2048 -      Ss                  0 ??         0:00.68 /usr/libexec/aosnotifyd
+    0    67     1     4004   0   4  0  2494900   3956 -      Ss                  0 ??         0:09.10 /usr/libexec/airportd
+    0    68     1     4004   0  31  0  2444632      8 -      Ss                  0 ??         0:00.06 /bin/sh /Library/Parallels/Parallels Service.app/Contents/Resources/ParallelsDispatcherService start
+    0    69     1     4004   0  33  0  2480056    996 -      Ss                  0 ??         0:07.48 /usr/sbin/notifyd
+    0    71     1     4004   0  33  0  2539980  24788 -      Ss                  0 ??         0:38.46 /System/Library/CoreServices/coreservicesd
+    0    72     1     4004   0  33  0  2493304   2604 -      Ss                  0 ??         0:34.47 /usr/sbin/distnoted daemon
+    0    73     1     4004   0   4  0  2469992   1072 -      Ss                  0 ??         0:00.10 /usr/libexec/xpcd
+    0    76     1     4004   0   4  0  2494016   2732 -      Ss                  0 ??         0:01.71 com.apple.authd
+    0    77     1     4004   0   4  0  2469468   1776 -      Ss                  0 ??         0:06.42 /usr/sbin/cfprefsd daemon
+    0    86     1     4004   0  33  0  2469660    860 -      Ss                  0 ??         0:00.21 /System/Library/PrivateFrameworks/Heimdal.framework/Helpers/kdc
+  202   146     1     4004   0  63  0  2476452   3236 -      Ss                  0 ??         9:24.74 /usr/sbin/coreaudiod
+    0   148     1  1004004   0  33  0  3691632 239052 -      Ss                  0 ??        18:24.58 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mds_stores
+   88   163     1     410c   0  79  0  3301736  55632 -      Ss                  0 ??        40:48.55 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/CoreGraphics.framework/Resources/WindowServer -daemon
+   24   166     1     4004   0  33  0  2469320   1624 -      Ss                  0 ??         0:03.02 /usr/libexec/networkd
+    0   169     1     4004   0  33  0  2469232    416 -      Ss                  0 ??         0:00.14 /usr/libexec/networkd_privileged
+  202   172     1     4104   0   4  0  2469992     12 -      Ss                  0 ??         0:00.03 /usr/libexec/xpcd
+  202   173     1     4004   0   4  0  2492472    428 -      Ss                  0 ??         0:00.06 com.apple.audio.DriverHelper
+    0   186     1     4004   0  33  0  2491728    888 -      Ss                  0 ??         0:01.84 /usr/libexec/usbd
+    0   187     1     4004   0  33  0  2468724    272 -      Ss                  0 ??         0:00.10 /sbin/SystemStarter
+    0   188     1     4004   0  33  0  2469756    400 -      Ss                  0 ??         0:03.15 /usr/libexec/pacemaker -b -e 0.0001 -a 10
+    0   189     1     4004   0  33  0  2509100   2176 -      Ss                  0 ??         0:00.62 /usr/libexec/sandboxd -n PluginProcess -n 
+    0   190     1     4004   0   4  0  2470300    632 -      Ss                  0 ??         0:00.38 /System/Library/PrivateFrameworks/CoreSymbolication.framework/coresymbolicationd
+    0   191     1     4004   0   4  0  2469284   1428 -      Ss                  0 ??         0:01.10 sysmond
+    0   214     1     4004   0  33  0  2518608    648 -      Ss                  0 ??         0:00.35 /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/CVMServer
+    0   224     1     4004   0   4  0  2469416    856 -      Ss                  0 ??         0:00.29 com.apple.CodeSigningHelper
+    0   260     1     4104   0  31  0  2452432     12 -      S                   0 ??         0:00.01 sudo /Library/StartupItems/HWNetMgr/HWNetCfg
+    0   261     1     4000   0  33  0   629672    280 -      S                   0 ??         0:00.19 /Library/StartupItems/HWPortDetect/HWPortCfg
+    0   263   260     4000   0  33  0   629724    284 -      S                   0 ??         0:00.16 /Library/StartupItems/HWNetMgr/HWNetCfg
+  501   283     1 80004004   0  31  0  2471568    936 -      Ss                  0 ??         0:03.31 /sbin/launchd
+    0   285     1     4004   0  33  0  2492488    480 -      Ss                  0 ??         0:00.15 /usr/libexec/securityd_service
+  501   290   283 40004004   0  33  0  2507688   6672 -      S                   0 ??         0:05.79 /usr/libexec/UserEventAgent (Aqua)
+  501   291   283     4004   0  33  0  2494876   5064 -      S                   0 ??         1:07.09 /usr/sbin/distnoted agent
+  501   294   283     4004   0   4  0  2470440   1596 -      S                   0 ??         0:04.55 /usr/sbin/cfprefsd agent
+  501   295     1     4104   0   4  0  2494820   2188 -      Ss                  0 ??         0:01.25 /usr/libexec/xpcd
+  501   299   283     4004   0  33  0  2492192   2336 -      S                   0 ??         0:00.57 /usr/sbin/usernoted
+  501   301   283     4004   0   4  0  2472424   2308 -      S                   0 ??         0:00.54 /System/Library/CoreServices/pbs
+  501   302   283     4004   0   4  0  2494920   2004 -      S                   0 ??         0:00.24 /System/Library/PrivateFrameworks/TCC.framework/Resources/tccd
+  501   304   283     4084   0   4  0  4015280  81392 -      S                   0 ??         5:46.86 /Applications/Safari.app/Contents/MacOS/Safari -psn_0_20485
+  501   306   283     4004   0   4  0  2497924   3956 -      S                   0 ??         0:01.47 /System/Library/PrivateFrameworks/CalendarAgent.framework/Executables/CalendarAgent
+  501   307   283     4084   0  49  0  2604736  24084 -      S                   0 ??         1:17.72 /Applications/Utilities/Terminal.app/Contents/MacOS/Terminal -psn_0_24582
+  501   309   283     4084   0   4  0  3695240 640676 -      S                   0 ??        44:53.78 /Applications/Firefox.app/Contents/MacOS/firefox -psn_0_28679
+  501   312   283     4004   0  31  0  2450184     32 -      S                   0 ??         0:00.01 /usr/sbin/pboard
+  501   315   283     4004   0  48  0  2613936  25220 -      S                   0 ??         2:07.80 /System/Library/CoreServices/Dock.app/Contents/MacOS/Dock
+  501   316   283  1004004   0  48  0  2586668  12976 -      S                   0 ??         0:19.63 /System/Library/CoreServices/SystemUIServer.app/Contents/MacOS/SystemUIServer
+  501   317   283     4004   0   4  0  2976440  86056 -      S                   0 ??         3:29.85 /System/Library/CoreServices/Finder.app/Contents/MacOS/Finder
+    0   321     1     4004   0   4  0  2471868   1436 -      Ss                  0 ??         0:00.06 /System/Library/PrivateFrameworks/TCC.framework/Resources/tccd system
+  501   322   283 80004004   0   4  0  2525104   4596 -      S                   0 ??         0:12.59 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/ATS.framework/Support/fontd
+  501   323   283     4004   0  33  0  2500336   3128 -      S                   0 ??         0:01.22 /usr/libexec/sharingd
+  501   330   283     4004   0   4  0  2502532   1404 -      S                   0 ??         0:00.73 /usr/libexec/librariand
+    0   331     1     4004   0  33  0  2506892    716 -      Ss                  0 ??         0:00.15 /Library/Parallels/Parallels Service.app/Contents/PlugIns/Parallels NAPT Service.app/Contents/MacOS/prl_naptd
+  501   333   283     4004   0  63  0  2511892   2940 -      S                   0 ??         0:03.00 /System/Library/PrivateFrameworks/Ubiquity.framework/Versions/A/Support/ubd
+    0   346    68     400c   0  36  0  2550804   6852 -      S                   0 ??         3:49.03 /Library/Parallels/Parallels Service.app/Contents/MacOS/prl_disp_service -e --logfile /var/log/prl_disp_service_server.log --pidfile /var/run/prl_disp_service.pid
+  501   347   283     4004   0  48  0  2543508   8516 -      S                   0 ??         0:03.62 /System/Library/CoreServices/NotificationCenter.app/Contents/MacOS/NotificationCenter
+    0   349     1     4004   0  33  0  2497412   1596 -      Ss                  0 ??         0:00.88 /usr/sbin/filecoordinationd
+  501   354     1     4004   0   4  0  2673796   6420 -      Ss                  0 ??         0:16.44 com.apple.IconServicesAgent
+  501   355     1     4004   0  48  0  2525296   3960 -      Ss                  0 ??         0:01.24 com.apple.internetaccounts
+  200   358     1     4004   0   4  0  3668776  86916 -      Ss                  0 ??         1:42.35 /System/Library/CoreServices/Software Update.app/Contents/Resources/softwareupdated
+  501   359   283     4004   0   4  0  2508316   2396 -      S                   0 ??         0:00.46 /System/Library/PrivateFrameworks/MessagesKit.framework/Resources/soagent.app/Contents/MacOS/soagent
+  501   360     1     4004   0  48  0  2514784   2052 -      Ss                  0 ??         0:01.15 com.apple.ShareKitHelper
+  200   363     1     4104   0   4  0  2469992     12 -      Ss                  0 ??         0:00.02 /usr/libexec/xpcd
+    0   369     1  1004004   0   4  0  2499520   3400 -      Ss                  0 ??         0:00.57 /System/Library/PrivateFrameworks/SoftwareUpdate.framework/Resources/suhelperd
+   55   375     1     4104   0   4  0  2468968     12 -      Ss                  0 ??         0:00.02 /usr/libexec/xpcd
+  501   377   283     4004   0  48  0  2512472   2104 -      S                   0 ??         0:01.03 /System/Library/CoreServices/AirPlayUIAgent.app/Contents/MacOS/AirPlayUIAgent --launchd
+  501   378   283     4004   0  33  0  2494812   2540 -      S                   0 ??         0:00.60 /System/Library/PrivateFrameworks/IMCore.framework/imagent.app/Contents/MacOS/imagent
+  501   395   283     4004   0   4  0  2492308    816 -      S                   0 ??         0:00.10 /usr/libexec/lsboxd
+  501   396     1     4004   0   4  0  2493680    832 -      Ss                  0 ??         0:00.07 com.apple.imdpersistence.IMDPersistenceAgent
+  501   405   283     4004   0   4  0  2497512   2904 -      S                   0 ??         0:01.35 /System/Library/PrivateFrameworks/IDSCore.framework/identityservicesd.app/Contents/MacOS/identityservicesd
+  501   406   283     4004   0  33  0  2493636   1128 -      S                   0 ??         0:00.50 /usr/libexec/secd
+  501   407     1     4004   0  63  0  3562640  14968 -      Ss                  0 ??         1:51.67 com.apple.WebKit.Networking
+  202   414     1     4004   0   4  0  2469452    312 -      Ss                  0 ??         0:00.03 com.apple.audio.SandboxHelper
+    0   423     1     4004   0   4  0  2469620    384 -      Ss                  0 ??         0:00.05 com.apple.systemadministration.writeconfig
+  501   430   283     4004   0  63  0  3564224  10632 -      S                   0 ??         0:11.46 /System/Library/PrivateFrameworks/CommerceKit.framework/Versions/A/Resources/storeagent
+  501   431     1     4004   0  48  0  2518936   3892 -      Ss                  0 ??         0:01.09 com.apple.dock.extra
+  501   437   283     4004   0   4  0  2496704   1220 -      S                   0 ??         0:00.21 /System/Library/Frameworks/Accounts.framework/Versions/A/Support/accountsd
+  501   448     1     4004   0   4  0  2493304    796 -      Ss                  0 ??         0:00.08 com.apple.NotesMigratorService
+  501   455   283     4004   0   4  0  2491880   1352 -      S                   0 ??         0:00.21 /usr/libexec/WiFiKeychainProxy
+  501   457   283     4004   0  33  0  2470048    652 -      S                   0 ??         0:00.04 /System/Library/CoreServices/SocialPushAgent.app/Contents/MacOS/SocialPushAgent
+  501   464   283     4004   0   4  0  2495100   1556 -      S                   0 ??         0:00.43 /System/Library/CoreServices/AppleIDAuthAgent
+  501   467   283     4000   0  33  0   675368   1208 -      S                   0 ??         0:02.35 /Library/Printers/Canon/CUPSCAPT/BackGrounder/Canon CAPT BackGrounder.app/Contents/MacOS/Canon CAPT BackGrounder
+  501   468   283     4004   0  33  0  2507160    780 -      S                   0 ??         0:00.12 /Library/Parallels/Parallels Service.app/Contents/PlugIns/Parallels NAPT Service.app/Contents/MacOS/prl_naptd proxy
+  501   472   283  1004080   0  33  0   657152   1380 -      S                   0 ??         0:02.14 /Users/mac/Library/Application Support/Google/Android File Transfer/Android File Transfer Agent.app/Contents/MacOS/Android File Transfer Agent
+  501   473   283     4004   0  48  0  2512556   1712 -      S                   0 ??         0:00.71 /System/Library/CoreServices/Menu Extras/TextInput.menu/Contents/SharedSupport/TISwitcher.app/Contents/MacOS/TISwitcher
+    0   479     1     4008   0  33  0   659280   1500 -      S                   0 ??         0:00.12 /usr/local/hw_mp_userdata/Idea_Net_Setter/OnlineUpdate/ouc.app/Contents/MacOS/ouc /Applications/Idea Net Setter.app/Contents/Resources/UpdateDog/
+  501   493   283     4004   0  33  0  2468844    904 -      S                   0 ??         0:00.05 /System/Library/Frameworks/Security.framework/Versions/A/Resources/CloudKeychainProxy.bundle/Contents/MacOS/CloudKeychainProxy
+   89   522     1 80004004   0  31  0  2471392    544 -      Ss                  0 ??         0:03.11 /sbin/launchd
+   89   525   522     4004   0  33  0  2493304   1352 -      S                   0 ??         0:04.94 /usr/sbin/distnoted agent
+  501   541   283  1004004   0  33  0  2502040   2008 -      S                   0 ??         0:01.58 /System/Library/Services/AppleSpell.service/Contents/MacOS/AppleSpell -psn_0_147492
+  501   543     1     4004   0   4  0  2496804   1824 -      Ss                  0 ??         0:00.22 com.apple.InputMethodKit.UserDictionary
+  501   564   283     4004   0   4  0  2469304    320 -      S                   0 ??         0:00.02 /System/Library/PrivateFrameworks/KerberosHelper/Helpers/DiskUnmountWatcher
+  501   565   283     4004   0  33  0  2469432    592 -      S                   0 ??         0:00.04 /usr/libexec/USBAgent
+  501   597   283     4004   0  33  0  2470584   1244 -      S                   0 ??         0:00.39 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdflagwriter
+    0   613     1     4004   0   4  0  2470840   2920 -      Ss                  0 ??         0:07.66 /usr/libexec/systemstatsd
+   89   622   522     4004   0   4  0  2471956   1096 -      S                   0 ??         0:01.56 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker-sizing -c MDSSizingWorker -m com.apple.mdworker.sizing
+  501   643   283     4004   0   4  0  2475040   1092 -      S                   0 ??         0:06.77 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker-sizing -c MDSSizingWorker -m com.apple.mdworker.sizing
+    0   874     1  1004004   0  33  0  2478660    780 -      Ss                  0 ??         0:20.12 /usr/sbin/smbd
+    0  1015     1     4004   0  32  1  2469224    344 -      SNs                 0 ??         0:00.02 /usr/libexec/periodic-wrapper daily
+    0  1016     1     4004   0  32  1  2469224    344 -      SNs                 0 ??         0:00.01 /usr/libexec/periodic-wrapper weekly
+    0  1103     1 80004004   0  31  0  2471392    348 -      Ss                  0 ??         0:00.05 /sbin/launchd
+    0  1105  1103     4004   0  33  0  2461060    348 -      S                   0 ??         0:00.02 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdflagwriter
+    0  1116     1  1004004   0   4  0  2608656   3868 -      Ss                  0 ??         0:22.15 /System/Library/PrivateFrameworks/PackageKit.framework/Resources/installd
+  501  1136   283     4004   0  48  0  2521632   2284 -      S                   0 ??         0:00.55 /System/Library/PrivateFrameworks/CommerceKit.framework/Resources/LaterAgent.app/Contents/MacOS/LaterAgent
+  501  1282   283     4004   0  33  0  2470444    908 -      S                   0 ??         0:00.21 /System/Library/CoreServices/NetAuthAgent.app/Contents/MacOS/NetAuthSysAgent
+  501  1399   283     4004   0  48  0  2522572   2540 -      S                   0 ??         0:00.58 /System/Library/PrivateFrameworks/CloudServices.framework/Resources/EscrowSecurityAlert.app/Contents/MacOS/EscrowSecurityAlert
+  501  1403     1     4004   0  48  0  3569496   1704 -      Ss                  0 ??         0:00.52 com.apple.WebKit.WebContent
+  501  1413     1     4004   0   4  0  2492192    804 -      Ss                  0 ??         0:00.10 com.apple.DataDetectorsDynamicData
+  501  1867   283     4004   0   4  0  2471844    728 -      S                   0 ??         0:00.04 /usr/libexec/spindump_agent
+    0  2027     1     4004   0   4  0  2469656   1680 -      Ss                  0 ??         0:00.05 /usr/libexec/syspolicyd
+  501  2302   283     4004   0  33  0  2469272    652 -      S                   0 ??         0:00.04 /System/Library/Frameworks/ApplicationServices.framework/Frameworks/PrintCore.framework/Versions/A/printtool agent
+   89  2378     1     4104   0   4  0  2471016   1548 -      Ss                  0 ??         0:00.35 /usr/libexec/xpcd
+  501  2649     1     4004   0   4  0  2468904     12 -      Ss                  0 ??         0:00.02 com.apple.menuextra.airport.keychainproxy
+  501  2653   283     4004   0   4  0  2491840   1120 -      S                   0 ??         0:00.08 /System/Library/PrivateFrameworks/CloudServices.framework/Resources/com.apple.sbd
+  501  3197     1     4004   0  48  0  3569496   2204 -      Ss                  0 ??         0:00.40 com.apple.WebKit.WebContent
+    0  4096     1     4004   0  31  0  2444628    172 -      S                   0 ??         0:00.03 /bin/sh /Applications/XAMPP/xamppfiles/bin/mysqld_safe --datadir=/Applications/XAMPP/xamppfiles/var/mysql --pid-file=/Applications/XAMPP/xamppfiles/var/mysql/Macs-MacBook-Pro.local.pid
+   -2  4191  4096     4100   0  10  0   658536   6880 -      S                   0 ??         0:02.42 /Applications/XAMPP/xamppfiles/sbin/mysqld --basedir=/Applications/XAMPP/xamppfiles --datadir=/Applications/XAMPP/xamppfiles/var/mysql --user=nobody --log-error=/Applications/XAMPP/xamppfiles/var/mysql/Macs-MacBook-Pro.local.err --pid-file=/Applications/XAMPP/xamppfiles/var/mysql/Macs-MacBook-Pro.local.pid --socket=/Applications/XAMPP/xamppfiles/var/mysql/mysql.sock --port=3306
+    0  4195     1        0   0  31  0   660100  11552 -      Ss                  0 ??         0:00.82 /Applications/XAMPP/xamppfiles/bin/httpd -E /Applications/XAMPP/xamppfiles/logs/error_log -k start -DPHP
+   -2  4196  4195      100   0  31  0   646548    608 -      S                   0 ??         0:00.00 /Applications/XAMPP/xamppfiles/bin/httpd -E /Applications/XAMPP/xamppfiles/logs/error_log -k start -DPHP
+   -2  4199  4195      100   0  31  0   661892   7928 -      S                   0 ??         0:00.20 /Applications/XAMPP/xamppfiles/bin/httpd -E /Applications/XAMPP/xamppfiles/logs/error_log -k start -DPHP
+   -2  4200  4195      100   0  31  0   661892  10112 -      S                   0 ??         0:00.85 /Applications/XAMPP/xamppfiles/bin/httpd -E /Applications/XAMPP/xamppfiles/logs/error_log -k start -DPHP
+   -2  4203  4195      100   0  31  0   661892   9112 -      S                   0 ??         0:00.09 /Applications/XAMPP/xamppfiles/bin/httpd -E /Applications/XAMPP/xamppfiles/logs/error_log -k start -DPHP
+   -2  4207  4195      100   0  31  0   661892   9876 -      S                   0 ??         0:00.46 /Applications/XAMPP/xamppfiles/bin/httpd -E /Applications/XAMPP/xamppfiles/logs/error_log -k start -DPHP
+   -2  4210  4195      100   0  31  0   660100   2320 -      S                   0 ??         0:00.01 /Applications/XAMPP/xamppfiles/bin/httpd -E /Applications/XAMPP/xamppfiles/logs/error_log -k start -DPHP
+   -2  4211  4195      100   0  31  0   660100   2284 -      S                   0 ??         0:00.01 /Applications/XAMPP/xamppfiles/bin/httpd -E /Applications/XAMPP/xamppfiles/logs/error_log -k start -DPHP
+   -2  4216  4195      100   0  31  0   660100   2108 -      S                   0 ??         0:00.01 /Applications/XAMPP/xamppfiles/bin/httpd -E /Applications/XAMPP/xamppfiles/logs/error_log -k start -DPHP
+   -2  4217  4195      100   0  31  0   660100   2328 -      S                   0 ??         0:00.01 /Applications/XAMPP/xamppfiles/bin/httpd -E /Applications/XAMPP/xamppfiles/logs/error_log -k start -DPHP
+   -2  4225  4195      100   0  31  0   660100   2340 -      S                   0 ??         0:00.00 /Applications/XAMPP/xamppfiles/bin/httpd -E /Applications/XAMPP/xamppfiles/logs/error_log -k start -DPHP
+  501  4420     1     4004   0   4  0  3783220  68504 -      Ss                  0 ??         0:05.10 com.apple.WebKit.WebContent
+  501  4447   283     4080   0   4  0  1121928 297508 -      S                   0 ??         1:18.78 /Applications/Adobe Reader.app/Contents/MacOS/AdobeReader -psn_0_913631
+  501  4453   283     4004   0  33  0  2491960   4648 -      S                   0 ??         0:00.08 /System/Library/PrivateFrameworks/HelpData.framework/Versions/A/Resources/helpd
+  222  4578     1     4004   0   4 20  2492828   4104 -      SNs                 0 ??         0:00.09 /usr/sbin/netbiosd
+    0  4589     1     4004   0  63  0  2493472   4192 -      Ss                  0 ??         0:00.21 /usr/sbin/ocspd
+  501  4654   283     4080   0   4  0   708400  13280 -      S                   0 ??         0:00.63 /Applications/XAMPP/XAMPP Control.app/Contents/MacOS/XAMPP Control
+   -2  4662  4195      100   0  31  0   660100   1212 -      S                   0 ??         0:00.00 /Applications/XAMPP/xamppfiles/bin/httpd -E /Applications/XAMPP/xamppfiles/logs/error_log -k start -DPHP
+   89  4722   522    84004   0   4 17  2513392  18948 -      UN                  0 ??         0:42.22 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+   89  4723   522    84004   0   4 17  2511580  14360 -      UN                  0 ??         0:04.10 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+   89  4724   522    84004   0   4 17  2510784  13712 -      UN                  0 ??         0:04.02 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+   89  4725   522    84004   0   4 17  2486880  13528 -      UN                  0 ??         0:04.18 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker -s mdworker -c MDSImporterWorker -m com.apple.mdworker.shared
+   89  4726   522    84000   0   4 17   685336   9492 -      SN                  0 ??         0:00.43 /System/Library/Frameworks/CoreServices.framework/Frameworks/Metadata.framework/Versions/A/Support/mdworker32 -s mdworker-lsb -c MDSImporterWorker -m com.apple.mdworker.32bit
+    0  4619   307     4106   0  33  0  2468788   2160 -      Ss                  0 ttys000    0:00.11 login -pf mac
+  501  4620  4619     4006   0  31  0  2444632   1412 -      S                   0 ttys000    0:00.10 -bash
+    0  4727  4620     4106   0  31  0  2432800    720 -      R+                  0 ttys000    0:00.01 ps -alx

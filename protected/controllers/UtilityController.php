@@ -8,10 +8,42 @@
 class UtilityController extends Controller
 
 {
+	public  static $uploadPath;
+	public function init(){
+	 self::$uploadPath=Yii::app()->getBasePath().'/../uploads/';
+	 parent::init();
+	 
+	}
     public function actionTest()
     {
         $this->render('test');
     }
+	public function actionUploads()
+	{
+	  	
+	  $segmentsArr = explode('/', Yii::app()->request->pathInfo);
+	  $fileName='';
+	  for ($i=2;$i<count($segmentsArr);$i++)
+	  {
+		 $fileName.='/'.$segmentsArr[$i]; 
+	  }
+	  $filePath=self::$uploadPath.'/'.$fileName;
+	 // print $filePath;
+	 // exit;
+	  if (file_exists($filePath))
+	  {
+		  $content=file_get_contents($filePath);
+	     Yii::app()->getRequest()->sendFile($fileName, $content);
+		 
+		 
+	  }	 
+	  else 
+	  {
+		  
+		  print "File $filePath:Not found";
+	  }
+	  
+	 }
    public static function monthDropdown($name="month", $selected=null)
 {
         $dd = '<select name="'.$name.'" id="'.$name.'">';
@@ -47,7 +79,15 @@ class UtilityController extends Controller
         return $dd;
 }
 
+  public static function getUrlSegment($part) {
+    
+    $segementsArr = explode('/', Yii::app()->request->pathInfo);
 
+    if (!empty($segementsArr[$part-1])) return $segementsArr[$part-1];
+    
+    return false;
+    
+  }
 
     
 }

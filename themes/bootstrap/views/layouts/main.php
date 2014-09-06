@@ -34,8 +34,25 @@
                     </form>
                 </div>-->
         <?php //$html = ob_get_clean(); ?>
+		<style>
+			.user2 > .navbar-inner
+			{
+				background-color: #4d90fe;
+    background-image: -moz-linear-gradient(center top , #4d90fe, #4787ed);
+    border: 1px solid #3079ed;
+			}
+			.user2 a:link 
+			{
+				color:black !important;
+			}
+			</style>
+	<div class="navbar navbar-static">
 
+<div class="container">
+<a class="brand" href="/yii1/index.php/">My Child Performance</a>
 
+</div>
+</div>
         <?php
         $this->widget('bootstrap.widgets.TbNavbar', array(
             //  'type' => '', // null or 'inverse'
@@ -43,6 +60,9 @@
             'display' => 'static',
             'brandUrl' => '',
             'collapse' => false, // requires bootstrap-responsive.css
+			'htmlOptions'=>array(
+				'class'=>'user2'
+			),
             'items' => array(
                 array(
                     'class' => 'bootstrap.widgets.TbNav',

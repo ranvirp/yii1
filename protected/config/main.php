@@ -16,7 +16,7 @@ return array(
 	'name'=>'My Web Application',
 'language'=>'en',
 	// preloading 'log' component
-	'theme'=>'bootstrap',
+	'theme'=>'abound',
 	'preload'=>array('log'),
     'aliases'=>array(
 	     // yiistrap configuration
@@ -33,16 +33,23 @@ return array(
         'application.modules.user.components.*',
         'application.modules.rights.*',
         'application.modules.rights.components.*',
-           
+         'application.modules.Basedata.models.*',  
+		'application.modules.School.models.*',  
+	    
 	    'bootstrap.helpers.*',
 		'bootstrap.widgets.*',
 		'bootstrap.behaviors.*',
 		'ext.giix-components.*', // giix components
             'ext.AweCrud.components.*', 
+		'ext.AttachmentBehavior.AttachmentBehavior.*',
 	),
 
 	'modules'=>array(
             'importModels',
+		    'Basedata',
+		    'School'=>array(
+			  'modules'=>array('LearningLevel'),	
+			),
 	    'user'=>array(
                 'tableUsers' => 'users',
                 'tableProfiles' => 'profiles',

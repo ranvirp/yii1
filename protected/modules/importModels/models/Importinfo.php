@@ -7,7 +7,8 @@
  * @property integer $id
  * @property string $filename
  * @property integer $filesize
- *
+ * @property string $correlation
+ * @property varchar $modelName
  * The followings are the available model relations:
  * @property Imports[] $imports
  */
@@ -29,12 +30,14 @@ class Importinfo extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id', 'required'),
-			array('id, filesize', 'numerical', 'integerOnly'=>true),
-			array('filename', 'safe'),
+			
+			//array(' filesize', 'numerical', 'integerOnly'=>true),
+		//	array('filename', 'unsafe'),
+			array('modelName', 'safe'),
+			//array('correlation', 'safe'),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, filename, filesize', 'safe', 'on'=>'search'),
+			
 		);
 	}
 
@@ -63,11 +66,7 @@ class Importinfo extends CActiveRecord
 			//'fallback_image' => 'images/sample_image.gif',
 			'path' => "uploads/:model/:id.:ext",
 			
-			'styles' => array(
-				# name => size 
-				# use ! if you would like 'keepratio' => false
-				'thumb' => '!100x60',
-			)			
+			
 		),
 	);
         }
@@ -80,6 +79,7 @@ class Importinfo extends CActiveRecord
 			'id' => Yii::t('app','ID'),
 			'filename' => Yii::t('app','Filename'),
 			'filesize' => Yii::t('app','Filesize'),
+			'modelName'=>Yii::t('app','modelName'),
 		);
 	}
 
@@ -144,4 +144,71 @@ class Importinfo extends CActiveRecord
         $list = CHtml::listData($models, $pk, 'name');
         return json_encode($list);
 	}
+	public static function createCorrelationArray($xlsxfile, $model) {
+		// get a reference to the path of PHPExcel classes 
+		$phpExcelPath = Yii::getPathOfAlias('ext.phpexcel.Classes');
+
+		// Turn off our amazing library autoload 
+		spl_autoload_unregister(array('YiiBase', 'autoload'));
+		include($phpExcelPath . DIRECTORY_SEPARATOR . 'PHPExcel.php');
+		$inputFileType = PHPExcel_IOFactory::identify($xlsxfile);
+
+		$objReader = PHPExcel_IOFactory::createReader($inputFileType);
+
+		$objReader->setReadDataOnly(true);
+
+		/**  Load $inputFileName to a PHPExcel Object  * */
+		$objPHPExcel = $objReader->load($xlsxfile);
+
+		//$total_sheets = $objPHPExcel->getSheetCount();
+
+		//$allSheetName = $objPHPExcel->getSheetNames();
+		//$objWorksheet = $objPHPExcel->setActiveSheetIndex(0);
+		//$highestRow = $objWorksheet->getHighestRow();
+		$highestColumn = $objWorksheet->getHighestColumn();
+		$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
+		//for ($row = 1; $row <= $highestRow; ++$row) {
+			for ($col = 0; $col < $highestColumnIndex; ++$col) {
+				$value = $objWorksheet->getCellByColumnAndRow($col, 1)->getValue();
+
+				$arraydata[] = $value;
+			}
+		//}
+			spl_autoload_register(array('YiiBase', 'autoload'));
+		return $arraydata;
+	}
+	public static function fetchDataFromSource($xlsxfile, $model) {
+		// get a reference to the path of PHPExcel classes 
+		$phpExcelPath = Yii::getPathOfAlias('ext.phpexcel.Classes');
+
+		// Turn off our amazing library autoload 
+		spl_autoload_unregister(array('YiiBase', 'autoload'));
+		include($phpExcelPath . DIRECTORY_SEPARATOR . 'PHPExcel.php');
+		$inputFileType = PHPExcel_IOFactory::identify($xlsxfile);
+
+		$objReader = PHPExcel_IOFactory::createReader($inputFileType);
+
+		$objReader->setReadDataOnly(true);
+
+		/**  Load $inputFileName to a PHPExcel Object  * */
+		$objPHPExcel = $objReader->load($xlsxfile);
+
+		$total_sheets = $objPHPExcel->getSheetCount();
+
+		$allSheetName = $objPHPExcel->getSheetNames();
+		$objWorksheet = $objPHPExcel->setActiveSheetIndex(0);
+		$highestRow = $objWorksheet->getHighestRow();
+		$highestColumn = $objWorksheet->getHighestColumn();
+		$highestColumnIndex = PHPExcel_Cell::columnIndexFromString($highestColumn);
+		for ($row = 1; $row <= $highestRow; ++$row) {
+			for ($col = 0; $col < $highestColumnIndex; ++$col) {
+				$value = $objWorksheet->getCellByColumnAndRow($col, $row)->getValue();
+
+				$arraydata[$row - 1][$col] = $value;
+			}
+		}
+		print_r($arraydata);
+		spl_autoload_register(array('YiiBase', 'autoload'));
+	}
+
 }

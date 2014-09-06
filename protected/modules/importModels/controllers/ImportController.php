@@ -1,31 +1,42 @@
 <?php
 
-class DefaultController extends Controller
+class ImportController extends Controller
 {
         public $connectionId='db';
         public $tablePrefix='';
+		public $file = "/Users/mac/tehsils.xml";
+		public $map_array=array
+			(
+			
+		    );
+
 	public function actionIndex()
 	{
             
-            print $this->renderPartial('/common/code', array(
+             $this->render('/common/code', array(
 				'file'=>  dirname(__FILE__).DIRECTORY_SEPARATOR.'..'.DIRECTORY_SEPARATOR.'templates/_Importform.php'));
 		
 	}
         public function actionGetForm($m)
         {
-            $model= new $m;
-            $basedir=dirname(__FILE__)."/../views/default/$m";
+            
+			$model= new $m;
+            $basedir=dirname(__FILE__)."/../views/import/$m";
            // print $basedir;
             //exit;
             if (!is_dir($basedir))
-            mkdir($basedir);
+            mkdir($basedir,0777,true);
+			
             file_put_contents($basedir."/"."_import.php",$this->renderPartial('_importform',array('model'=>$model),true));
-        $this->render($m."/_import",array('model'=>$model));
+            chmod($basedir."/"."_import.php",777);
+			$this->render($m."/_import",array('model'=>$model));
             }
         public function actionGetFormByModel($m)
         {
              $model= new $m;
-            $this->render($m."/_import",array('model'=>$model));
+			 print "hi";
+			 exit;
+             $this->render("school/_import",array('model'=>$model));
         }
         protected function generateClassName($tableName)
 	{
@@ -69,4 +80,77 @@ class DefaultController extends Controller
 		}
 		return $tableName;
 	}
+	public function actionImportFromXML()
+	{
+		   // $term->vocabulary_machine_name = $vocabulary->machine_name;
+
+$xml_parser = xml_parser_create();
+// use case-folding so we are sure to find the tag in $map_array
+xml_parser_set_option($xml_parser, XML_OPTION_CASE_FOLDING, true);
+xml_set_element_handler($xml_parser, 'startElement', 'endElement');
+xml_set_character_data_handler($xml_parser, "characterData");
+if (!($fp = fopen($file, "r"))) {
+    die("could not open XML input");
+}
+
+while ($data = fread($fp, 4096)) {
+    if (!xml_parse($xml_parser, $data, feof($fp))) {
+        die(sprintf("XML error: %s at line %d",
+                    xml_error_string(xml_get_error_code($xml_parser)),
+                    xml_get_current_line_number($xml_parser)));
+    }
+}
+xml_parser_free($xml_parser);
+
+	}
+	function startElement($parser, $name, $attrs) 
+{
+    
+	global $map_array;
+	global $current_element;
+	$name=  strtolower($name);
+    if (isset($map_array[strtolower($name)])) {
+       // echo "<$map_array[$name]>";
+		$current_element=strtolower($name);
+		
+    }
+}
+
+function endElement($parser, $name) 
+{
+   global $map_array;
+	global $current_element;
+	global $term;
+	global $vid;
+	$name=strtolower($name);
+   if (isset($map_array[strtolower($name)])) {
+        //echo "</$map_array[$name]>";
+		if (strcmp(strtolower($name), "name")==0)
+		{
+			taxonomy_term_save($term);
+			 $term = new stdClass();
+    $term->vid = $vid;
+    //$term->vocabulary_machine_name = $vocabulary->machine_name;
+		}
+    }
+}
+
+function characterData($parser, $data) 
+{
+	global $map_array;
+	global $current_element;
+	global $term;
+    echo $data;
+	if (isset($map_array[$current_element])) {
+      $t=$map_array[$current_element];
+	  $term->$t=array('hi'=>array(array('value'=>$data)));
+	  if ($current_element=='name')
+		  $term->name=$data;
+	  
+	
+	 
+	 
+	}
+}
+
 }
