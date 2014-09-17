@@ -7,8 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Learning Level Management System">
     <meta name="author" content="Ranvir Prasad">
-	<link href='http://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
-
+	<?php
+	//<link href='http://fonts.googleapis.com/css?family=Carrois+Gothic' rel='stylesheet' type='text/css'>
+?>
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -25,7 +26,7 @@
     <link rel="apple-touch-icon-precomposed" href="<?php echo $baseUrl;?>/img/icons/apple-touch-icon-57-precomposed.png">
 	<?php  
 	  $cs->registerCssFile($baseUrl.'/css/bootstrap.min.css');
-	  $cs->registerCssFile($baseUrl.'/css/bootstrap-responsive.min.css');
+	  $cs->registerCssFile($baseUrl.'/css/bootstrap-theme.min.css');
 	  $cs->registerCssFile($baseUrl.'/css/abound.css');
 	  //$cs->registerCssFile($baseUrl.'/css/style-blue.css');
 	  ?>
@@ -39,10 +40,10 @@
         <link rel="alternate stylesheet" type="text/css" media="screen" title="style7" href="<?php echo $baseUrl;?>/css/style-red.css" />
 	  <?php
 	  $cs->registerScriptFile($baseUrl.'/js/bootstrap.min.js');
-	  $cs->registerScriptFile($baseUrl.'/js/plugins/jquery.sparkline.js');
+	  //$cs->registerScriptFile($baseUrl.'/js/plugins/jquery.sparkline.js');
 	  $cs->registerScriptFile($baseUrl.'/js/plugins/jquery.flot.min.js');
 	  $cs->registerScriptFile($baseUrl.'/js/plugins/jquery.flot.pie.min.js');
-	  $cs->registerScriptFile($baseUrl.'/js/charts.js');
+	 // $cs->registerScriptFile($baseUrl.'/js/charts.js');
 	  $cs->registerScriptFile($baseUrl.'/js/plugins/jquery.knob.js');
 	  $cs->registerScriptFile($baseUrl.'/js/plugins/jquery.masonry.min.js');
 	  $cs->registerScriptFile($baseUrl.'/js/styleswitcher.js');

@@ -36,9 +36,11 @@ class Issues extends CActiveRecord
 	 */
 	public function tableName()
 	{
-		return '{{issues}}';
+		return 'issues';
 	}
-
+public function behaviors() {
+	return array('filesUploadbehaviour');
+}
 	/**
 	 * @return array validation rules for model attributes.
 	 */

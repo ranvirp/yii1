@@ -14,7 +14,7 @@ return array(
 ),
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
-'language'=>'en',
+	'language'=>'en',
 	// preloading 'log' component
 	'theme'=>'abound',
 	'preload'=>array('log'),
@@ -23,6 +23,11 @@ return array(
         'bootstrap' => realpath(__DIR__ . '/../extensions/bootstrap'), // change if necessary
         // yiiwheels configuration
         'yiiwheels' => realpath(__DIR__ . '/../extensions/yiiwheels'),
+		 //If you manually installed it
+    'xupload' => realpath(__DIR__ . '/../extensions/xupload-0.5.1'),
+		'basicupload' => realpath(__DIR__ . '/../extensions/basicJqueryUpload'),
+	
+		
 	),
 	// autoloading model and component classes
 	'import'=>array(
@@ -34,7 +39,11 @@ return array(
         'application.modules.rights.*',
         'application.modules.rights.components.*',
          'application.modules.Basedata.models.*',  
+		 'application.modules.Basedata.components.*',  
+		
 		'application.modules.School.models.*',  
+		'application.modules.rdp.models.*',  
+	    
 	    
 	    'bootstrap.helpers.*',
 		'bootstrap.widgets.*',
@@ -47,6 +56,7 @@ return array(
 	'modules'=>array(
             'importModels',
 		    'Basedata',
+		    'rdp',
 		    'School'=>array(
 			  'modules'=>array('LearningLevel'),	
 			),
@@ -169,6 +179,7 @@ return array(
 			'username' => 'root',
 			'password' => '',
 			'charset' => 'utf8',
+			'tablePrefix'=>'',
 		),
 		
 		'errorHandler'=>array(
@@ -203,7 +214,8 @@ return array(
 	// application-level parameters that can be accessed
 	// using Yii::app()->params['paramName']
 	'params'=>array(
-		// this is used in contact page
-		'adminEmail'=>'webmaster@example.com',
-	),
+                // this is used in contact page
+                'adminEmail'=>'webmaster@example.com',
+                'filesAlias'=>'application.data.files',
+        ),
 );

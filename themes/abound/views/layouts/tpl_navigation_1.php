@@ -8,11 +8,11 @@
           </a>
      
           <!-- Be sure to leave the brand out there if you want it shown -->
-          <a class="brand" href="#">LearningLevel <small>Management System </small></a>
+          <a class="navbar-brand" href="#">LearningLevel <small>Management System </small></a>
           
-          <div class="nav-collapse">
+          <div class="navbar-collapse collapse">
 			<?php $this->widget('zii.widgets.CMenu',array(
-                    'htmlOptions'=>array('class'=>'pull-right nav'),
+                    'htmlOptions'=>array('class'=>'pull-right nav navbar-nav'),
                     'submenuHtmlOptions'=>array('class'=>'dropdown-menu'),
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,

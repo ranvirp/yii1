@@ -1,8 +1,8 @@
 <?php /* @var $this Controller */ ?>
 <?php $this->beginContent('//layouts/main'); ?>
 
-  <div class="row-fluid">
-	<div class="span3">
+  <div class="row">
+	<div class="col-md-3">
 		<div class="sidebar-nav">
         
 		  <?php $this->widget('zii.widgets.CMenu', array(
@@ -70,7 +70,7 @@
       </div>
 		
     </div><!--/span-->
-    <div class="span9">
+    <div class="col-md-9">
     
     <?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(

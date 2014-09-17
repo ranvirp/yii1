@@ -114,4 +114,70 @@ class SiteController extends Controller
 		
 		$this->render('test1');
 	}
+	public function actionUpload()
+	{
+		header( 'Vary: Accept' );
+        if( isset( $_SERVER['HTTP_ACCEPT'] ) && (strpos( $_SERVER['HTTP_ACCEPT'], 'application/json' ) !== false) ) {
+            header( 'Content-type: application/json' );
+        } else {
+            header( 'Content-type: text/plain' );
+        }
+ 
+        if( isset( $_GET["_method"] ) ) {
+            if( $_GET["_method"] == "delete" ) {
+                $success = is_file( $_GET["file"] ) && $_GET["file"][0] !== '.' && unlink( $_GET["file"] );
+                echo json_encode( $success );
+            }
+        } else {
+            $this->init( );
+            $model = new Uploads;//Here we instantiate our model
+ 
+            //We get the uploaded instance
+            $model->file = CUploadedFile::getInstanceByName( 'Issues[attachments]' );
+            if( $model->file !== null ) {
+                $model->mime_type = $model->file->getType( );
+                $model->size = $model->file->getSize( );
+                $model->name = $model->file->getName( );
+                //Initialize the ddditional Fields, note that we retrieve the
+                //fields as if they were in a normal $_POST array
+                $model->title = Yii::app()->request->getPost('title', '');
+                $model->description  = Yii::app()->request->getPost('description', '');
+ $model->code='::';
+                if( $model->validate( ) ) {
+                    $path = Yii::app() -> getBasePath() . "/data/files";
+                    $publicPath = Yii::app()->getBaseUrl()."/files/uploads";
+                    if( !is_dir( $path ) ) {
+                        mkdir( $path, 0777, true );
+                        chmod ( $path , 0777 );
+                    }
+                    $model->file->saveAs( $path.$model->name );
+                    chmod( $path.$model->name, 0777 );
+ 
+                    //Now we return our json
+                    echo json_encode( array( array(
+                            "name" => $model->name,
+                            "type" => $model->mime_type,
+                            "size" => $model->size,
+                            //Add the title 
+                            "title" => $model->title,
+                            //And the description
+                            "description" => $model->description,
+                            "url" => $publicPath.$model->name,
+                            "thumbnail_url" => $publicPath.$model->name,
+                            "delete_url" => $this->createUrl( "upload", array(
+                                "_method" => "delete",
+                                "file" => $path.$model->name
+                            ) ),
+                            "delete_type" => "POST"
+                        ) ) );
+                } else {
+                    echo json_encode( array( array( "error" => $model->getErrors( 'file' ), ) ) );
+                    Yii::log( "XUploadAction: ".CVarDumper::dumpAsString( $model->getErrors( ) ), CLogger::LEVEL_ERROR, "xupload.actions.XUploadAction" );
+                }
+            } else {
+                throw new CHttpException( 500, "Could not upload file" );
+            }
+        }
+    }
+	
 }
