@@ -9,7 +9,7 @@
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'issues-form',
 	'enableAjaxValidation'=>true,
-	//'enableClientValidation'=>TRUE,
+	'enableClientValidation'=>TRUE,
 	'clientOptions'=>array('validateOnSubmit'=>true),
 	
 )); ?>
@@ -65,6 +65,15 @@
 </div>
 	</div>
 	<div class='tab-pane' id='attachments'>
-		<?php $this->widget('ext.basicJqueryUpload.basicJqueryFileUploadWidget',array('model'=>$model,'attribute'=>'attachments'));?>
+		<?php $this->widget('ext.basicJqueryUpload.basicJqueryFileUploadWidget',array('model'=>$model,'attribute'=>'attachments',));?>
 	</div>
 	</div>
+	<script>
+	$('.thumbnail').click(function(){
+  	$('.modal-body').empty();
+  	var title = $(this).parent('a').attr("title");
+  	$('.modal-title').html(title);
+  	$($(this).parents('div').html()).appendTo('.modal-body');
+  	$('#myModal').modal({show:true});
+});
+</script>

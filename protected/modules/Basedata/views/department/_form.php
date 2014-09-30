@@ -23,7 +23,7 @@
     
     
     
-    	 <?php echo $form->textFieldControlGroup($model,'name_hi',array('span'=>5,'maxlength'=>45)); ?>
+    	 <?php echo $form->textFieldControlGroup($model,'name_hi',array('span'=>5,'maxlength'=>45,'class'=>'hindiinput')); ?>
 
     
     	 <?php echo $form->textFieldControlGroup($model,'code',array('span'=>5,'maxlength'=>45)); ?>

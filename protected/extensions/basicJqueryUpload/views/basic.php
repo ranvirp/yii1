@@ -101,9 +101,14 @@ $.each(data.result, function (index, file) {
 if (file.url) {
 var link = $('<a>')
 .attr('target', '_blank')
-.prop('href', file.url);
+.prop('href', file.url)
+.prop('title',file.name)
+.prop('class','thumbnail image-responsive');
+$(data.context).prop('class','col-md-2');
 $(data.context.children()[index])
-.wrap(link);
+.wrap(link)
+;
+;
 } else if (file.error) {
 var error = $('<span class="text-danger"/>').text(file.error);
 $(data.context.children()[index])

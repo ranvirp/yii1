@@ -45,7 +45,24 @@
             )
   }
   </script>
-	<div class='form-inline well'>
+  <style>
+  .well1
+  {
+      background-color: #fff;
+    border-color: #ddd;
+    border-radius: 4px 4px 0 0;
+    border-width: 1px;
+    box-shadow: none;
+    margin-left: 0;
+    margin-right: 0;
+    padding: 2px;
+    border-style:solid;
+  }
+  </style>
+  <div class="row">
+  <?php echo TbHtml::labelTb("Designation:");?>
+  </div>
+	<div class='form-inline well1'>
 		<div class='form-group'>
       <label>
 District:
@@ -71,7 +88,7 @@ District:
 	</div>
 		<div class='form-group'>
 		<label class="required">
-Designation
+Department
 <span class="required">*</span>
 </label>
 	

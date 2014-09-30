@@ -76,7 +76,7 @@ class IssuesController extends Controller
 				
 				//}
 				
-				$this->redirect(array('view','id'=>$model->id));
+			   $this->redirect(array('view','id'=>$model->id));
 				}
 		}
  
@@ -197,6 +197,7 @@ class IssuesController extends Controller
 		{
 			 CActiveForm::validate($model);
 			Yii::app()->end();
+                        exit;
 		}
 	}
 	public function actionGetLevelDetails(){

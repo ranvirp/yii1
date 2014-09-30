@@ -78,6 +78,11 @@ class AdminController extends Controller
 		$model=new User;
 		$profile=new Profile;
 		$this->performAjaxValidation(array($model,$profile));
+                /** Added by Ranvir Prasad **/
+                $model->attachBehavior('addRole',new SaveUserRole());
+                $profile->attachBehavior('addDesignation',new SaveUserRole());
+                 
+                 
 		if(isset($_POST['User']))
 		{
 			$model->attributes=$_POST['User'];

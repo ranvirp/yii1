@@ -355,9 +355,10 @@ class FilesController extends Controller
 		//$model->type = 1; //P3Media::TYPE_FILE;
 		$model->path = $filePath;
 		$model->md5 = $md5;
-		if (!$mime = $this->_mime_content_type($fullFilePath)) {
-			$mime = $getimagesize['mime'];
-		}
+		//if (!$mime = $this->_mime_content_type($fullFilePath)) {
+			//$mime = $getimagesize['mime'];
+		//}
+		$mime="";
 		$model->mimetype = $mime;
 		//$model->info = CJSON::encode(getimagesize($fullFilePath));
 		$model->size = filesize($fullFilePath);
@@ -394,12 +395,16 @@ class FilesController extends Controller
 	}
 	public function _mime_content_type($filename)
 {
-    $result = new finfo();
-
-    if (is_resource($result) === true)
-    {
-        return $result->file($filename, FILEINFO_MIME_TYPE);
-    }
+    $finfo = finfo_open(FILEINFO_MIME_TYPE); 
+	//$result = new finfo();
+$mimetype=finfo_file($finfo, $filename);
+finfo_close();
+if ($mimetype)
+return $mimetype;
+    //if (is_resource($result) === true)
+   // {
+       // return $result->file($filename, FILEINFO_MIME_TYPE);
+   // }
 
     return false;
 }

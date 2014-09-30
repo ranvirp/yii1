@@ -20,9 +20,9 @@ return array(
 	'preload'=>array('log'),
     'aliases'=>array(
 	     // yiistrap configuration
-        'bootstrap' => realpath(__DIR__ . '/../extensions/bootstrap'), // change if necessary
+        'bootstrap' => realpath(__DIR__ . '/../extensions/yiistrap-bs3'), // change if necessary
         // yiiwheels configuration
-        'yiiwheels' => realpath(__DIR__ . '/../extensions/yiiwheels'),
+        'yiiwheels' => realpath(__DIR__ . '/../extensions/yiiwheels-bs3'),
 		 //If you manually installed it
     'xupload' => realpath(__DIR__ . '/../extensions/xupload-0.5.1'),
 		'basicupload' => realpath(__DIR__ . '/../extensions/basicJqueryUpload'),

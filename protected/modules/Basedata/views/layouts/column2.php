@@ -1,76 +1,48 @@
 <?php /* @var $this Controller */ ?>
-<?php $this->beginContent('/layouts/main'); ?>
+<?php
+$menu1=array(
+array('label'=>'Add User','url'=>array('/user')),
+array('label'=>'Districts','url'=>array('/Basedata/district/create')),
+array('label'=>'Tehsils','url'=>array('/Basedata/tehsil/create')),
+array('label'=>'Blocks','url'=>array('/Basedata/block/create')),
+array('label'=>'Revenue Village','url'=>array('/Basedata/revenueVillage/create')),  
+array('label'=>'Department','url'=>array('/Basedata/department/create')),
+array('label'=>'Add Designation Type','url'=>array('/Basedata/designationType/create')),
+array('label'=>'Add Designation','url'=>array('/Basedata/designation/create')),
+array('label'=>'Assign User to a Designation','url'=>array('/Basedata/designation/userAssign')),
 
-  <div class="row-fluid">
-	<div class="span3">
+
+
+);
+?>
+<?php $this->beginContent(); ?>
+<div class="navbar-collapse collapse">
+    <?php $this->widget('zii.widgets.CMenu',
+           array( 'htmlOptions'=>array('class'=>'pull-right nav navbar-nav'),
+                    'submenuHtmlOptions'=>array('class'=>'dropdown-menu'),
+					'itemCssClass'=>'item-test',
+                    'encodeLabel'=>false,
+                    'items'=>$menu1));
+    ?>
+</div>
+  <div class="row">
+	<div class="col-md-3">
 		<div class="sidebar-nav">
         
 		  <?php $this->widget('zii.widgets.CMenu', array(
 			/*'type'=>'list',*/
 			'encodeLabel'=>false,
 			'items'=>array(
-				array('label'=>'<i class="icon icon-home"></i>  Dashboard <span class="label label-info pull-right">BETA</span>', 'url'=>array('/site/index'),'itemOptions'=>array('class'=>'')),
-				array('label'=>'<i class="icon icon-search"></i> About this theme <span class="label label-important pull-right">HOT</span>', 'url'=>'http://www.webapplicationthemes.com/abound-yii-framework-theme/'),
-				array('label'=>'<i class="icon icon-envelope"></i> Messages <span class="badge badge-success pull-right">12</span>', 'url'=>'#'),
+				
 				// Include the operations menu
 				array('label'=>'OPERATIONS','items'=>$this->menu),
 			),
 			));?>
 		</div>
-        <br>
-        <table class="table table-striped table-bordered">
-          <tbody>
-            <tr>
-              <td width="50%">Bandwith Usage</td>
-              <td>
-              	<div class="progress progress-danger">
-                  <div class="bar" style="width: 80%"></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Disk Spage</td>
-              <td>
-             	<div class="progress progress-warning">
-                  <div class="bar" style="width: 60%"></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Conversion Rate</td>
-              <td>
-             	<div class="progress progress-success">
-                  <div class="bar" style="width: 40%"></div>
-                </div>
-              </td>
-            </tr>
-            <tr>
-              <td>Closed Sales</td>
-              <td>
-              	<div class="progress progress-info">
-                  <div class="bar" style="width: 20%"></div>
-                </div>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-		<div class="well">
         
-            <dl class="dl-horizontal">
-              <dt>Account status</dt>
-              <dd>$1,234,002</dd>
-              <dt>Open Invoices</dt>
-              <dd>$245,000</dd>
-              <dt>Overdue Invoices</dt>
-              <dd>$20,023</dd>
-              <dt>Converted Quotes</dt>
-              <dd>$560,000</dd>
-              
-            </dl>
-      </div>
 		
     </div><!--/span-->
-    <div class="span9">
+    <div class="col-md-9">
     
     <?php if(isset($this->breadcrumbs)):?>
 		<?php $this->widget('zii.widgets.CBreadcrumbs', array(

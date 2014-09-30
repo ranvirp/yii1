@@ -1,11 +1,18 @@
+<?php
+$this->menu=array(
+array('label'=>'Add User','url'=>array('/user')),
+array('label'=>'Districts','url'=>array('/Basedata/district/create')),
+array('label'=>'Tehsils','url'=>array('/Basedata/tehsil/create')),
+array('label'=>'Blocks','url'=>array('/Basedata/block/create')),
+array('label'=>'Revenue Village','url'=>array('/Basedata/revenueVillage/create')),  
+array('label'=>'Department','url'=>array('/Basedata/department/create')),
+array('label'=>'Add Designation Type','url'=>array('/Basedata/designationType/create')),
+array('label'=>'Add Designation','url'=>array('/Basedata/designation/create')),
+array('label'=>'Assign User to a Designation','url'=>array('/Basedata/designation/userAssign')),
 
-<h1><?php echo $this->uniqueId . '/' . $this->action->id; ?></h1>
 
-<p>
-This is the view content for action "<?php echo $this->action->id; ?>".
-The action belongs to the controller "<?php echo get_class($this); ?>"
-in the "<?php echo $this->module->id; ?>" module.
-</p>
-<p>
-You may customize this page by editing <tt><?php echo __FILE__; ?></tt>
-</p>
+
+);
+
+
+?>

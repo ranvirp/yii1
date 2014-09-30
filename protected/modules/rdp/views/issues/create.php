@@ -13,6 +13,6 @@ $this->menu=array(
 
  <?php $panel=$this->beginWidget("yiiwheels.widgets.box.WhBox",array('htmlOptions'=>array (),'title'=>'
     अपनी समस्या दर्ज कराएं'));?>
-	<?php $this->renderPartial('_form', array('model'=>$model,'files'=>$files),false,TRUE); ?>
+	<?php $this->renderPartial('_form', array('model'=>$model),false,TRUE); ?>
 
 	<?php $this->endWidget();?>

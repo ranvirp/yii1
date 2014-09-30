@@ -17,7 +17,7 @@
 					'itemCssClass'=>'item-test',
                     'encodeLabel'=>false,
                     'items'=>array(
-                        array('label'=>'Dashboard', 'url'=>array('/site/index')),
+                        array('label'=>'Basedata', 'url'=>array('/Basedata')),
                         array('label'=>'School', 'url'=>array('/School', 'view'=>'graphs')),
                         array('label'=>'Student', 'url'=>array('/School/student', 'view'=>'forms')),
                         array('label'=>'Learning Level', 'url'=>array('/site/page', 'view'=>'tables')),
@@ -35,6 +35,7 @@
                     ),
                 )); ?>
     	</div>
+      
     </div>
 	</div>
 </div>

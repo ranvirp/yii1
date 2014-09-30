@@ -17,6 +17,8 @@ class BasedataModule extends CWebModule
 			'Basedata.models.*',
 			'Basedata.components.*',
 		));
+               
+
 	}
 
 	public function beforeControllerAction($controller, $action)
@@ -25,8 +27,10 @@ class BasedataModule extends CWebModule
 		{
 			// this method is called before any module controller action is performed
 			// you may place customized code here
-			$this->layoutPath = Yii::getPathOfAlias('Basedata.views.layouts');
-        $this->layout = 'column2';
+                    
+
+			//$controller->layoutPath = Yii::getPathOfAlias('Basedata.views.layouts');
+        $controller->layout = 'Basedata.views.layouts.column2';
 			return true;
 		}
 		else
