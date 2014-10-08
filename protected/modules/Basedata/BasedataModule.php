@@ -9,10 +9,10 @@ class BasedataModule extends CWebModule
 
 		// import the module-level models and components
 		
-		if (!Yii::app()->user->checkAccess('Base Data Manager'))
-		{
-			throw new CHttpException(400,'Invalid request.');
-		}
+		//if (!Yii::app()->user->checkAccess('Base Data Manager'))
+		//{
+		//	throw new CHttpException(400,'Invalid request.');
+		//}
 		$this->setImport(array(
 			'Basedata.models.*',
 			'Basedata.components.*',

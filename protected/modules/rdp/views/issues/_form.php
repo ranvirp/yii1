@@ -8,9 +8,9 @@
 
 <?php $form=$this->beginWidget('CActiveForm', array(
 	'id'=>'issues-form',
-	'enableAjaxValidation'=>true,
-	'enableClientValidation'=>TRUE,
-	'clientOptions'=>array('validateOnSubmit'=>true),
+	'enableAjaxValidation'=>false,
+	//'enableClientValidation'=>TRUE,
+	//'clientOptions'=>array('validateOnSubmit'=>true),
 	
 )); ?>
 

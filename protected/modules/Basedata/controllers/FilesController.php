@@ -37,7 +37,7 @@ class FilesController extends Controller
 	{
 		return array(
 			array('allow',  // allow all users to perform 'index' and 'view' actions
-				'actions'=>array('index','view'),
+				'actions'=>array('index','view','uploadFile'),
 				'users'=>array('*'),
 			),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
@@ -83,8 +83,11 @@ class FilesController extends Controller
 
 	 	
 	 }
-	 public function actionUploadFile($field){
-	 $contents = $this->uploadHandler($field);
+	 public function actionUploadFile(){
+	 file_put_contents("d:/a.text",print_r($_POST,true).print_r($_FILES,true));
+	 header("hi",true,200);
+	 exit;
+	 $contents = $this->uploadHandler();
 		// $contents=new uploadHandler($options);
 		echo $contents;
 		//exit;
@@ -245,13 +248,13 @@ class FilesController extends Controller
  }
   
 	
-	private function uploadHandler($field){
+	private function uploadHandler(){
 		$options = array(
 			'url' => $this->createUrl("/files/",array('path'=>Yii::app()->user->id."/")),
 			'upload_dir' => Yii::getPathOfAlias(Yii::app()->params['filesAlias']).'/',
 			'upload_url' => $this->createUrl("/files/uploadFile"),
 			'script_url' => $this->createUrl("/files/uploadFile",array('path'=>Yii::app()->user->id."/")),
-			'field_name' => 'files',
+			'field_name' => '',
 			'image_versions' => array(
                 // Uncomment the following version to restrict the size of
                 // uploaded images. You can also add additional versions with

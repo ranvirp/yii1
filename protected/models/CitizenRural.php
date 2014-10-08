@@ -12,6 +12,11 @@
  * @property string $father_name_hi
  * @property string $spouse_name_hi
  * @property string $revenue_village_code
+ * @property string $address
+ * @property string $mobile1
+ * @property string $mobile2
+ * @property string $photo
+ * @property string $gender
  *
  * The followings are the available model relations:
  * @property RevenueVillage $revenueVillageCode
@@ -34,13 +39,16 @@ class CitizenRural extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('id', 'required'),
+			array('id, address,  gender', 'required'),
 			array('id', 'numerical', 'integerOnly'=>true),
 			array('name_en, name_hi, father_name_en, spouse_name_en, father_name_hi, spouse_name_hi', 'length', 'max'=>45),
 			array('revenue_village_code', 'length', 'max'=>10),
+			array('mobile1, mobile2', 'length', 'max'=>12),
+                    array('address', 'length', 'max'=>250),
+			array('gender', 'length', 'max'=>1),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, name_en, name_hi, father_name_en, spouse_name_en, father_name_hi, spouse_name_hi, revenue_village_code', 'safe', 'on'=>'search'),
+			array(' name_en, name_hi, father_name_en, spouse_name_en, father_name_hi, spouse_name_hi, revenue_village_code, address, mobile1, mobile2, photo, gender', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -62,14 +70,19 @@ class CitizenRural extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => 'ID',
-			'name_en' => 'Name En',
-			'name_hi' => 'Name Hi',
-			'father_name_en' => 'Father Name En',
-			'spouse_name_en' => 'Spouse Name En',
-			'father_name_hi' => 'Father Name Hi',
-			'spouse_name_hi' => 'Spouse Name Hi',
-			'revenue_village_code' => 'Revenue Village Code',
+			'id' => Yii::t('app','ID'),
+			'name_en' => Yii::t('app','Name En'),
+			'name_hi' => Yii::t('app','Name Hi'),
+			'father_name_en' => Yii::t('app','Father Name En'),
+			'spouse_name_en' => Yii::t('app','Spouse Name En'),
+			'father_name_hi' => Yii::t('app','Father Name Hi'),
+			'spouse_name_hi' => Yii::t('app','Spouse Name Hi'),
+			'revenue_village_code' => Yii::t('app','Revenue Village Code'),
+			'address' => Yii::t('app','Address'),
+			'mobile1' => Yii::t('app','Mobile1'),
+			'mobile2' => Yii::t('app','Mobile2'),
+			'photo' => Yii::t('app','Photo'),
+			'gender' => Yii::t('app','Gender'),
 		);
 	}
 
@@ -99,6 +112,11 @@ class CitizenRural extends CActiveRecord
 		$criteria->compare('father_name_hi',$this->father_name_hi,true);
 		$criteria->compare('spouse_name_hi',$this->spouse_name_hi,true);
 		$criteria->compare('revenue_village_code',$this->revenue_village_code,true);
+		$criteria->compare('address',$this->address,true);
+		$criteria->compare('mobile1',$this->mobile1,true);
+		$criteria->compare('mobile2',$this->mobile2,true);
+		$criteria->compare('photo',$this->photo,true);
+		$criteria->compare('gender',$this->gender,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -114,5 +132,29 @@ class CitizenRural extends CActiveRecord
 	public static function model($className=__CLASS__)
 	{
 		return parent::model($className);
+	}
+	/**
+	* Returns all models in List of primary key,name format
+	*/
+	public static function listAll($className=__CLASS__)
+	{
+	    $lang = Yii::app()->language;
+        $models = $className::model()->findAll();
+        $pk = $className::model()->tableSchema->primaryKey;
+        // format models resulting using listData     
+        $list = CHtml::listData($models, $pk, 'name_'.$lang);
+        return $list;
+	}
+        /**
+	* Returns all models in List of primary key,name format
+	*/
+	public static function listAllJson($className=__CLASS__)
+	{
+	    $lang = Yii::app()->language;
+        $models = $className::model()->findAll();
+        $pk = $className::model()->tableSchema->primaryKey;
+        // format models resulting using listData     
+        $list = CHtml::listData($models, $pk, 'name_'.$lang);
+        return json_encode($list);
 	}
 }

@@ -26,7 +26,7 @@ class Controller extends CController{
 	 * for more details on how to specify this property.
 	 */
 	public $breadcrumbs=array();
-	public function resolveViewFile($viewName, $viewPath, $basePath, 
+	public function resolveViewFile1($viewName, $viewPath, $basePath, 
             $moduleViewPath = null) {
         
         // First try to find the view file from this module
