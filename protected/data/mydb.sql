@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 30, 2014 at 10:28 PM
+-- Generation Time: Oct 14, 2014 at 05:21 PM
 -- Server version: 5.6.20
 -- PHP Version: 5.5.15
 
@@ -130,7 +130,6 @@ CREATE TABLE IF NOT EXISTS `citizen_rural` (
   `spouse_name_en` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `father_name_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
   `spouse_name_hi` varchar(45) CHARACTER SET utf8 DEFAULT NULL,
-  `revenue_village_code` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
   `address` text COLLATE utf8_unicode_ci NOT NULL,
   `mobile1` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
   `mobile2` varchar(12) COLLATE utf8_unicode_ci NOT NULL,
@@ -170,18 +169,20 @@ CREATE TABLE IF NOT EXISTS `designation` (
 `id` int(11) NOT NULL,
   `designation_type_id` int(11) NOT NULL,
   `level_type_id` int(11) NOT NULL,
-  `district_code` varchar(5) CHARACTER SET utf8 NOT NULL
+  `district_code` varchar(5) CHARACTER SET utf8 NOT NULL,
+  `name_hi` varchar(1000) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `name_en` varchar(1000) COLLATE utf8_unicode_ci NOT NULL
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=8 ;
 
 --
 -- Dumping data for table `designation`
 --
 
-INSERT INTO `designation` (`id`, `designation_type_id`, `level_type_id`, `district_code`) VALUES
-(1, 1, 970, '970'),
-(3, 3, 970, '970'),
-(5, 2, 3122014, '970'),
-(7, 4, 3122014, '970');
+INSERT INTO `designation` (`id`, `designation_type_id`, `level_type_id`, `district_code`, `name_hi`, `name_en`) VALUES
+(1, 1, 970, '970', NULL, 'Basic Shiksha Adhikari,ETAH'),
+(3, 3, 970, '970', NULL, ''),
+(5, 2, 3122014, '970', NULL, ''),
+(7, 4, 3122014, '970', NULL, '');
 
 -- --------------------------------------------------------
 
@@ -196,7 +197,7 @@ CREATE TABLE IF NOT EXISTS `designation_type` (
   `department_id` int(11) NOT NULL,
   `name_en` varchar(45) COLLATE utf8_unicode_ci DEFAULT NULL,
   `level_id` int(11) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='<double-click to overwrite multiple objects>' AUTO_INCREMENT=5 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci COMMENT='<double-click to overwrite multiple objects>' AUTO_INCREMENT=6 ;
 
 --
 -- Dumping data for table `designation_type`
@@ -206,7 +207,8 @@ INSERT INTO `designation_type` (`id`, `name_hi`, `code`, `department_id`, `name_
 (1, 'बेसिक शिक्षा अधिकारी ', 'BSA', 1, 'Basic Shiksha Adhikari', 1),
 (2, 'सहायक बेसिक शिक्षा अधिकारी', 'ABSA', 1, 'Assistant Basic Shiksha Adhikari', 2),
 (3, 'डेटा एंट्री ऑपरेटर -जिला स्तर-1 ', 'dist-dataOperator', 1, 'Data Entry Operator- District Level-1', 1),
-(4, 'डेटा एंट्री ऑपरेटर-ब्लॉक ', 'deoBlock-1', 1, 'Data Entry Operator- Block Level-1', 2);
+(4, 'डेटा एंट्री ऑपरेटर-ब्लॉक ', 'deoBlock-1', 1, 'Data Entry Operator- Block Level-1', 2),
+(5, 'अधिशाषी अभियंता ', 'eepwd', 2, 'Executive Engineer', 4);
 
 -- --------------------------------------------------------
 
@@ -221,7 +223,7 @@ CREATE TABLE IF NOT EXISTS `designation_user` (
   `create_time` varchar(45) DEFAULT NULL,
   `update_time` varchar(45) DEFAULT NULL,
   `create_user` int(11) DEFAULT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=7 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=10 ;
 
 --
 -- Dumping data for table `designation_user`
@@ -231,7 +233,10 @@ INSERT INTO `designation_user` (`id`, `designation_id`, `user_id`, `create_time`
 (3, 1, 3, NULL, NULL, NULL),
 (4, 3, 3, '1408359330', NULL, 1),
 (5, 7, 4, '1408360942', NULL, 1),
-(6, 3, 3, '1408901721', NULL, 1);
+(6, 3, 3, '1408901721', NULL, 1),
+(7, 1, 3, '1412962666', NULL, 1),
+(8, 1, 3, '1412962928', NULL, 1),
+(9, 1, 1, '1412964267', NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -486,7 +491,7 @@ CREATE TABLE IF NOT EXISTS `issues` (
   `author_id` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
   `update_time` int(11) NOT NULL,
   `district_id` int(11) NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=48 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=49 ;
 
 --
 -- Dumping data for table `issues`
@@ -535,7 +540,8 @@ INSERT INTO `issues` (`id`, `schemeid`, `parentissue`, `from`, `to`, `title`, `d
 (44, 1, 0, 5, 5, '', 'hi newest one ', 0, '', 0, 'Array\n(\n    [Issues] => Array\n        (\n            [schemeid] => 1\n            [from] => 5\n            [to] => 5\n            [description] => hi newest one \n        )\n\n    [Issues_from_dist_code] => 970\n    [Issues_from_deptDropDown] => 1\n    [Issues_fro', 1410958834, '1', 1410958834, 0),
 (45, 1, 0, 5, 5, '', 'hi what are we doing', 0, '', 0, 'Array\n(\n    [Issues] => Array\n        (\n            [schemeid] => 1\n            [from] => 5\n            [to] => 5\n            [description] => hi what are we doing\n        )\n\n    [Issues_from_dist_code] => 970\n    [Issues_from_deptDropDown] => 1\n    [Issu', 1410959044, '1', 1410959044, 0),
 (46, 1, 0, 5, 5, '', 'hi', 0, '', 0, '', 1410960190, '1', 1410960190, 0),
-(47, 1, 0, 5, 5, '', 'hi hi ', 0, '', 0, '112,113', 1410960743, '1', 1410960743, 0);
+(47, 1, 0, 5, 5, '', 'hi hi ', 0, '', 0, '112,113', 1410960743, '1', 1410960743, 0),
+(48, 1, 0, 5, 1, '', 'Funds have not been released for MDM ', 0, '', 0, '', 1412953241, '1', 1412953241, 0);
 
 -- --------------------------------------------------------
 
@@ -545,14 +551,15 @@ INSERT INTO `issues` (`id`, `schemeid`, `parentissue`, `from`, `to`, `title`, `d
 
 CREATE TABLE IF NOT EXISTS `landdisputes` (
 `id` int(11) NOT NULL,
-  `complainants` varchar(100) NOT NULL,
-  `oppositions` varchar(100) NOT NULL,
+  `complainants` varchar(1500) NOT NULL,
+  `oppositions` varchar(1500) NOT NULL,
   `revenuevillage` int(11) NOT NULL,
   `policestation` int(11) NOT NULL,
   `gatanos` varchar(220) NOT NULL,
   `category` int(11) NOT NULL,
   `description` text NOT NULL,
   `courtcasepending` tinyint(4) NOT NULL,
+  `courtname` varchar(50) DEFAULT NULL,
   `courtcasedetails` varchar(1000) NOT NULL,
   `policerequired` tinyint(4) NOT NULL,
   `nextdateofaction` varchar(200) NOT NULL,
@@ -614,7 +621,7 @@ INSERT INTO `level` (`id`, `name_hi`, `name_en`, `table_name`) VALUES
 (1, 'जिला ', 'District', 'district'),
 (2, 'खंड ', 'Block', 'block'),
 (3, 'विद्यालय ', 'School', 'school'),
-(4, 'लोक निर्माण विभाग इकाइयां ', 'PWD Units', 'pwd_units');
+(4, 'लोक निर्माण विभाग इकाइयां ', 'PWD Units', 'pwd_unit');
 
 -- --------------------------------------------------------
 
@@ -650,6 +657,28 @@ CREATE TABLE IF NOT EXISTS `panchayat` (
 
 INSERT INTO `panchayat` (`code`, `district_code`, `block_code`, `name_en`, `name_hi`) VALUES
 ('3122014001', '970', '3122014', 'AHMADPUR', 'अहमदपुर  ');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `photos`
+--
+
+CREATE TABLE IF NOT EXISTS `photos` (
+`id` int(11) NOT NULL,
+  `bwid` varchar(200) NOT NULL,
+  `gpslat` float NOT NULL,
+  `gpslong` float NOT NULL,
+  `gpsacc` int(11) NOT NULL,
+  `photourl` varchar(1000) NOT NULL
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
+
+--
+-- Dumping data for table `photos`
+--
+
+INSERT INTO `photos` (`id`, `bwid`, `gpslat`, `gpslong`, `gpsacc`, `photourl`) VALUES
+(1, 'b_20', 26.054, 83.1659, 13, 'https://dl.dropbox.com/s/1vxkwxosjm7agfs/Picture_2014-10-14_170003.jpg?dl=0');
 
 -- --------------------------------------------------------
 
@@ -736,9 +765,16 @@ INSERT INTO `profiles_fields` (`id`, `varname`, `title`, `field_type`, `field_si
 CREATE TABLE IF NOT EXISTS `pwd_unit` (
   `code` varchar(10) NOT NULL,
   `district_code` varchar(10) NOT NULL,
-  `name_hi` varchar(300) NOT NULL,
+  `name_hi` varchar(300) CHARACTER SET utf8 COLLATE utf8_unicode_ci NOT NULL,
   `name_en` varchar(300) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `pwd_unit`
+--
+
+INSERT INTO `pwd_unit` (`code`, `district_code`, `name_hi`, `name_en`) VALUES
+('pd', '970', 'प्रांतीय खंड ', 'Provincial Division');
 
 -- --------------------------------------------------------
 
@@ -1166,7 +1202,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `password`, `email`, `activkey`, `create_at`, `lastvisit_at`, `superuser`, `status`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'webmaster@example.com', '9a24eff8c15a6a141ece27eb6947da0f', '2014-07-13 10:33:20', '2014-09-24 23:15:15', 1, 1),
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'webmaster@example.com', '9a24eff8c15a6a141ece27eb6947da0f', '2014-07-13 10:33:20', '2014-10-14 08:00:25', 1, 1),
 (2, 'demo', 'fe01ce2a7fbac8fafaed7c982a04e229', 'demo@example.com', '099f825543f7850cc038b90aaff39fac', '2014-07-13 10:33:20', '0000-00-00 00:00:00', 0, 1),
 (3, 'rkumar', '1d36782b8c8cdf0b8bc8ba875642f4d8', 'r@r.com', '9a7819bd20973f016d2d5b1fc5d3bd56', '2014-07-23 03:13:23', '2014-08-24 12:12:54', 0, 1),
 (4, 'akumar', '6edff95dabd2b7ed2311e60d6f4f6310', 'a@a.com', 'bbac6f28a295b4417920cf5e889838ce', '2014-08-18 05:51:31', '0000-00-00 00:00:00', 0, 1),
@@ -1200,6 +1236,30 @@ CREATE TABLE IF NOT EXISTS `ward` (
   `name_en` varchar(45) CHARACTER SET utf8 DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `works`
+--
+
+CREATE TABLE IF NOT EXISTS `works` (
+  `bwid` varchar(20) NOT NULL,
+  `title` varchar(1000) NOT NULL,
+  `gpslat` float DEFAULT NULL,
+  `gpslong` float DEFAULT NULL,
+  `finyear` varchar(8) DEFAULT NULL,
+  `sanctioned_cost` float DEFAULT NULL,
+  `officerincharge` varchar(10) DEFAULT NULL,
+  `schemecode` varchar(10) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `works`
+--
+
+INSERT INTO `works` (`bwid`, `title`, `gpslat`, `gpslong`, `finyear`, `sanctioned_cost`, `officerincharge`, `schemecode`) VALUES
+('1', 'Construction of Road from A to B', NULL, NULL, '', NULL, '', '');
+
 --
 -- Indexes for dumped tables
 --
@@ -1232,7 +1292,7 @@ ALTER TABLE `block`
 -- Indexes for table `citizen_rural`
 --
 ALTER TABLE `citizen_rural`
- ADD PRIMARY KEY (`id`), ADD KEY `code_idx` (`revenue_village_code`);
+ ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `department`
@@ -1325,6 +1385,12 @@ ALTER TABLE `panchayat`
  ADD PRIMARY KEY (`code`), ADD KEY `code_idx` (`block_code`);
 
 --
+-- Indexes for table `photos`
+--
+ALTER TABLE `photos`
+ ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `policestation`
 --
 ALTER TABLE `policestation`
@@ -1341,6 +1407,12 @@ ALTER TABLE `profiles`
 --
 ALTER TABLE `profiles_fields`
  ADD PRIMARY KEY (`id`), ADD KEY `varname` (`varname`,`widget`,`visible`);
+
+--
+-- Indexes for table `pwd_unit`
+--
+ALTER TABLE `pwd_unit`
+ ADD PRIMARY KEY (`code`);
 
 --
 -- Indexes for table `replies`
@@ -1475,6 +1547,12 @@ ALTER TABLE `ward`
  ADD PRIMARY KEY (`code`), ADD KEY `wardtowncode_idx` (`town_code`);
 
 --
+-- Indexes for table `works`
+--
+ALTER TABLE `works`
+ ADD PRIMARY KEY (`bwid`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -1492,12 +1570,12 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=8;
 -- AUTO_INCREMENT for table `designation_type`
 --
 ALTER TABLE `designation_type`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `designation_user`
 --
 ALTER TABLE `designation_user`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `files`
 --
@@ -1512,7 +1590,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=6;
 -- AUTO_INCREMENT for table `issues`
 --
 ALTER TABLE `issues`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=48;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=49;
 --
 -- AUTO_INCREMENT for table `landdisputes`
 --
@@ -1528,6 +1606,11 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=13;
 --
 ALTER TABLE `level`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=5;
+--
+-- AUTO_INCREMENT for table `photos`
+--
+ALTER TABLE `photos`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `policestation`
 --
@@ -1625,12 +1708,6 @@ ADD CONSTRAINT `authitemchild_ibfk_2` FOREIGN KEY (`child`) REFERENCES `authitem
 --
 ALTER TABLE `block`
 ADD CONSTRAINT `districtcode1` FOREIGN KEY (`district_code`) REFERENCES `district` (`code`) ON DELETE CASCADE ON UPDATE CASCADE;
-
---
--- Constraints for table `citizen_rural`
---
-ALTER TABLE `citizen_rural`
-ADD CONSTRAINT `citizenruralvillagecode` FOREIGN KEY (`revenue_village_code`) REFERENCES `revenue_village` (`code`) ON DELETE NO ACTION ON UPDATE NO ACTION;
 
 --
 -- Constraints for table `department`
