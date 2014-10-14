@@ -13,7 +13,7 @@
 	// There is a call to performAjaxValidation() commented in generated controller code.
 	// See class documentation of CActiveForm for details on this.
 	'enableAjaxValidation'=>false,
-        'layout'=>  TbHtml::FORM_LAYOUT_HORIZONTAL,
+        //'layout'=>  TbHtml::FORM_LAYOUT_HORIZONTAL,
 )); ?>
 
     <p class="help-block">Fields with <span class="required">*</span> are required.</p>
@@ -90,15 +90,16 @@
              <div class="col-md-2"><?php echo Yii::t('app',"mobile2");?></div>
             <div class="col-md-2"><?php echo $form->textField($opposition,'[$i]mobile2');?></div>
               </div>
+            <?php endforeach;?>
         </div>
+         
      </div>
     <div class="tab-pane" id="landdetailstab">
     	 
-    
-    	 <?php echo $form->textFieldControlGroup($model,'revenuevillage',array('span'=>5,'maxlength'=>11)); ?>
-
-    
-    	 <?php echo $form->textFieldControlGroup($model,'policestation',array('span'=>5,'maxlength'=>11)); ?>
+<div class="row">
+        <?php  $this->widget('RevenueVillageWidget',array('model'=>$model,'attribute'=>'revenuevillage'));?>    
+</div>  	 
+            <?php echo $form->textFieldControlGroup($model,'policestation',array('span'=>5,'maxlength'=>11)); ?>
 
     
     	 <?php echo $form->textFieldControlGroup($model,'gatanos',array('span'=>5,'maxlength'=>220)); ?>
@@ -140,4 +141,4 @@
 
     <?php $this->endWidget(); ?>
 
-</div><!-- form -->
+</div>

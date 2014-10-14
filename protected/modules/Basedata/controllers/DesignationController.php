@@ -46,12 +46,21 @@ class DesignationController extends Controller
         if (isset($_POST['Designation'])) {
 			$model->attributes=$_POST['Designation'];
 			//$model->district_code=$_POST[]
+                        $lang=Yii::app()->language;
+                        if ($model->validate())
+                        {
+                          $designation_name=$model->designationType->$name;
+                                $level_name=  $model->designationType->level->name_en;
+                                $place_name=$level_name::model()->findByPK($model->level_type_id);
+                                $model->$name=$designation_name.",".$place_name->$name;
+                        }
 			if ($model->save()) {
+                                
 				$this->redirect(array('view','id'=>$model->id));
 			}
 		}
 		}
-		catch (CDbException $e)
+		catch (Exception $e)
 		{
 			$model->addError('designation_type_id', "The post has already been created");
 		}
@@ -70,7 +79,7 @@ class DesignationController extends Controller
 	public function actionUpdate($id)
 	{
 		$model=$this->loadModel($id);
-        $userDesignation = Designation::model()->getDesignationModelByUser(Yii::app()->user->id);
+                $userDesignation = Designation::model()->getDesignationModelByUser(Yii::app()->user->id);
 		if ($userDesignation)
 		   {
 			$district_code = $userDesignation->designation->district_code;
@@ -80,13 +89,22 @@ class DesignationController extends Controller
 			$district_code = null;
 		if ($district_code !=$model->district_code)
 		{
-			throw new CHttpException(400,'Invalid request. Please do not repeat this request again.');
+			throw new CHttpException(400,'Yo do not belong to this district');
 		}
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 try{
 		if (isset($_POST['Designation'])) {
 			$model->attributes=$_POST['Designation'];
+                        $lang=Yii::app()->language;
+                        $name='name_'.$lang;
+                        if ($model->validate())
+                        {
+                          $designation_name=$model->designationType->$name;
+                                $level_name=  $model->designationType->level->name_en;
+                                $place_name=$level_name::model()->findByPK($model->level_type_id);
+                                $model->$name=$designation_name.",".$place_name->$name;
+                        }
 			if ($model->save()) {
 				$this->redirect(array('view','id'=>$model->id));
 			}
@@ -183,14 +201,18 @@ try{
 	{
 		print json_encode(Designation::model()->getLevelsByType($id,$dist));
 	}
+        public function actionGetUserName($id)
+	{
+		print Designation::model()->getUserName($id);
+	}
 	public function actionUserAssign()
 	{
 		$model=new DesignationUser;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
-        if (isset($_POST['DesignationAssign'])) {
-			$model->attributes=$_POST['DesignationAssign'];
+        if (isset($_POST['DesignationUser'])) {
+			$model->attributes=$_POST['DesignationUser'];
 			$model->create_time=time();
 			$model->create_user=Yii::app()->user->id;
 			if ($model->save()) {
@@ -198,8 +220,12 @@ try{
 			}
 		}
 
-		$this->render('_formAssign',array(
+		$this->render('_formAssignNew',array(
 			'model'=>$model,
 		));
 	}
+        public function actionUserDesignationView($id)
+        {
+            $this->render('userDesignationView',array('id'=>$id));
+        }
 }

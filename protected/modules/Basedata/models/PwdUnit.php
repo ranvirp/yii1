@@ -1,24 +1,22 @@
 <?php
 
 /**
- * This is the model class for table "photos".
+ * This is the model class for table "pwd_unit".
  *
- * The followings are the available columns in table 'photos':
- * @property integer $id
- * @property string $bwid
- * @property double $gpslat
- * @property double $gpslong
- * @property integer $gpsacc
- * @property string $photourl
+ * The followings are the available columns in table 'pwd_unit':
+ * @property string $code
+ * @property string $district_code
+ * @property string $name_hi
+ * @property string $name_en
  */
-class Photos extends CActiveRecord
+class PwdUnit extends CActiveRecord
 {
 	/**
 	 * @return string the associated database table name
 	 */
 	public function tableName()
 	{
-		return 'photos';
+		return 'pwd_unit';
 	}
 
 	/**
@@ -29,14 +27,12 @@ class Photos extends CActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('bwid, gpslat, gpslong, gpsacc, photourl', 'required'),
-			array('gpsacc', 'numerical', 'integerOnly'=>true),
-			array('gpslat, gpslong', 'numerical'),
-			array('bwid', 'length', 'max'=>200),
-			array('photourl', 'length', 'max'=>1000),
+			array('code, district_code, name_hi, name_en', 'required'),
+			array('code, district_code', 'length', 'max'=>10),
+			array('name_hi, name_en', 'length', 'max'=>300),
 			// The following rule is used by search().
 			// @todo Please remove those attributes that should not be searched.
-			array('id, bwid, gpslat, gpslong, gpsacc, photourl', 'safe', 'on'=>'search'),
+			array('code, district_code, name_hi, name_en', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -57,12 +53,10 @@ class Photos extends CActiveRecord
 	public function attributeLabels()
 	{
 		return array(
-			'id' => Yii::t('app','ID'),
-			'bwid' => Yii::t('app','Bwid'),
-			'gpslat' => Yii::t('app','Gpslat'),
-			'gpslong' => Yii::t('app','Gpslong'),
-			'gpsacc' => Yii::t('app','Gpsacc'),
-			'photourl' => Yii::t('app','Photourl'),
+			'code' => Yii::t('app','Code'),
+			'district_code' => Yii::t('app','District Code'),
+			'name_hi' => Yii::t('app','Name Hi'),
+			'name_en' => Yii::t('app','Name En'),
 		);
 	}
 
@@ -84,12 +78,10 @@ class Photos extends CActiveRecord
 
 		$criteria=new CDbCriteria;
 
-		$criteria->compare('id',$this->id);
-		$criteria->compare('bwid',$this->bwid,true);
-		$criteria->compare('gpslat',$this->gpslat);
-		$criteria->compare('gpslong',$this->gpslong);
-		$criteria->compare('gpsacc',$this->gpsacc);
-		$criteria->compare('photourl',$this->photourl,true);
+		$criteria->compare('code',$this->code,true);
+		$criteria->compare('district_code',$this->district_code,true);
+		$criteria->compare('name_hi',$this->name_hi,true);
+		$criteria->compare('name_en',$this->name_en,true);
 
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,
@@ -100,7 +92,7 @@ class Photos extends CActiveRecord
 	 * Returns the static model of the specified AR class.
 	 * Please note that you should have this exact method in all your CActiveRecord descendants!
 	 * @param string $className active record class name.
-	 * @return Photos the static model class
+	 * @return PwdUnit the static model class
 	 */
 	public static function model($className=__CLASS__)
 	{

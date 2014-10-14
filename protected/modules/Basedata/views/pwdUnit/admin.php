@@ -1,16 +1,16 @@
 <?php
-/* @var $this DesignationUserController */
-/* @var $model DesignationUser */
+/* @var $this PwdUnitController */
+/* @var $model PwdUnit */
 
 
 $this->breadcrumbs=array(
-	'Designation Users'=>array('index'),
+	'Pwd Units'=>array('index'),
 	'Manage',
 );
 
 $this->menu=array(
-	array('label'=>'List DesignationUser', 'url'=>array('index')),
-	array('label'=>'Create DesignationUser', 'url'=>array('create')),
+	array('label'=>'List PwdUnit', 'url'=>array('index')),
+	array('label'=>'Create PwdUnit', 'url'=>array('create')),
 );
 
 Yii::app()->clientScript->registerScript('search', "
@@ -19,7 +19,7 @@ $('.search-button').click(function(){
 	return false;
 });
 $('.search-form form').submit(function(){
-	$('#designation-user-grid').yiiGridView('update', {
+	$('#pwd-unit-grid').yiiGridView('update', {
 		data: $(this).serialize()
 	});
 	return false;
@@ -27,7 +27,7 @@ $('.search-form form').submit(function(){
 ");
 ?>
 
-<h1>Manage Designation Users</h1>
+<h1>Manage Pwd Units</h1>
 
 <p>
     You may optionally enter a comparison operator (<b>&lt;</b>, <b>&lt;=</b>, <b>&gt;</b>, <b>&gt;=</b>, <b>
@@ -43,19 +43,14 @@ or <b>=</b>) at the beginning of each of your search values to specify how the c
 </div><!-- search-form -->
 
 <?php $this->widget('bootstrap.widgets.TbGridView',array(
-	'id'=>'designation-user-grid',
+	'id'=>'pwd-unit-grid',
 	'dataProvider'=>$model->search(),
 	'filter'=>$model,
 	'columns'=>array(
-		
-		array(
-                    'name'=>'designation_id',
-                    'value'=>'$data->designation->name_en',
-                    ),
-		array(
-                    'name'=>'user_id',
-                    'value'=>'$data->user->username.":".$data->user->profile->firstname." ".$data->user->profile->lastname'
-                    ),
+		'code',
+		'district_code',
+		'name_hi',
+		'name_en',
 		array(
 			'class'=>'bootstrap.widgets.TbButtonColumn',
 		),

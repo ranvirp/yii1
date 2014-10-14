@@ -11,17 +11,19 @@
  *
  * @author mac
  */
-class OfficerWidget extends CWidget{
+class RevenueVillageWidget extends CWidget{
 	//put your code here
-	 public $model;
-	 public $attribute;
+	 public $tehsil;
+	 public $district;
+         public $model;
+         public $attribute;
 
     public function run()
     {
         if (! $this->model instanceof CModel) {
             throw new RuntimeException('No valid model available.');
         }
-        $this->render('designationFormWidget_new', array(
+        $this->render('RevenueVillageFormWidget', array(
 			'model'=>$this->model,
 			'attribute'=>$this->attribute,
 			),FALSE);

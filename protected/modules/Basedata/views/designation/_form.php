@@ -113,7 +113,7 @@
 		<tr><td>
 				<label class="control-label">Department:</label>
 			</td><td>
-		<?php echo TbHtml::dropDownList('deptDropDown', $model->designationType->department->id, Department::model()->listAll(), array('empty' => 'None', 'onChange' => 'js:populateDesignationTypes($(this).val())')); ?>
+		<?php echo TbHtml::dropDownList('deptDropDown', $model->designationType?$model->designationType->department_id:'', Department::model()->listAll(), array('empty' => 'None', 'onChange' => 'js:populateDesignationTypes($(this).val())')); ?>
 			</td>
 		</tr>
 		<tr>
@@ -123,19 +123,19 @@
 		<span class="required">*</span>
 	</label>
 			</td><td>
-		<?php echo TbHtml::dropDownList('Designation[designation_type_id]', $model->designation_type_id, Utility::listAllByAttributes('DesignationType', array('department_id'=>$model->designationType->department->id)), array('id' => 'Designation_designation_type_id','empty'=>'None', 'onChange' => 'js:populateLevels($(this).val())')); ?>
+		<?php echo TbHtml::dropDownList('Designation[designation_type_id]', $model->designation_type_id, Utility::listAllByAttributes('DesignationType', array('department_id'=>$model->designationType?$model->designationType->department->id:null)), array('id' => 'Designation_designation_type_id','empty'=>'None', 'onChange' => 'js:populateLevels($(this).val())')); ?>
 		<?php 
-		if ($model->designationType->level->name_en !='District')
+		if ($model->designationType?$model->designationType->level->name_en:'' !='District')
 		{
 		 if ($model->designationType->level->name_en)
-		echo TbHtml::dropDownList('Designation[level_type_id]', $model->level_type_id, Utility::listAllByAttributes($model->designationType->level->name_en, array('district_code'=>$model->district_code)), array('id' => 'Designation_level_type_id')); 
+		echo TbHtml::dropDownList('Designation[level_type_id]', $model->level_type_id, Utility::listAllByAttributes($model->designationType?$model->designationType->level->name_en:null, array('district_code'=>$model->district_code)), array('id' => 'Designation_level_type_id')); 
 		else 
 			echo TbHtml::dropDownList('Designation[level_type_id]', $model->level_type_id, array(), array('id' => 'Designation_level_type_id')); 
 		
 		 
 		}
 	 else 
-	 	echo TbHtml::dropDownList('Designation[level_type_id]', $model->level_type_id, Utility::listAllByAttributes($model->designationType->level->name_en, array('code'=>$model->district_code)), array('id' => 'Designation_level_type_id')); ?>
+	 	echo TbHtml::dropDownList('Designation[level_type_id]', $model->level_type_id, Utility::listAllByAttributes($model->designationType?$model->designationType->level->name_en:null, array('code'=>$model->district_code)), array('id' => 'Designation_level_type_id')); ?>
 	 
 	 
 			</td>

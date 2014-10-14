@@ -6,18 +6,21 @@
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
+    /*
     'controllerMap' => array(
 'api' => array(
 'class' => 'ext.json_api.JsonApiController',
 'modelName' => 'Post',
 ),
 ),
+    */
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
 	'name'=>'My Web Application',
 	'language'=>'en',
 	// preloading 'log' component
 	'theme'=>'abound',
 	'preload'=>array('log'),
+    'defaultController'=>'Basedata/revenueVillage',
     'aliases'=>array(
 	     // yiistrap configuration
         'bootstrap' => realpath(__DIR__ . '/../extensions/yiistrap-bs3'), // change if necessary
@@ -26,6 +29,7 @@ return array(
 		 //If you manually installed it
     'xupload' => realpath(__DIR__ . '/../extensions/xupload-0.5.1'),
 		'basicupload' => realpath(__DIR__ . '/../extensions/basicJqueryUpload'),
+        'RestfullYii'=>realpath(__DIR__.'/../extensions/RestfullYii'),
 	
 		
 	),
@@ -161,11 +165,16 @@ return array(
 		
 		'urlManager'=>array(
 			'urlFormat'=>'path',
+                     //'showScriptName' => false,
+                        'rules'=>require(dirname(__FILE__).'/../extensions/RestfullYii/config/routes.php'),
+                    /*
 			'rules'=>array(
 				'<controller:\w+>/<id:\d+>'=>'<controller>/view',
 				'<controller:\w+>/<action:\w+>/<id:\d+>'=>'<controller>/<action>',
 				'<controller:\w+>/<action:\w+>'=>'<controller>/<action>',
 			),
+                     * */
+                     
 		),
 		
 		'db'=>array(

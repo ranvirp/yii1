@@ -148,7 +148,7 @@ class Designation extends CActiveRecord {
 	}
 
 	public static function getDesignationByUser($userid) {
-		$deisgnationUser = DesignationUser::model()->findByAttributes(array('user_id' => $userid), array('order' => 'create_time DESC'));
+		$designationUser = DesignationUser::model()->findByAttributes(array('user_id' => $userid), array('order' => 'create_time DESC'));
 		return $designationUser->designation_id;
 	}
 
@@ -158,7 +158,7 @@ class Designation extends CActiveRecord {
 	}
 
 	public static function getUserByDesignation($designation_id) {
-		$deisgnationUser = DesignationUser::model()->findByAttributes(array('designation_id' => $designation_id), array('order' => 'create_time DESC'));
+		$designationUser = DesignationUser::model()->findByAttributes(array('designation_id' => $designation_id), array('order' => 'create_time DESC'));
 		return $designationUser->user_id;
 	}
 
@@ -167,5 +167,14 @@ class Designation extends CActiveRecord {
 		return array('locationtype' => Level::model()->findByPk($designation->designationType->level_id)->name_en,
 			'location_id' => $designation->level_type_id);
 	}
+        public static function getUserName($id) {
+            $designationUser = DesignationUser::model()->findByAttributes(array('designation_id' => $id), array('order' => 'create_time DESC'));
+            $user=User::model()->findByPk($designationUser->user_id);
+            
+            if ($user)
+	    return $user->profile->firstname." ".$user->profile->lastname;
+            else 
+                return "";
+        }
 
 }

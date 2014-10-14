@@ -1,52 +1,36 @@
 <?php
 
-class PhotosController extends Controller
+class PwdUnitController extends Controller
 {
 	/**
 	 * @var string the default layout for the views. Defaults to '//layouts/column2', meaning
 	 * using two-column layout. See 'protected/views/layouts/column2.php'.
 	 */
 	public $layout='//layouts/column2';
-        /**
+
+	/**
 	 * @return array action filters
 	 */
-public function actions()
-{
-        return array(
-            'REST.'=>'application.extensions.RestfullYii.actions.ERestActionProvider',
-        );
-}	
-public function filters()
-{
-        return array(
-            // 'rights - REST.GET', // perform access control for CRUD operations
-            'accessControl',
-           // 'postOnly + delete',
-            array(
-                'ext.RestfullYii.filters.ERestFilter + 
-                REST.GET, REST.PUT, REST.POST, REST.DELETE'
-            ),
-        );
-}
-	
+	public function filters()
+	{
+		return array(
+			'accessControl', // perform access control for CRUD operations
+			'postOnly + delete', // we only allow deletion via POST request
+		);
+	}
 
 	/**
 	 * Specifies the access control rules.
 	 * This method is used by the 'accessControl' filter.
 	 * @return array access control rules
 	 */
-
 	public function accessRules()
 	{
 		return array(
-                    
 			array('allow',  // allow all users to perform 'index' and 'view' actions
 				'actions'=>array('index','view'),
 				'users'=>array('*'),
 			),
-                    array('allow', 'actions'=>array('REST.GET', 'REST.PUT', 'REST.POST', 'REST.DELETE'),
-            'users'=>array('*'),
-            ),
 			array('allow', // allow authenticated user to perform 'create' and 'update' actions
 				'actions'=>array('create','update'),
 				'users'=>array('@'),
@@ -78,15 +62,15 @@ public function filters()
 	 */
 	public function actionCreate()
 	{
-		$model=new Photos;
+		$model=new PwdUnit;
 
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if (isset($_POST['Photos'])) {
-			$model->attributes=$_POST['Photos'];
+		if (isset($_POST['PwdUnit'])) {
+			$model->attributes=$_POST['PwdUnit'];
 			if ($model->save()) {
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','id'=>$model->code));
 			}
 		}
 
@@ -107,10 +91,10 @@ public function filters()
 		// Uncomment the following line if AJAX validation is needed
 		// $this->performAjaxValidation($model);
 
-		if (isset($_POST['Photos'])) {
-			$model->attributes=$_POST['Photos'];
+		if (isset($_POST['PwdUnit'])) {
+			$model->attributes=$_POST['PwdUnit'];
 			if ($model->save()) {
-				$this->redirect(array('view','id'=>$model->id));
+				$this->redirect(array('view','id'=>$model->code));
 			}
 		}
 
@@ -144,7 +128,7 @@ public function filters()
 	 */
 	public function actionIndex()
 	{
-		$dataProvider=new CActiveDataProvider('Photos');
+		$dataProvider=new CActiveDataProvider('PwdUnit');
 		$this->render('index',array(
 			'dataProvider'=>$dataProvider,
 		));
@@ -155,10 +139,10 @@ public function filters()
 	 */
 	public function actionAdmin()
 	{
-		$model=new Photos('search');
+		$model=new PwdUnit('search');
 		$model->unsetAttributes();  // clear any default values
-		if (isset($_GET['Photos'])) {
-			$model->attributes=$_GET['Photos'];
+		if (isset($_GET['PwdUnit'])) {
+			$model->attributes=$_GET['PwdUnit'];
 		}
 
 		$this->render('admin',array(
@@ -170,12 +154,12 @@ public function filters()
 	 * Returns the data model based on the primary key given in the GET variable.
 	 * If the data model is not found, an HTTP exception will be raised.
 	 * @param integer $id the ID of the model to be loaded
-	 * @return Photos the loaded model
+	 * @return PwdUnit the loaded model
 	 * @throws CHttpException
 	 */
 	public function loadModel($id)
 	{
-		$model=Photos::model()->findByPk($id);
+		$model=PwdUnit::model()->findByPk($id);
 		if ($model===null) {
 			throw new CHttpException(404,'The requested page does not exist.');
 		}
@@ -184,11 +168,11 @@ public function filters()
 
 	/**
 	 * Performs the AJAX validation.
-	 * @param Photos $model the model to be validated
+	 * @param PwdUnit $model the model to be validated
 	 */
 	protected function performAjaxValidation($model)
 	{
-		if (isset($_POST['ajax']) && $_POST['ajax']==='photos-form') {
+		if (isset($_POST['ajax']) && $_POST['ajax']==='pwd-unit-form') {
 			echo CActiveForm::validate($model);
 			Yii::app()->end();
 		}

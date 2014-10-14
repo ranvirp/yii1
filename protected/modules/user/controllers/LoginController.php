@@ -29,6 +29,24 @@ class LoginController extends Controller
 		} else
 			$this->redirect(Yii::app()->controller->module->returnUrl);
 	}
+        public function actionApiLogin()
+	{
+		if (Yii::app()->user->isGuest) {
+			$model=new UserLogin;
+			// collect user input data
+			if(isset($_POST['UserLogin']))
+			{
+				$model->attributes=$_POST['UserLogin'];
+				// validate user input and redirect to previous page if valid
+				if($model->validate()) {
+					$this->lastViset();
+                                        print "OK";
+					
+				}
+			}
+			
+		}
+	}
 	
 	private function lastViset() {
 		$lastVisit = User::model()->notsafe()->findByPk(Yii::app()->user->id);

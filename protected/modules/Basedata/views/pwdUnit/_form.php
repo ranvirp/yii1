@@ -1,13 +1,13 @@
 <?php
-/* @var $this RevenueVillageController */
-/* @var $model RevenueVillage */
+/* @var $this PwdUnitController */
+/* @var $model PwdUnit */
 /* @var $form TbActiveForm */
 ?>
 
 <div class="form">
 
     <?php $form=$this->beginWidget('bootstrap.widgets.TbActiveForm', array(
-	'id'=>'revenue-village-form',
+	'id'=>'pwd-unit-form',
 	// Please note: When you enable ajax validation, make sure the corresponding
 	// controller action is handling ajax validation correctly.
 	// There is a call to performAjaxValidation() commented in generated controller code.
@@ -20,21 +20,17 @@
 
     <?php echo $form->errorSummary($model); ?>
    
-    <?php   echo $form->dropDownListControlGroup($model,'tehsil_code',tehsil::model()->listAll());  ?>
     
-    	 <?php echo $form->textFieldControlGroup($model,'code',array('span'=>5,'maxlength'=>15)); ?>
+    	 <?php echo $form->textFieldControlGroup($model,'code',array('span'=>5,'maxlength'=>10)); ?>
 
     
-    
-    	 <?php echo $form->textFieldControlGroup($model,'name_en',array('span'=>5,'maxlength'=>45)); ?>
+    	 <?php echo $form->dropDownListControlGroup($model,'district_code',District::model()->listAll(),array('span'=>5,'maxlength'=>10)); ?>
 
     
-    	 <?php echo $form->textFieldControlGroup($model,'name_hi',array('span'=>5,'maxlength'=>45,'class'=>'hindiinput')); ?>
+    	 <?php echo $form->textFieldControlGroup($model,'name_hi',array('span'=>5,'maxlength'=>300,'class'=>'hindiinput')); ?>
 
     
-    <?php   echo $form->dropDownListControlGroup($model,'panchayat_code',panchayat::model()->listAll());  ?>
-    
-    	 <?php echo $form->textFieldControlGroup($model,'census_code',array('span'=>5,'maxlength'=>45)); ?>
+    	 <?php echo $form->textFieldControlGroup($model,'name_en',array('span'=>5,'maxlength'=>300)); ?>
 
     <div class="form-actions">
         <?php echo TbHtml::submitButton($model->isNewRecord ? 'Create' : 'Save',array(

@@ -3968,3 +3968,1137 @@ Stack trace:
 REQUEST_URI=/yii1/index.php/utility
 HTTP_REFERER=http://localhost/yii1/index.php/School/student/admin
 ---
+2014/10/09 13:28:01 [error] [exception.RuntimeException] exception 'RuntimeException' with message 'No valid model available.' in D:\xampp\htdocs\yii1\protected\modules\Basedata\components\RevenueVillageWidget.php:24
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CBaseController.php(173): RevenueVillageWidget->run()
+#1 D:\xampp\htdocs\yii1\protected\views\landdisputes\_form.php(101): CBaseController->widget('RevenueVillageW...', Array)
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('D:\\xampp\\htdocs...')
+#3 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\xampp\\htdocs...', Array, true)
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\\xampp\\htdocs...', Array, true)
+#5 D:\xampp\htdocs\yii1\protected\views\landdisputes\create.php(20): CController->renderPartial('_form', Array)
+#6 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('D:\\xampp\\htdocs...')
+#7 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\xampp\\htdocs...', Array, true)
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\\xampp\\htdocs...', Array, true)
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#10 D:\xampp\htdocs\yii1\protected\controllers\LanddisputesController.php(82): CController->render('create', Array)
+#11 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): LanddisputesController->actionCreate()
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#13 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#14 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#15 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#16 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#17 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#18 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#19 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#20 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#21 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('landdisputes/cr...')
+#22 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#23 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#24 {main}
+REQUEST_URI=/yii1/index.php/landdisputes/create
+HTTP_REFERER=http://localhost/yii1/index.php/user/login
+---
+2014/10/09 13:28:42 [error] [exception.CException] exception 'CException' with message 'RevenueVillageWidget cannot find the view "RevenueVillageWidget".' in D:\xampp\htdocs\yii\framework\web\widgets\CWidget.php:246
+Stack trace:
+#0 D:\xampp\htdocs\yii1\protected\modules\Basedata\components\RevenueVillageWidget.php(29): CWidget->render('RevenueVillageW...', Array, false)
+#1 D:\xampp\htdocs\yii\framework\web\CBaseController.php(173): RevenueVillageWidget->run()
+#2 D:\xampp\htdocs\yii1\protected\views\landdisputes\_form.php(101): CBaseController->widget('RevenueVillageW...', Array)
+#3 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('D:\\xampp\\htdocs...')
+#4 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\xampp\\htdocs...', Array, true)
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\\xampp\\htdocs...', Array, true)
+#6 D:\xampp\htdocs\yii1\protected\views\landdisputes\create.php(20): CController->renderPartial('_form', Array)
+#7 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('D:\\xampp\\htdocs...')
+#8 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\xampp\\htdocs...', Array, true)
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\\xampp\\htdocs...', Array, true)
+#10 D:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#11 D:\xampp\htdocs\yii1\protected\controllers\LanddisputesController.php(82): CController->render('create', Array)
+#12 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): LanddisputesController->actionCreate()
+#13 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#14 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#15 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#16 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#17 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#18 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#19 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#20 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#22 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('landdisputes/cr...')
+#23 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#24 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#25 {main}
+REQUEST_URI=/yii1/index.php/landdisputes/create
+---
+2014/10/09 13:28:56 [error] [exception.CException] exception 'CException' with message 'Property "Landdisputes.revenueVillage" is not defined.' in D:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('revenueVillage')
+#1 D:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(2529): CActiveRecord->__get('revenueVillage')
+#2 D:\xampp\htdocs\yii\framework\web\helpers\CHtml.php(1802): CHtml::resolveValue(Object(Landdisputes), 'revenueVillage')
+#3 D:\xampp\htdocs\yii1\protected\extensions\yiistrap-bs3\helpers\TbHtml.php(2002): CHtml::activeDropDownList(Object(Landdisputes), 'revenueVillage', Array, Array)
+#4 D:\xampp\htdocs\yii1\protected\modules\Basedata\components\views\RevenueVillageFormWidget.php(56): TbHtml::activeDropDownList(Object(Landdisputes), 'revenueVillage', Array)
+#5 D:\xampp\htdocs\yii\framework\web\CBaseController.php(130): require('D:\\xampp\\htdocs...')
+#6 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\xampp\\htdocs...', Array, false)
+#7 D:\xampp\htdocs\yii\framework\web\widgets\CWidget.php(244): CBaseController->renderFile('D:\\xampp\\htdocs...', Array, false)
+#8 D:\xampp\htdocs\yii1\protected\modules\Basedata\components\RevenueVillageWidget.php(29): CWidget->render('RevenueVillageF...', Array, false)
+#9 D:\xampp\htdocs\yii\framework\web\CBaseController.php(173): RevenueVillageWidget->run()
+#10 D:\xampp\htdocs\yii1\protected\views\landdisputes\_form.php(101): CBaseController->widget('RevenueVillageW...', Array)
+#11 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('D:\\xampp\\htdocs...')
+#12 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\xampp\\htdocs...', Array, true)
+#13 D:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\\xampp\\htdocs...', Array, true)
+#14 D:\xampp\htdocs\yii1\protected\views\landdisputes\create.php(20): CController->renderPartial('_form', Array)
+#15 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require('D:\\xampp\\htdocs...')
+#16 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): CBaseController->renderInternal('D:\\xampp\\htdocs...', Array, true)
+#17 D:\xampp\htdocs\yii\framework\web\CController.php(869): CBaseController->renderFile('D:\\xampp\\htdocs...', Array, true)
+#18 D:\xampp\htdocs\yii\framework\web\CController.php(782): CController->renderPartial('create', Array, true)
+#19 D:\xampp\htdocs\yii1\protected\controllers\LanddisputesController.php(82): CController->render('create', Array)
+#20 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): LanddisputesController->actionCreate()
+#21 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#22 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#23 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#24 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#25 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#26 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#27 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#28 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#29 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('create')
+#30 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('landdisputes/cr...')
+#31 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#32 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#33 {main}
+REQUEST_URI=/yii1/index.php/landdisputes/create
+---
+2014/10/09 13:29:26 [error] [php] Object of class RevenueVillageWidget could not be converted to string (D:\xampp\htdocs\yii1\protected\views\landdisputes\_form.php:101)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(869): LanddisputesController->renderFile()
+#1 D:\xampp\htdocs\yii1\protected\views\landdisputes\create.php(20): LanddisputesController->renderPartial()
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): LanddisputesController->renderInternal()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(869): LanddisputesController->renderFile()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(782): LanddisputesController->renderPartial()
+#6 D:\xampp\htdocs\yii1\protected\controllers\LanddisputesController.php(82): LanddisputesController->render()
+#7 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): LanddisputesController->actionCreate()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): LanddisputesController->runAction()
+#10 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): LanddisputesController->filterAccessControl()
+#13 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\xampp\htdocs\yii\framework\web\CController.php(265): LanddisputesController->runActionWithFilters()
+#16 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): LanddisputesController->run()
+#17 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/landdisputes/create
+in D:\xampp\htdocs\yii1\protected\views\landdisputes\_form.php (101)
+in D:\xampp\htdocs\yii1\protected\views\landdisputes\create.php (20)
+in D:\xampp\htdocs\yii1\protected\controllers\LanddisputesController.php (82)
+2014/10/09 13:36:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "NaN".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('NaN')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('NaN')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('landdisputes/Na...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/landdisputes/NaN
+HTTP_REFERER=http://localhost/yii1/index.php/landdisputes/create
+---
+2014/10/09 13:36:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "NaN".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('NaN')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('NaN')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('landdisputes/Na...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/landdisputes/NaN
+HTTP_REFERER=http://localhost/yii1/index.php/landdisputes/create
+---
+2014/10/09 13:43:55 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "getRevenueVillageByTehsilJSON".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('getRevenueVilla...')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('getRevenueVilla...')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/Revenu...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/Basedata/RevenueVillage/getRevenueVillageByTehsilJSON/t/220400
+HTTP_REFERER=http://localhost/yii1/index.php/landdisputes/create
+---
+2014/10/09 13:45:01 [error] [exception.CDbException] exception 'CDbException' with message 'Table "revenue_village" does not have a column named "thsil_code".' in D:\xampp\htdocs\yii\framework\db\schema\CDbCommandBuilder.php:694
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(1535): CDbCommandBuilder->createColumnCriteria(Object(CMysqlTableSchema), Array, '', Array, '`t`.')
+#1 D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\RevenueVillageController.php(163): CActiveRecord->findAllByAttributes(Array)
+#2 [internal function]: RevenueVillageController->actionGetRevenueVillagesByTehsil('220400')
+#3 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(RevenueVillageController), Array)
+#4 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(RevenueVillageController), Object(ReflectionMethod), Array)
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('getRevenueVilla...')
+#14 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/Revenu...')
+#15 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii1/index.php/Basedata/RevenueVillage/getRevenueVillagesByTehsil/t/220400
+HTTP_REFERER=http://localhost/yii1/index.php/landdisputes/create
+---
+2014/10/10 16:52:30 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('GetByTypeJSON')
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/design...')
+#10 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii1/index.php/Basedata/designation/GetByTypeJSON/id/2
+HTTP_REFERER=http://localhost/yii1/index.php/rdp/issues/create
+---
+2014/10/10 17:00:41 [error] [php] Trying to get property of non-object (D:\xampp\htdocs\yii1\protected\modules\rdp\views\issues\view.php:33)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(869): IssuesController->renderFile()
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(782): IssuesController->renderPartial()
+#2 D:\xampp\htdocs\yii1\protected\modules\rdp\controllers\IssuesController.php(55): IssuesController->render()
+#3 unknown(0): IssuesController->actionView()
+#4 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#5 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): IssuesController->runAction()
+#8 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#10 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): IssuesController->filterAccessControl()
+#11 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 D:\xampp\htdocs\yii\framework\web\CController.php(265): IssuesController->runActionWithFilters()
+#14 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): IssuesController->run()
+#15 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#16 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/rdp/issues/view/id/48
+in D:\xampp\htdocs\yii1\protected\modules\rdp\views\issues\view.php (33)
+in D:\xampp\htdocs\yii1\protected\modules\rdp\controllers\IssuesController.php (55)
+in D:\xampp\htdocs\yii1\index.php (13)
+2014/10/10 19:30:49 [error] [php] Object of class DesignationUser could not be converted to string (D:\xampp\htdocs\yii1\protected\modules\Basedata\components\views\designationFormWidget_new.php:75)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\widgets\CWidget.php(244): OfficerWidget->renderFile()
+#1 D:\xampp\htdocs\yii1\protected\modules\Basedata\components\OfficerWidget.php(27): OfficerWidget->render()
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(173): OfficerWidget->run()
+#3 D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\_formAssignNew.php(68): DesignationController->widget()
+#4 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#5 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): DesignationController->renderInternal()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(869): DesignationController->renderFile()
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(782): DesignationController->renderPartial()
+#8 D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php(224): DesignationController->render()
+#9 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DesignationController->actionUserAssign()
+#10 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#11 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#12 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#13 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#14 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#15 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#16 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#17 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#18 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#19 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#20 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#21 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/userAssign
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\components\views\designationFormWidget_new.php (75)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\components\OfficerWidget.php (27)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\_formAssignNew.php (68)
+2014/10/10 19:31:41 [error] [php] Undefined variable: designationUser (D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php:172)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#11 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/GetUserName/id
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php (172)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (205)
+in D:\xampp\htdocs\yii1\index.php (13)
+2014/10/10 19:32:08 [error] [php] Undefined variable: designationUser (D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php:172)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#11 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/GetUserName/id
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php (172)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (205)
+in D:\xampp\htdocs\yii1\index.php (13)
+2014/10/10 19:37:43 [error] [php] Undefined variable: designationUser (D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php:172)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#11 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/GetUserName/id
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php (172)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (205)
+in D:\xampp\htdocs\yii1\index.php (13)
+2014/10/10 19:37:46 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "userDesignationView".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('userDesignation...')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('userDesignation...')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/design...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/Basedata/designation/userDesignationView/id/7
+HTTP_REFERER=http://localhost/yii1/index.php/Basedata/designation/userAssign
+---
+2014/10/10 19:38:04 [error] [php] Undefined variable: designationUser (D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php:172)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#11 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/GetUserName/id
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php (172)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (205)
+in D:\xampp\htdocs\yii1\index.php (13)
+2014/10/10 19:39:36 [error] [php] Undefined variable: designationUser (D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php:172)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#11 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/GetUserName/id
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php (172)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (205)
+in D:\xampp\htdocs\yii1\index.php (13)
+2014/10/10 19:40:25 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('GetUserName')
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/design...')
+#10 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii1/index.php/Basedata/designation/GetUserName/id1
+HTTP_REFERER=http://localhost/yii1/index.php/Basedata/designation/userAssign
+---
+2014/10/10 19:40:55 [error] [php] Undefined variable: designationUser (D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php:172)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#11 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/GetUserName/id/1
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php (172)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (205)
+in D:\xampp\htdocs\yii1\index.php (13)
+2014/10/10 19:42:08 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "userDesignationView".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('userDesignation...')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('userDesignation...')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/design...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/Basedata/designation/userDesignationView/id/8
+HTTP_REFERER=http://localhost/yii1/index.php/Basedata/designation/userAssign
+---
+2014/10/10 19:44:25 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "userDesignationView".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('userDesignation...')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('userDesignation...')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/design...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/Basedata/designation/userDesignationView/id/8
+---
+2014/10/10 19:46:06 [error] [php] Undefined variable: model (D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php:228)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/userDesignationView/id/8
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (228)
+in D:\xampp\htdocs\yii1\index.php (13)
+2014/10/10 19:46:50 [error] [php] Undefined variable: designationUser (D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php:173)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#11 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/GetUserName/id/1
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php (173)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (205)
+in D:\xampp\htdocs\yii1\index.php (13)
+2014/10/10 19:48:54 [error] [exception.CException] exception 'CException' with message 'Property "DesignationUser.profile" is not defined.' in D:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('profile')
+#1 D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php(173): CActiveRecord->__get('profile')
+#2 D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php(205): Designation::getUserName('1')
+#3 [internal function]: DesignationController->actionGetUserName('1')
+#4 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DesignationController), Array)
+#5 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DesignationController), Object(ReflectionMethod), Array)
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#8 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#14 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('GetUserName')
+#15 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/design...')
+#16 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii1/index.php/Basedata/designation/GetUserName/id/1
+HTTP_REFERER=http://localhost/yii1/index.php/Basedata/designation/userAssign
+---
+2014/10/10 19:50:58 [error] [php] Trying to get property of non-object (D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php:174)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs()
+#1 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#11 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#12 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#13 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/GetUserName/id/1
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\models\Designation.php (174)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (205)
+in D:\xampp\htdocs\yii1\index.php (13)
+2014/10/10 20:00:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "GetByType".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('GetByType')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('GetByType')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/design...')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/Basedata/designation/GetByType/id/1
+HTTP_REFERER=http://localhost/yii1/index.php/Basedata/designationUser/update/id/3
+---
+2014/10/10 20:03:00 [error] [php] Trying to get property of non-object (D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\_form.php:116)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(869): DesignationController->renderFile()
+#1 D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\create.php(20): DesignationController->renderPartial()
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): DesignationController->renderInternal()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(869): DesignationController->renderFile()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(782): DesignationController->renderPartial()
+#6 D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php(69): DesignationController->render()
+#7 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DesignationController->actionCreate()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#10 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#13 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#16 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#17 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/create
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\_form.php (116)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\create.php (20)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (69)
+2014/10/10 20:03:48 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Yo do not belong to this district' in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php:92
+Stack trace:
+#0 [internal function]: DesignationController->actionUpdate('1')
+#1 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DesignationController), Array)
+#2 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DesignationController), Object(ReflectionMethod), Array)
+#3 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#5 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#7 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#8 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#10 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#12 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/design...')
+#13 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#14 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#15 {main}
+REQUEST_URI=/yii1/index.php/Basedata/designation/update/id/1
+HTTP_REFERER=http://localhost/yii1/index.php/Basedata/designation/admin
+---
+2014/10/10 20:04:45 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/design...')
+#10 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii1/index.php/Basedata/designation/update/1
+---
+2014/10/10 20:04:54 [error] [exception.CHttpException.400] exception 'CHttpException' with message 'Your request is invalid.' in D:\xampp\htdocs\yii\framework\web\CController.php:336
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(309): CController->invalidActionParams(Object(CInlineAction))
+#1 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#2 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#3 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#4 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#5 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#6 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#8 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('view')
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/design...')
+#10 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#11 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#12 {main}
+REQUEST_URI=/yii1/index.php/Basedata/designation/view/1
+---
+2014/10/10 20:05:29 [error] [exception.CException] exception 'CException' with message 'Property "DesignationType.name_" is not defined.' in D:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('name_')
+#1 D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php(102): CActiveRecord->__get('name_')
+#2 [internal function]: DesignationController->actionUpdate('1')
+#3 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DesignationController), Array)
+#4 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DesignationController), Object(ReflectionMethod), Array)
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/design...')
+#15 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii1/index.php/Basedata/designation/update/id/1
+HTTP_REFERER=http://localhost/yii1/index.php/Basedata/designation/update/id/1
+---
+2014/10/10 20:07:33 [error] [exception.CException] exception 'CException' with message 'Property "Designation.name_" is not defined.' in D:\xampp\htdocs\yii\framework\base\CComponent.php:130
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(145): CComponent->__get('name_')
+#1 D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php(106): CActiveRecord->__get('name_')
+#2 [internal function]: DesignationController->actionUpdate('1')
+#3 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(DesignationController), Array)
+#4 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CAction->runWithParamsInternal(Object(DesignationController), Object(ReflectionMethod), Array)
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams(Array)
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(CInlineAction))
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#9 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#10 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#11 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#13 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('update')
+#14 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/design...')
+#15 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#16 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#17 {main}
+REQUEST_URI=/yii1/index.php/Basedata/designation/update/id/1
+HTTP_REFERER=http://localhost/yii1/index.php/Basedata/designation/update/id/1
+---
+2014/10/10 20:08:21 [error] [php] Object of class District could not be converted to string (D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php:106)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(47): CInlineAction->runWithParamsInternal()
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#2 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#3 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#5 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#7 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#9 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#10 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#11 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#12 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/update/id/1
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (106)
+in D:\xampp\htdocs\yii1\index.php (13)
+2014/10/10 20:11:58 [error] [php] include(Users.php): failed to open stream: No such file or directory (D:\xampp\htdocs\yii\framework\YiiBase.php:427)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(395): spl_autoload_call()
+#1 D:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(182): model()
+#2 D:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(230): CActiveFinder->getModel()
+#3 D:\xampp\htdocs\yii\framework\db\ar\CActiveFinder.php(48): CActiveFinder->buildJoinTree()
+#4 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(909): CActiveFinder->__construct()
+#5 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(280): DesignationUser->getActiveFinder()
+#6 D:\xampp\htdocs\yii\framework\db\ar\CActiveRecord.php(143): DesignationUser->getRelated()
+#7 D:\xampp\htdocs\yii\framework\base\CComponent.php(612) : eval()'d code(1): DesignationUser->__get()
+#8 D:\xampp\htdocs\yii\framework\base\CComponent.php(612): eval()
+#9 D:\xampp\htdocs\yii\framework\zii\widgets\grid\CDataColumn.php(137): TbDataColumn->evaluateExpression()
+#10 D:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridColumn.php(151): TbDataColumn->renderDataCellContent()
+#11 D:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(616): TbDataColumn->renderDataCell()
+#12 D:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(572): TbGridView->renderTableRow()
+#13 D:\xampp\htdocs\yii\framework\zii\widgets\grid\CGridView.php(482): TbGridView->renderTableBody()
+#14 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(167): TbGridView->renderItems()
+#15 unknown(0): TbGridView->renderSection()
+#16 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(150): preg_replace_callback()
+#17 D:\xampp\htdocs\yii\framework\zii\widgets\CBaseListView.php(135): TbGridView->renderContent()
+#18 D:\xampp\htdocs\yii\framework\web\CBaseController.php(173): TbGridView->run()
+#19 D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designationUser\admin.php(63): DesignationUserController->widget()
+#20 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#21 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): DesignationUserController->renderInternal()
+#22 D:\xampp\htdocs\yii\framework\web\CController.php(869): DesignationUserController->renderFile()
+#23 D:\xampp\htdocs\yii\framework\web\CController.php(782): DesignationUserController->renderPartial()
+#24 D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationUserController.php(126): DesignationUserController->render()
+#25 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DesignationUserController->actionAdmin()
+#26 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#27 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationUserController->runAction()
+#28 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#29 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#30 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationUserController->filterAccessControl()
+#31 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#32 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#33 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationUserController->runActionWithFilters()
+#34 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationUserController->run()
+#35 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#36 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#37 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designationUser/admin
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designationUser\admin.php (63)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationUserController.php (126)
+in D:\xampp\htdocs\yii1\index.php (13)
+2014/10/10 20:14:36 [error] [php] Trying to get property of non-object (D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\_form.php:116)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(869): DesignationController->renderFile()
+#1 D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\create.php(20): DesignationController->renderPartial()
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): DesignationController->renderInternal()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(869): DesignationController->renderFile()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(782): DesignationController->renderPartial()
+#6 D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php(69): DesignationController->render()
+#7 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DesignationController->actionCreate()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#10 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#13 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#16 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#17 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/create
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\_form.php (116)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\create.php (20)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (69)
+2014/10/10 20:17:07 [error] [php] Trying to get property of non-object (D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\_form.php:116)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(869): DesignationController->renderFile()
+#1 D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\create.php(20): DesignationController->renderPartial()
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): DesignationController->renderInternal()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(869): DesignationController->renderFile()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(782): DesignationController->renderPartial()
+#6 D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php(69): DesignationController->render()
+#7 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DesignationController->actionCreate()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#10 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#13 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#16 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#17 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/create
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\_form.php (116)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\create.php (20)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (69)
+2014/10/10 20:18:19 [error] [php] Trying to get property of non-object (D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\_form.php:126)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(869): DesignationController->renderFile()
+#1 D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\create.php(20): DesignationController->renderPartial()
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): DesignationController->renderInternal()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(869): DesignationController->renderFile()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(782): DesignationController->renderPartial()
+#6 D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php(69): DesignationController->render()
+#7 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DesignationController->actionCreate()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#10 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#13 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#16 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#17 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/create
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\_form.php (126)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\create.php (20)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (69)
+2014/10/10 20:20:25 [error] [php] Trying to get property of non-object (D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\_form.php:128)
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(869): DesignationController->renderFile()
+#1 D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\create.php(20): DesignationController->renderPartial()
+#2 D:\xampp\htdocs\yii\framework\web\CBaseController.php(126): require()
+#3 D:\xampp\htdocs\yii\framework\web\CBaseController.php(95): DesignationController->renderInternal()
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(869): DesignationController->renderFile()
+#5 D:\xampp\htdocs\yii\framework\web\CController.php(782): DesignationController->renderPartial()
+#6 D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php(69): DesignationController->render()
+#7 D:\xampp\htdocs\yii\framework\web\actions\CInlineAction.php(49): DesignationController->actionCreate()
+#8 D:\xampp\htdocs\yii\framework\web\CController.php(308): CInlineAction->runWithParams()
+#9 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): DesignationController->runAction()
+#10 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#11 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CAccessControlFilter->filter()
+#12 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): DesignationController->filterAccessControl()
+#13 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter()
+#14 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#15 D:\xampp\htdocs\yii\framework\web\CController.php(265): DesignationController->runActionWithFilters()
+#16 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): DesignationController->run()
+#17 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController()
+#18 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#19 D:\xampp\htdocs\yii1\index.php(13): CWebApplication->run()
+REQUEST_URI=/yii1/index.php/Basedata/designation/create
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\_form.php (128)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\views\designation\create.php (20)
+in D:\xampp\htdocs\yii1\protected\modules\Basedata\controllers\DesignationController.php (69)
+2014/10/14 10:19:21 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "students/REST.GET".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('students/REST.G...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii1/index.php/api/students
+---
+2014/10/14 10:24:10 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "REST.GET".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('REST.GET')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/api/photos
+---
+2014/10/14 10:24:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "REST.GET".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('REST.GET')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/api/photos
+---
+2014/10/14 10:28:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "REST.GET".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('REST.GET')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/api/photos
+---
+2014/10/14 10:29:40 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "REST.GET".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('REST.GET')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/api/photos
+---
+2014/10/14 10:31:57 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "REST.GET".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('REST.GET')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/api/photos/
+---
+2014/10/14 10:32:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "REST.GET".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('REST.GET')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/api/photos/1
+---
+2014/10/14 10:35:39 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "REST.GET".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('REST.GET')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/api/photos/1
+---
+2014/10/14 10:35:43 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "REST.GET".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('REST.GET')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/api/photos
+---
+2014/10/14 10:38:17 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'The system is unable to find the requested action "REST.GET".' in D:\xampp\htdocs\yii\framework\web\CController.php:483
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(270): CController->missingAction('REST.GET')
+#1 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#2 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#3 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#4 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#5 {main}
+REQUEST_URI=/yii1/index.php/api/photos
+---
+2014/10/14 10:40:36 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "api".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('api')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii1/index.php/api/
+---
+2014/10/14 10:42:07 [error] [exception.CException] exception 'CException' with message 'Alias "ext.starship.RestfullYii.actions.ERestActionProvider" is invalid. Make sure it points to an existing PHP file and the file is readable.' in D:\xampp\htdocs\yii\framework\YiiBase.php:322
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(468): YiiBase::import('ext.starship.Re...', true)
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(417): CController->createActionFromMap(Array, 'REST.GET', 'REST.GET')
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(259): CController->createAction('REST.GET')
+#3 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#4 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#5 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/yii1/index.php/api/photos
+---
+2014/10/14 10:42:23 [error] [exception.CException] exception 'CException' with message 'Alias "RestfullYii.actions.ERestBaseAction" is invalid. Make sure it points to an existing directory or file.' in D:\xampp\htdocs\yii\framework\YiiBase.php:347
+Stack trace:
+#0 D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\actions\ERestActionProvider.php(2): YiiBase::import('RestfullYii.act...')
+#1 D:\xampp\htdocs\yii\framework\YiiBase.php(320): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(468): YiiBase::import('ext.RestfullYii...', true)
+#3 D:\xampp\htdocs\yii\framework\web\CController.php(417): CController->createActionFromMap(Array, 'REST.GET', 'REST.GET')
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(259): CController->createAction('REST.GET')
+#5 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#6 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#7 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii1/index.php/api/photos
+---
+2014/10/14 10:43:24 [error] [exception.CException] exception 'CException' with message 'Alias "RestfullYii.actions.ERestActionProvider" is invalid. Make sure it points to an existing directory or file.' in D:\xampp\htdocs\yii\framework\YiiBase.php:347
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(468): YiiBase::import('RestfullYii.act...', true)
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(417): CController->createActionFromMap(Array, 'REST.GET', 'REST.GET')
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(259): CController->createAction('REST.GET')
+#3 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#4 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#5 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/yii1/index.php/api/photos
+---
+2014/10/14 10:44:05 [error] [exception.CException] exception 'CException' with message 'Alias "extensions.RestfullYii.actions.ERestActionProvider" is invalid. Make sure it points to an existing directory or file.' in D:\xampp\htdocs\yii\framework\YiiBase.php:347
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CController.php(468): YiiBase::import('extensions.Rest...', true)
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(417): CController->createActionFromMap(Array, 'REST.GET', 'REST.GET')
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(259): CController->createAction('REST.GET')
+#3 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#4 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#5 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/yii1/index.php/api/photos
+---
+2014/10/14 10:44:22 [error] [exception.CException] exception 'CException' with message 'Alias "RestfullYii.actions.ERestBaseAction" is invalid. Make sure it points to an existing directory or file.' in D:\xampp\htdocs\yii\framework\YiiBase.php:347
+Stack trace:
+#0 D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\actions\ERestActionProvider.php(2): YiiBase::import('RestfullYii.act...')
+#1 D:\xampp\htdocs\yii\framework\YiiBase.php(320): require('D:\\xampp\\htdocs...')
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(468): YiiBase::import('application.ext...', true)
+#3 D:\xampp\htdocs\yii\framework\web\CController.php(417): CController->createActionFromMap(Array, 'REST.GET', 'REST.GET')
+#4 D:\xampp\htdocs\yii\framework\web\CController.php(259): CController->createAction('REST.GET')
+#5 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#6 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#7 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#8 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#9 {main}
+REQUEST_URI=/yii1/index.php/api/photos
+---
+2014/10/14 10:44:58 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Resource Not Found' in D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\actions\EActionRestGET.php:56
+Stack trace:
+#0 [internal function]: EActionRestGET->run('put', NULL, NULL)
+#1 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(EActionRestGET), Array)
+#2 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(74): CAction->runWithParamsInternal(Object(EActionRestGET), Object(ReflectionMethod), Array)
+#3 D:\xampp\htdocs\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#4 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(EActionRestGET))
+#5 D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\filters\ERestFilter.php(88): CFilterChain->run()
+#6 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): ERestFilter->preFilter(Object(CFilterChain))
+#7 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#8 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#9 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#10 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#11 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#12 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#13 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(EActionRestGET), Array)
+#14 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.GET')
+#15 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.GET')
+#16 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#17 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#18 {main}
+REQUEST_URI=/yii1/index.php/api/photos/put
+---
+2014/10/14 13:03:00 [error] [exception.CException] exception 'CException' with message 'Filter "rights" is invalid. Controller "PhotosController" does not have the filter method "filterrights".' in D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php:46
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(69): CInlineFilter::create(Object(PhotosController), 'rights')
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain::create(Object(PhotosController), Object(EActionRestPOST), Array)
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(EActionRestPOST), Array)
+#3 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.POST')
+#4 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.POS...')
+#5 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/yii1/index.php//api/photos
+---
+2014/10/14 13:16:07 [error] [exception.CException] exception 'CException' with message 'Filter "rights" is invalid. Controller "PhotosController" does not have the filter method "filterrights".' in D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php:46
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(69): CInlineFilter::create(Object(PhotosController), 'rights')
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain::create(Object(PhotosController), Object(EActionRestPOST), Array)
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(EActionRestPOST), Array)
+#3 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.POST')
+#4 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.POS...')
+#5 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/yii1/index.php//api/photos
+---
+2014/10/14 13:24:01 [error] [exception.CException] exception 'CException' with message 'Filter "rights" is invalid. Controller "PhotosController" does not have the filter method "filterrights".' in D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php:46
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(69): CInlineFilter::create(Object(PhotosController), 'rights')
+#1 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain::create(Object(PhotosController), Object(EActionRestPOST), Array)
+#2 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(EActionRestPOST), Array)
+#3 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.POST')
+#4 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.POS...')
+#5 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#6 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#7 {main}
+REQUEST_URI=/yii1/index.php//api/photos
+---
+2014/10/14 13:27:42 [error] [exception.CHttpException.400] exception 'CHttpException' with message '{"bwid":["Bwid is too long (maximum is 20 characters)."]}' in D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\events\ERestEventListenerRegistry.php:852
+Stack trace:
+#0 [internal function]: ERestEventListenerRegistry->{closure}(Object(Photos))
+#1 D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\events\Eventor\Eventor.php(170): call_user_func_array(Object(Closure), Array)
+#2 D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\behaviors\ERestBehavior.php(109): Eventor->emit('model.save', Array)
+#3 [internal function]: ERestBehavior->emitRest('model.save', Array)
+#4 D:\xampp\htdocs\yii\framework\base\CComponent.php(261): call_user_func_array(Array, Array)
+#5 D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\actions\EActionRestPOST.php(66): CComponent->__call('emitRest', Array)
+#6 D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\actions\EActionRestPOST.php(66): PhotosController->emitRest('model.save', Array)
+#7 D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\actions\EActionRestPOST.php(31): EActionRestPOST->handlePost()
+#8 [internal function]: EActionRestPOST->run(NULL, NULL, NULL)
+#9 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(108): ReflectionMethod->invokeArgs(Object(EActionRestPOST), Array)
+#10 D:\xampp\htdocs\yii\framework\web\actions\CAction.php(74): CAction->runWithParamsInternal(Object(EActionRestPOST), Object(ReflectionMethod), Array)
+#11 D:\xampp\htdocs\yii\framework\web\CController.php(308): CAction->runWithParams(Array)
+#12 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(133): CController->runAction(Object(EActionRestPOST))
+#13 D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\filters\ERestFilter.php(88): CFilterChain->run()
+#14 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(38): ERestFilter->preFilter(Object(CFilterChain))
+#15 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CFilter->filter(Object(CFilterChain))
+#16 D:\xampp\htdocs\yii\framework\web\filters\CFilter.php(40): CFilterChain->run()
+#17 D:\xampp\htdocs\yii\framework\web\CController.php(1145): CFilter->filter(Object(CFilterChain))
+#18 D:\xampp\htdocs\yii\framework\web\filters\CInlineFilter.php(58): CController->filterAccessControl(Object(CFilterChain))
+#19 D:\xampp\htdocs\yii\framework\web\filters\CFilterChain.php(130): CInlineFilter->filter(Object(CFilterChain))
+#20 D:\xampp\htdocs\yii\framework\web\CController.php(291): CFilterChain->run()
+#21 D:\xampp\htdocs\yii\framework\web\CController.php(265): CController->runActionWithFilters(Object(EActionRestPOST), Array)
+#22 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(282): CController->run('REST.POST')
+#23 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('photos/REST.POS...')
+#24 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#25 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#26 {main}
+REQUEST_URI=/yii1/index.php//api/photos
+---
+2014/10/14 13:30:26 [warning] [application] Failed to set unsafe attribute "id" of "Photos".
+in D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\ARBehaviors\ERestActiveRecordRelationBehavior.php (114)
+in D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\ARBehaviors\ERestActiveRecordRelationBehavior.php (48)
+in D:\xampp\htdocs\yii1\protected\extensions\RestfullYii\events\ERestEventListenerRegistry.php (851)
+2014/10/14 16:38:09 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "RevenueVillages".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii1/
+---
+2014/10/14 16:38:19 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/RevenueVillages".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii1/
+---
+2014/10/14 16:38:47 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/Basedata/RevenueVillage".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii1/
+---
+2014/10/14 16:39:16 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "/Basedata/revenueVillage".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii1/index.php/
+---
+2014/10/14 16:53:42 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "School/LearningLevel/admin".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('School/Learning...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii1/index.php/School/LearningLevel/admin
+---
+2014/10/14 16:54:07 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "School/LearningLevel/Student".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('School/Learning...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii1/index.php/School/LearningLevel/Student
+---
+2014/10/14 16:54:15 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "School/LearningLevel/student".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('School/Learning...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii1/index.php/School/LearningLevel/student
+---
+2014/10/14 17:07:27 [error] [exception.CHttpException.404] exception 'CHttpException' with message 'Unable to resolve the request "Basedata/pwd_unit/create".' in D:\xampp\htdocs\yii\framework\web\CWebApplication.php:286
+Stack trace:
+#0 D:\xampp\htdocs\yii\framework\web\CWebApplication.php(141): CWebApplication->runController('Basedata/pwd_un...')
+#1 D:\xampp\htdocs\yii\framework\base\CApplication.php(180): CWebApplication->processRequest()
+#2 D:\xampp\htdocs\yii1\index.php(13): CApplication->run()
+#3 {main}
+REQUEST_URI=/yii1/index.php/Basedata/pwd_unit/create
+---
