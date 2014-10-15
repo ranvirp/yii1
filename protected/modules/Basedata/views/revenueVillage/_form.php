@@ -20,7 +20,7 @@
 
     <?php echo $form->errorSummary($model); ?>
    
-    <?php   echo $form->dropDownListControlGroup($model,'tehsil_code',tehsil::model()->listAll());  ?>
+    <?php   echo $form->dropDownListControlGroup($model,'tehsil_code',Tehsil::model()->listAll());  ?>
     
     	 <?php echo $form->textFieldControlGroup($model,'code',array('span'=>5,'maxlength'=>15)); ?>
 
@@ -32,7 +32,7 @@
     	 <?php echo $form->textFieldControlGroup($model,'name_hi',array('span'=>5,'maxlength'=>45,'class'=>'hindiinput')); ?>
 
     
-    <?php   echo $form->dropDownListControlGroup($model,'panchayat_code',panchayat::model()->listAll());  ?>
+    <?php   echo $form->dropDownListControlGroup($model,'panchayat_code',Panchayat::model()->listAll());  ?>
     
     	 <?php echo $form->textFieldControlGroup($model,'census_code',array('span'=>5,'maxlength'=>45)); ?>
 

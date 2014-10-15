@@ -15,6 +15,7 @@ return array(
 ),
     */
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
+    'runtimePath'=>"/home/ranvir/runtime",
 	'name'=>'My Web Application',
 	'language'=>'en',
 	// preloading 'log' component
@@ -186,7 +187,7 @@ return array(
 			'connectionString' => 'mysql:host=localhost;dbname=mydb',
 			'emulatePrepare' => true,
 			'username' => 'root',
-			'password' => '',
+			'password' => 'root',
 			'charset' => 'utf8',
 			'tablePrefix'=>'',
 		),
